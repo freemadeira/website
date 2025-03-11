@@ -5,12 +5,12 @@ export const headingStyles = tv({
   base: 'max-w-full font-main font-normal',
   variants: {
     size: {
-      h1: 'text-[104px] leading-[120px] font-medium',
+      h1: 'text-[56px] leading-[64px] font-medium sm:text-[104px] sm:leading-[120px]',
       // h2: 'text-3xl',
-      h3: 'text-[56px] leading-[64px]',
-      h4: 'text-[40px] leading-[51px]',
-      h5: 'text-[32px] leading-normal',
-      h6: 'text-2xl leading-[150%]',
+      h3: 'text-[40px] leading-[54px] sm:text-[56px] sm:leading-[64px]',
+      h4: 'text-[32px] leading-[40px] sm:text-[40px] sm:leading-[51px]',
+      h5: 'text-[24px] leading-[32px] sm:text-[32px] sm:leading-normal',
+      h6: 'text-[20px] leading-[150%] sm:text-2xl sm:font-medium',
     },
     align: {
       left: 'text-left',
@@ -61,7 +61,7 @@ export function Heading({
       className={headingStyles({ size, align, weight, truncate, balance, className })}
       {...props}
     >
-      {truncate ? <span className='truncate'>{children}</span> : children}
+      {truncate ? <span className="truncate">{children}</span> : children}
     </Tag>
   );
 }
