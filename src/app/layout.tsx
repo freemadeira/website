@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Schibsted_Grotesk, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { Footer } from '@/components/footer';
 
 const schibstedGrotesk = Schibsted_Grotesk({
   variable: '--font-main',
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang='en' className={`${schibstedGrotesk.variable}`}>
       <body className='min-h-dvh antialiased'>{children}</body>
+        <Footer />
     </html>
   );
 }
