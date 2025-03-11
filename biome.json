@@ -31,8 +31,7 @@
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "single",
-      "jsxQuoteStyle": "single"
+      "quoteStyle": "single"
     }
   }
 }
