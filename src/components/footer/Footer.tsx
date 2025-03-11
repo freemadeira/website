@@ -1,6 +1,6 @@
 import { Flex } from '@/components/ui/atoms';
-import { Newsletter } from './Newsletter';
 import { Links } from './Links';
+import { Newsletter } from './Newsletter';
 import { Socials } from './Socials';
 
 export function Footer(): React.ReactElement {

@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from 'react';
-import { tv, type VariantProps } from 'tailwind-variants';
+import { type VariantProps, tv } from 'tailwind-variants';
 
 export const headingStyles = tv({
   base: 'max-w-full font-main font-normal',
