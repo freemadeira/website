@@ -18,9 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={`${schibstedGrotesk.variable}`}>
-      <body className='min-h-dvh antialiased'>{children}</body>
+    <html lang="en" className={`${schibstedGrotesk.variable}`}>
+      <body className="flex min-h-dvh flex-col antialiased">
+        <main className="grow">{children}</main>
         <Footer />
+      </body>
     </html>
   );
 }
