@@ -5,6 +5,7 @@ import { Footer } from '@/components/footer';
 
 const schibstedGrotesk = Schibsted_Grotesk({
   variable: '--font-main',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
