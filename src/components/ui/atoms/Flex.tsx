@@ -19,6 +19,7 @@ const flexVariants = tv({
       1: 'gap-1',
       1.5: 'gap-1.5',
       2: 'gap-2',
+      2.5: 'gap-2.5',
       3: 'gap-3',
       4: 'gap-4',
       5: 'gap-5',
