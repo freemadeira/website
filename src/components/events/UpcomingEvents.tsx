@@ -4,7 +4,7 @@ import { EventTags } from './EventTags';
 
 export function UpcomingEvents(): React.ReactElement {
   return (
-    <Container className="me-0 gap-7">
+    <Container className="gap-7 pe-0">
       <Heading size="h5">Upcoming Events</Heading>
 
       <Flex gap={8} className="w-full overflow-scroll pe-4 sm:pe-0">

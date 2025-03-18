@@ -4,7 +4,7 @@ import { Flex } from './Flex';
 
 // TODO: Rethink this component. It should stop expanding beyond the width of a 15" screen
 const containerVariants = tv({
-  base: 'flex flex-col mx-4 sm:mx-12',
+  base: 'flex flex-col px-4 sm:px-12',
   variants: {
     size: {
       sm: 'max-w-screen-sm',
