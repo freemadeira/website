@@ -23,7 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
+      <head>
+        <meta http-equiv='refresh' content='0;url=https://energysummit.freemadeira.org' />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} h-dvh antialiased`}>
         {children}
       </body>
