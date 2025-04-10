@@ -8,7 +8,18 @@
   /* Colours */
   --color-dark: #090506; /* TODO: convert to oklch */
   /* Supernova */
-  --color-supernova-400: oklch(86.33% 0.1758 89.84); /* #FFCB05 */
+  --color-primary-50: #fefce8;
+  --color-primary-100: #fffac2;
+  --color-primary-200: #fff187;
+  --color-primary-300: #ffe243;
+  --color-primary-400: oklch(86.33% 0.1758 89.84);
+  --color-primary-500: #efb403;
+  --color-primary-600: #ce8b00;
+  --color-primary-700: #a46204;
+  --color-primary-800: #884c0b;
+  --color-primary-900: #733e10;
+  --color-primary-950: #432005;
+
   /* Bridal Heath */
   --color-bridal-50: oklch(97.73% 0.0102 81.8); /* #FBF7F0 */
   --color-bridal-700: oklch(53.55% 0.1025 50.31); /* #9c5a32 */

@@ -5,7 +5,7 @@ export function Contribute(): React.ReactElement {
   return (
     <Flex
       alignItems="center"
-      className='flex-col gap-16 bg-bridal-50 pt-12 sm:flex-row sm:gap-44 sm:px-42 sm:pt-0 dark:bg-mountain-mist-800'
+      className="flex-col gap-16 bg-bridal-50 pt-12 sm:flex-row sm:gap-44 sm:px-42 sm:pt-0 dark:bg-mountain-mist-800"
       as={Container}
     >
       <Flex direction="column" className="w-full gap-8 sm:w-3/7 sm:gap-14">
