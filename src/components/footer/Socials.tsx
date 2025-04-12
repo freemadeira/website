@@ -1,14 +1,29 @@
-import { Grid } from '@/components/ui/atoms';
+import { Grid, IconButton, type Social, SocialButton } from '@/components/ui/atoms';
+import { freeMadeiraSocials } from '@/utils/constants';
+import { XIcon } from 'lucide-react';
 
-export function Socials(): React.ReactElement {
+const socials: Social[] = [
+  'instagram',
+  'telegram',
+  'facebook',
+  'nostr',
+  'x',
+  'youtube',
+  'github',
+  'linkedin',
+];
+
+export const Socials = (): React.ReactElement => {
   return (
-    <Grid cols={3} gap={4}>
-      <p>Links</p>
-      <p>Links</p>
-      <p>Links</p>
-      <p>Links</p>
-      <p>Links</p>
-      <p>Links</p>
+    <Grid cols={4} gap={4}>
+      {socials.map((social) => (
+        <SocialButton
+          key={social}
+          style="outlined"
+          social={social}
+          username={freeMadeiraSocials[social]}
+        />
+      ))}
     </Grid>
   );
-}
+};
