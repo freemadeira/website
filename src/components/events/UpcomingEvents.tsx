@@ -7,7 +7,7 @@ export function UpcomingEvents(): React.ReactElement {
     <Container className="gap-7 pe-0">
       <Heading size="h5">Upcoming Events</Heading>
 
-      <Flex gap={8} className="w-full overflow-scroll pe-4 sm:pe-0">
+      <Flex gap={8} className='no-scrollbar w-full overflow-x-auto pe-4 sm:pe-0'>
         <EventCard
           event={{
             date: 'December 26, 2024, 17:00',
