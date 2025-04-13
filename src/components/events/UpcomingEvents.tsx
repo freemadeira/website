@@ -4,10 +4,12 @@ import { EventTags } from './EventTags';
 
 export function UpcomingEvents(): React.ReactElement {
   return (
-    <Container className="gap-7 pe-0">
-      <Heading size="h5">Upcoming Events</Heading>
+    <Container className="mx-0 gap-7" outer>
+      <Heading size="h5" className="mx-4 sm:mx-0">
+        Upcoming Events
+      </Heading>
 
-      <Flex gap={8} className='no-scrollbar w-full overflow-x-auto pe-4 sm:pe-0'>
+      <Flex gap={8} className="no-scrollbar w-full overflow-x-auto px-4 sm:px-0">
         <EventCard
           event={{
             date: 'December 26, 2024, 17:00',
