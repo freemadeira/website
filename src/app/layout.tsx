@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
-        <meta http-equiv='refresh' content='0;url=https://energysummit.freemadeira.org' />
+        <meta http-equiv='refresh' content='0;url=https://shop.freemadeira.org' />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} h-dvh antialiased`}>
         {children}
