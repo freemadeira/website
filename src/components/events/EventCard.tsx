@@ -13,8 +13,18 @@ type EventCardProps = {
 
 export function EventCard({ event }: EventCardProps): React.ReactElement {
   return (
-    <Flex direction="column" gap={5} className="flex-1 border-dark border-b pb-6">
-      <Image src="/test-photo.jpg" alt="Event" width={400} height={300} />
+    <Flex
+      direction="column"
+      gap={5}
+      className="w-[70vw] flex-1 border-dark border-b pb-6 sm:w-auto"
+    >
+      <Image
+        src="/test-photo.jpg"
+        alt="Event"
+        width={6240}
+        height={4160}
+        className="h-48 w-full object-cover"
+      />
 
       <Flex direction="column" gap={3} className="grow">
         <Text size="sm" className="text-gray-500 uppercase leading-4 tracking-[4%]">
