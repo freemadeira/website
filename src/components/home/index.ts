@@ -3,3 +3,4 @@ export * from './Contribute';
 export * from './Education';
 export * from './Hero';
 export * from './Merchants';
+export * from './Partners';

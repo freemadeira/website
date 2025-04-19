@@ -1,4 +1,4 @@
-import { Container, Flex, Heading, Text } from '@/components/ui/atoms';
+import { Button, Container, Flex, Heading, Text } from '@/components/ui/atoms';
 import { CategoryTag } from '@/components/ui/atoms/CategoryTag';
 import { Coin } from '@/components/ui/svgs';
 
@@ -24,6 +24,9 @@ export function Education(): React.ReactElement {
           </p>
 
           <p>Button</p>
+          <Button as="a" href="/education" discrete>
+            Learn more about our courses
+          </Button>
         </Flex>
       </Flex>
     </Container>
