@@ -3,8 +3,8 @@ import { Svg } from '../../atoms/';
 
 export const X: React.FC<SocialIconProps> = ({ className, ...props }) => {
   return (
-    <Svg viewBox="0 0 1000.78 936.69" className={className} {...props}>
-      <path d="M2.44,0l386.39,516.64L0,936.69h87.51l340.42-367.76,275.05,367.76h297.8l-408.13-545.7L954.57,0h-87.51l-313.51,338.7L300.24,0H2.44ZM131.13,64.46h136.81l604.13,807.76h-136.81L131.13,64.46Z" />
+    <Svg viewBox="0 0 24 24" className={className} {...props}>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     </Svg>
   );
 };
