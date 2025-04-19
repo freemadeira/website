@@ -7,7 +7,7 @@ import merchantMapLight from '@/assets/images/merchant-map-light.png';
 export function Merchants(): React.ReactElement {
   return (
     <Container outer>
-      <Flex gap={0} stackOnMobile>
+      <Flex stackOnMobile gap={0}>
         <Flex
           direction="column"
           gap={4}

@@ -19,8 +19,8 @@ export const buttonVariants = tv({
       filled: 'bg-primary-400 text-dark hover:bg-primary-500/90 active:bg-primary-500/80',
       outlined: twJoin(
         'border border-dark text-dark',
-        'hover:border-dark hover:bg-dark hover:text-white',
-        'active:border-dark/85 active:bg-dark/90',
+        'hover:border-primary-500/90 hover:bg-primary-500/90 hover:text-dark/90',
+        'active:border-primary-500/80 active:bg-primary-500/80',
       ),
       ghost: twJoin(
         'text-primary-700',
@@ -40,12 +40,6 @@ export const buttonVariants = tv({
       center: 'justify-center',
       right: 'justify-end',
     },
-    // textColor: {
-    //   inherit: 'text-inherit',
-    //   primary: 'text-primary-700',
-    //   foreground: 'text-foreground',
-    //   background: 'text-background',
-    // },
     underlined: {
       true: 'underline underline-offset-2',
     },
@@ -54,28 +48,6 @@ export const buttonVariants = tv({
       black: '',
     },
   },
-  // compoundVariants: [
-  //   {
-  //     buttonColor: 'gray',
-  //     fill: 'outlined',
-  //     class: twJoin(
-  //       'border border-gray-300',
-  //       'hover:border-gray-500 hover:bg-gray-50 hover:text-inherit',
-  //       'active:border-gray-500 active:bg-gray-50',
-  //       'aria-expanded:bg-gray-100 aria-expanded:border-gray-600',
-  //     ),
-  //   },
-  //   {
-  //     buttonColor: 'black',
-  //     fill: 'outlined',
-  //     class: twJoin(
-  //       'border border-gray-500',
-  //       'hover:border-gray-900 hover:bg-gray-100 hover:text-inherit',
-  //       'active:border-gray-900 active:bg-gray-100',
-  //       'aria-expanded:bg-gray-200 aria-expanded:border-gray-900',
-  //     ),
-  //   },
-  // ],
   defaultVariants: {
     fill: 'filled',
     noAnimation: false,
