@@ -9,10 +9,10 @@ import { Button, Flex } from '../ui/atoms';
 import { LogoHorizontal } from '../ui/svgs/LogoHorizontal';
 
 const menuItems = [
-  {
-    name: 'About',
-    href: '/about',
-  },
+  // {
+  //   name: 'About',
+  //   href: '/about',
+  // },
   // {
   //   name: 'Madeira',
   //   href: '#',
