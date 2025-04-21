@@ -28,7 +28,7 @@ export function Merchants(): React.ReactElement {
           </Link>
         </Flex>
 
-        <div className="relative w-full sm:w-1/2">
+        <div className='relative h-64 w-full sm:h-auto sm:w-1/2'>
           <Image src={merchantMapLight} alt="Merchant Map" className="object-cover" fill />
         </div>
       </Flex>
