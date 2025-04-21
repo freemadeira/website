@@ -27,7 +27,7 @@ export function Newsletter(): React.ReactElement {
   };
 
   return (
-    <Flex direction="column" gap={4} className="w-full">
+    <Flex direction="column" gap={4} className="w-full sm:w-auto">
       <Text size="lg">Subscribe to our newsletter</Text>
 
       <Flex gap={2}>

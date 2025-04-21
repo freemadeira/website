@@ -3,12 +3,12 @@ import { freeMadeiraSocials } from '@/utils/constants';
 import { XIcon } from 'lucide-react';
 
 const socials: Social[] = [
-  'instagram',
+  'x',
+  'nostr',
+  'youtube',
   'telegram',
   'facebook',
-  'nostr',
-  'x',
-  'youtube',
+  'instagram',
   'github',
   'linkedin',
 ];

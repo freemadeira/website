@@ -5,9 +5,9 @@ export function Links(): React.ReactElement {
   return (
     // TODO: Fix when we can use responsive variants
     <Grid cols={2} gap={8} className="grow text-sm leading-[200%] sm:grid-cols-4">
-      {/* <Flex direction="column"></Flex> */}
+      {/* <Flex direction="column" /> */}
 
-      {/* <Flex direction="column"></Flex> */}
+      <Flex direction="column" />
 
       <Flex direction="column">
         <Link
