@@ -35,6 +35,12 @@ export type Social =
   | 'telegram'
   | 'youtube';
 
+type socialType = {
+  title: string;
+  baseUrl: string;
+  icon: React.FC;
+};
+
 interface SocialButtonProps
   extends VariantProps<typeof socialButtonVariants>,
     React.ComponentProps<typeof IconButton> {
@@ -42,37 +48,45 @@ interface SocialButtonProps
   username: string;
 }
 
-const socialMedia: Record<Social, { baseUrl: string; icon: React.FC }> = {
+const socialMedia: Record<Social, socialType> = {
   facebook: {
+    title: 'Facebook',
     baseUrl: 'https://www.facebook.com/',
     icon: Facebook,
   },
   x: {
+    title: 'X',
     baseUrl: 'https://x.com/',
     icon: X,
   },
   instagram: {
+    title: 'Instagram',
     baseUrl: 'https://www.instagram.com/',
     // icon: Instagram,
     icon: Instagram,
   },
   linkedin: {
+    title: 'LinkedIn',
     baseUrl: 'https://www.linkedin.com/',
     icon: Linkedin,
   },
   nostr: {
+    title: 'Nostr',
     baseUrl: 'https://nostr.com/',
     icon: Nostr,
   },
   github: {
+    title: 'GitHub',
     baseUrl: 'https://github.com/',
     icon: Github,
   },
   telegram: {
+    title: 'Telegram',
     baseUrl: 'https://t.me/',
     icon: Telegram,
   },
   youtube: {
+    title: 'YouTube',
     baseUrl: 'https://www.youtube.com/@',
     icon: Youtube,
   },
@@ -97,6 +111,7 @@ export function SocialButton({
       className={socialButtonVariants({ style })}
       target="_blank"
       rel="noopener noreferrer"
+      title={socialMedia[social].title}
       {...props}
     >
       <Tag />
