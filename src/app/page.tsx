@@ -1,5 +1,5 @@
 import { UpcomingEvents } from '@/components/events';
-import { Education, Merchants } from '@/components/home';
+import { About, Carousel, Contribute, Education, Merchants } from '@/components/home';
 import { Hero } from '@/components/home/Hero';
 import { Container } from '@/components/ui/atoms';
 import { PortalHands } from '@/components/ui/svgs';
@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-
       <UpcomingEvents />
-
       <Education />
-
+      <Carousel />
+      <About />
       <Merchants />
+      <Contribute />
     </>
   );
 }
