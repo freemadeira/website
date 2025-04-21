@@ -23,7 +23,7 @@ export function Education(): React.ReactElement {
             incididunt ut labore et dolore magna aliqua.
           </p>
 
-          <p>Button</p>
+          {/* TODO: Add button */}
         </Flex>
       </Flex>
     </Container>
