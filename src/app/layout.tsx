@@ -3,7 +3,6 @@ import { Schibsted_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
-// import { useTheme } from '@/hooks/useTheme';
 
 const schibstedGrotesk = Schibsted_Grotesk({
   variable: '--font-main',
