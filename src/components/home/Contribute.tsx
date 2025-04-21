@@ -1,4 +1,4 @@
-import { Container, Flex, Heading } from '../ui/atoms';
+import { Button, Container, Flex, Heading } from '../ui/atoms';
 import { FingerTouch } from '../ui/svgs';
 
 export function Contribute(): React.ReactElement {
@@ -12,8 +12,18 @@ export function Contribute(): React.ReactElement {
         <Heading size="h4">Find out how you can contribute to our success</Heading>
 
         <Flex gap={4}>
-          <p>Button</p>
-          <p>Button</p>
+          <Button
+            as="a"
+            href="https://geyser.fund/project/freemadeira"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donations
+          </Button>
+
+          <Button as="a" href="mailto:info@freemadeira.org" fill="outlined">
+            Partnerships
+          </Button>
         </Flex>
       </Flex>
 
