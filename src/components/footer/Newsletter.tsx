@@ -27,7 +27,7 @@ export function Newsletter(): React.ReactElement {
   };
 
   return (
-    <Flex direction="column" gap={4}>
+    <Flex direction="column" gap={4} className="w-full">
       <Text size="lg">Subscribe to our newsletter</Text>
 
       <Flex gap={2}>
@@ -36,7 +36,7 @@ export function Newsletter(): React.ReactElement {
           required
           placeholder="Email address"
           aria-label="Email address"
-          className="rounded-full bg-white px-6 py-2.5 text-dark text-sm placeholder:text-dark/40 focus:outline-none focus:ring-0"
+          className="grow rounded-full bg-white px-6 py-2.5 text-dark text-sm placeholder:text-dark/40 focus:outline-none focus:ring-0"
           onChange={handleChange}
         />
         <IconButton
