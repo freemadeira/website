@@ -13,7 +13,7 @@ export function Hero(): React.ReactElement {
           </Heading>
         </Flex>
 
-        <p>Button</p>
+        {/* TODO: Add button */}
       </Flex>
 
       <PortalHands className="w-full sm:w-2/5" />
