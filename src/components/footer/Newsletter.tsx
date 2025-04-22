@@ -6,15 +6,14 @@ import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 export function Newsletter(): React.ReactElement {
-  const [submitted, setSubmitted] = useState(false);
-  const [email, setEmail] = useState(null);
+  const [submitted, setSubmitted] = useState<boolean>(false);
+  const [email, setEmail] = useState<string | null>(null);
 
-  // TODO: Add types
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     await axios.post('/api/mailerlite', { email });
