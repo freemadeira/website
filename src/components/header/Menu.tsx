@@ -8,7 +8,12 @@ import { twJoin, twMerge } from 'tailwind-merge';
 import { Button, Flex } from '../ui/atoms';
 import { LogoHorizontal } from '../ui/svgs/LogoHorizontal';
 
-const menuItems = [
+interface MenuItem {
+  name: string;
+  href: string;
+}
+
+const menuItems: MenuItem[] = [
   // {
   //   name: 'About',
   //   href: '/about',
