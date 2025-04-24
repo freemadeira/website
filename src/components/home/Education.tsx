@@ -14,13 +14,14 @@ export function Education(): React.ReactElement {
         <Flex direction="column" className="w-full gap-4 sm:w-3/5 sm:gap-8">
           <CategoryTag>Education</CategoryTag>
 
-          <Heading size="h3">Expand your knowledge on Bitcoin</Heading>
+          <Heading size="h3">Dive deeper into the Bitcoin world</Heading>
         </Flex>
 
         <Flex direction="column" gap={8} justifyContent="end" className="mb-2 w-full sm:w-2/5">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            Explore Bitcoin education in Portuguese, designed for all knowledge levels — whether
+            you're simply curious or eager to delve deeper. Enjoy high-quality, free, and accessible
+            content available to everyone.
           </p>
 
           {/* TODO: Add button */}

@@ -9,7 +9,7 @@ export function Contribute(): React.ReactElement {
       as={Container}
     >
       <Flex direction="column" className="w-full gap-8 sm:w-3/7 sm:gap-14">
-        <Heading size="h4">Find out how you can contribute to our success</Heading>
+        <Heading size="h4">Do you want to be part of the change?</Heading>
 
         <Flex gap={4}>
           <Button

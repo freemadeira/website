@@ -10,8 +10,8 @@ export function About(): React.ReactElement {
         <Flex direction="column" gap={12} className="h-full w-full sm:w-4/7" justifyContent="end">
           <div className="grow">
             <Heading size="h3" className="grow">
-              We support the local community and position Madeira as a technology leader in Bitcoin
-              adoption.
+              Knowledge is the catalyst for change. By providing monetary education to all, we forge
+              a path to economic empowerment.
             </Heading>
           </div>
 

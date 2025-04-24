@@ -15,9 +15,8 @@ export function Merchants(): React.ReactElement {
         >
           <Heading size="h5">Free your business</Heading>
           <Text>
-            In the last year, we have onboarded more than 100 merchants who now accept Bitcoin at
-            their businesses, bringing new customers and fostering a local circular economy in the
-            island. Be part of this movement and allow your business to grow with bitcoin.
+            Over 140 businesses already accept bitcoin on Madeira Island. Do you own a business and
+            want to start receiving payments in bitcoin? We can assist you every step of the way.
           </Text>
 
           <Link
@@ -28,7 +27,7 @@ export function Merchants(): React.ReactElement {
           </Link>
         </Flex>
 
-        <div className='relative h-64 w-full sm:h-auto sm:w-1/2'>
+        <div className="relative h-64 w-full sm:h-auto sm:w-1/2">
           <Image src={merchantMapLight} alt="Merchant Map" className="object-cover" fill />
         </div>
       </Flex>
