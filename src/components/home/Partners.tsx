@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { twJoin, twMerge } from 'tailwind-merge';
 import { Flex, Heading, Svg, type SvgProps } from '../ui/atoms';
 
 import {
@@ -11,7 +12,6 @@ import {
   Vulcan21,
   Zaprite,
 } from '@/components/ui/svgs/partners';
-import { twJoin, twMerge } from 'tailwind-merge';
 
 interface Partner {
   name: string;
