@@ -1,4 +1,4 @@
-interface SvgProps extends React.SVGProps<SVGSVGElement> {
+export interface SvgProps extends React.SVGProps<SVGSVGElement> {
   viewBox?: string;
   className?: string;
   fill?: string;

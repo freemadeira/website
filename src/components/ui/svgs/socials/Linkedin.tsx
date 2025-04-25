@@ -1,7 +1,6 @@
-import type { SocialIconProps } from '.';
-import { Svg } from '../../atoms/';
+import { Svg, type SvgProps } from '@/components/ui/atoms';
 
-export const Linkedin: React.FC<SocialIconProps> = ({ className, ...props }) => {
+export const Linkedin: React.FC<SvgProps> = ({ className, ...props }) => {
   return (
     <Svg viewBox="0 0 12 12" className={className} {...props}>
       <path d="M2.72447 3.9032V12H0.152066V3.9032H2.72447Z" />
