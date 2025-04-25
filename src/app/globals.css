@@ -29,6 +29,14 @@
   --color-mountain-mist-950: #252527;
   /* Gray */
   --color-gray-500: #6b6d6f;
+
+  --animate-loop-scroll: loop-scroll 50s linear infinite;
+
+  @keyframes loop-scroll {
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 @utility no-scrollbar {
@@ -38,6 +46,10 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+@utility paused {
+  animation-play-state: paused;
 }
 
 :root {

@@ -1,5 +1,5 @@
 import { UpcomingEvents } from '@/components/events';
-import { About, Carousel, Contribute, Education, Merchants } from '@/components/home';
+import { About, Carousel, Contribute, Education, Merchants, Partners } from '@/components/home';
 import { Hero } from '@/components/home/Hero';
 import { Container } from '@/components/ui/atoms';
 import { PortalHands } from '@/components/ui/svgs';
@@ -15,6 +15,7 @@ export default function Home() {
       <Carousel />
       <About />
       <Merchants />
+      <Partners />
       <Contribute />
     </>
   );
