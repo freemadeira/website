@@ -2,9 +2,17 @@ export interface SvgProps extends React.SVGProps<SVGSVGElement> {
   viewBox?: string;
   className?: string;
   fill?: string;
+  title?: string;
 }
 
-export const Svg: React.FC<SvgProps> = ({ viewBox, fill, className, children, ...props }) => {
+export const Svg: React.FC<SvgProps> = ({
+  viewBox,
+  fill,
+  className,
+  title,
+  children,
+  ...props
+}) => {
   return (
     <svg
       viewBox={viewBox}
@@ -13,6 +21,7 @@ export const Svg: React.FC<SvgProps> = ({ viewBox, fill, className, children, ..
       fill={fill}
       {...props}
     >
+      {title && <title>{title}</title>}
       {children}
     </svg>
   );

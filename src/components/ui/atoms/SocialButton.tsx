@@ -92,17 +92,17 @@ const socialMedia: Record<Social, socialType> = {
   },
 };
 
-const href = (social: Social, username: string): string => {
-  return socialMedia[social].baseUrl + username;
-};
-
 export function SocialButton({
   style,
   social,
   username,
   ...props
 }: SocialButtonProps): React.ReactElement {
-  const Tag = socialMedia[social].icon;
+  const socialNetwork = socialMedia[social];
+  const SocialIcon = socialNetwork.icon;
+  const href = (social: Social, username: string): string => {
+    return socialNetwork.baseUrl + username;
+  };
 
   return (
     <IconButton
@@ -111,10 +111,10 @@ export function SocialButton({
       className={socialButtonVariants({ style })}
       target="_blank"
       rel="noopener noreferrer"
-      title={socialMedia[social].title}
+      title={socialNetwork.title}
       {...props}
     >
-      <Tag />
+      <SocialIcon />
     </IconButton>
   );
 }
