@@ -36,6 +36,7 @@ const partners: Partner[] = [
     name: 'Zaprite',
     href: 'https://zaprite.com/',
     logo: Zaprite,
+    width: 'w-32 sm:w-40',
   },
   {
     name: 'Crtpyosteel',
@@ -46,17 +47,19 @@ const partners: Partner[] = [
     name: '21 Energy',
     href: 'https://21energy.com/',
     logo: Energy21,
+    width: 'w-32 sm:w-40',
   },
   {
     name: 'Bitcoin Brabant',
     href: 'https://bitcoinbrabant.com/',
     logo: BitcoinBrabant,
+    width: 'w-36 sm:w-48',
   },
   {
     name: 'Vulcan21',
     href: 'https://vulcan21.com/',
     logo: Vulcan21,
-    width: 'w-16 sm:w-20',
+    width: 'w-14 sm:w-20',
   },
 ];
 
@@ -75,9 +78,11 @@ const PartnerLogos: React.FC<{ className?: string }> = ({ className }) => (
         target="_blank"
         rel="noopener noreferrer"
         className="flex-1 text-center"
+        aria-label={`Visit ${partner.name}`}
       >
         <partner.logo
           className={twMerge('w-44 fill-dark opacity-50 hover:opacity-100 sm:w-52', partner.width)}
+          title={partner.name}
         />
       </Link>
     ))}

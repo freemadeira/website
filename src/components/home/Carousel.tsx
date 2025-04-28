@@ -5,12 +5,12 @@ import { Button, CategoryTag, Container, Flex, Heading, IconButton } from '../ui
 
 export const Carousel: React.FC = () => {
   return (
-    <div className='h-screen w-full bg-[url(/img/madeira.jpg)] pt-14 pb-10 text-white sm:pt-16 sm:pb-14'>
+    <div className="h-screen w-full bg-[url(/images/madeira.jpg)] pt-14 pb-10 text-white sm:pt-16 sm:pb-14">
       {/* <Image src={madeiraJpg} alt="Madeira" className="object-cover" fill priority /> */}
       <Flex as={Container} direction="column" gap={8} className="h-full">
         <CategoryTag>Investments</CategoryTag>
 
-        <Flex direction="column" gap={6} className='w-full grow sm:w-3/5' justifyContent="center">
+        <Flex direction="column" gap={6} className="w-full grow sm:w-3/5" justifyContent="center">
           <Heading size="h4">
             With more than 100 businesses accepting Bitcoin and regular meetups, Madeira island has
             become a Bitcoin world reference.
@@ -21,7 +21,7 @@ export const Carousel: React.FC = () => {
           </Button>
         </Flex>
 
-        <Flex gap={3} justifyContent="start" className='opacity-0 sm:justify-center sm:gap-4'>
+        <Flex gap={3} justifyContent="start" className="opacity-0 sm:justify-center sm:gap-4">
           <IconButton fill="outlined" colour="white" className="border-[1.5px] opacity-50">
             <ArrowLeft className="size-7 sm:size-8" strokeWidth={1.5} />
           </IconButton>
