@@ -1,7 +1,9 @@
 import { Flex, Tag } from '@/components/ui/atoms';
 
+export type EventTag = string;
+
 type EventTagsProps = {
-  tags: string[];
+  tags: EventTag[];
 };
 
 export function EventTags({ tags }: EventTagsProps): React.ReactElement {

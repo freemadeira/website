@@ -1,14 +1,10 @@
 import { Flex, Heading, Text } from '@/components/ui/atoms';
 import { EventTags } from './EventTags';
 import Image from 'next/image';
+import type { Event } from './UpcomingEvents';
 
 type EventCardProps = {
-  event: {
-    date: string;
-    title: string;
-    description: string;
-    tags: string[];
-  };
+  event: Event;
 };
 
 export function EventCard({ event }: EventCardProps): React.ReactElement {
@@ -19,7 +15,7 @@ export function EventCard({ event }: EventCardProps): React.ReactElement {
       className="w-[70vw] flex-1 border-dark border-b pb-6 sm:w-auto"
     >
       <Image
-        src="/test-photo.jpg"
+        src={event.imgSrc || '/images/events/placeholder.png'}
         alt="Event"
         width={6240}
         height={4160}
@@ -36,7 +32,7 @@ export function EventCard({ event }: EventCardProps): React.ReactElement {
         <p className="grow">{event.description}</p>
       </Flex>
 
-      <EventTags tags={['Online', 'Workshop']} />
+      <EventTags tags={event.tags} />
     </Flex>
   );
 }
