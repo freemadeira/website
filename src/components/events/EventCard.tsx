@@ -32,7 +32,7 @@ export function EventCard({ event }: EventCardProps): React.ReactElement {
 
         {event.link ? <EventLink href={event.link}>{eventTitle}</EventLink> : eventTitle}
 
-        <p className="grow">{event.description}</p>
+        <Text className="grow">{event.description}</Text>
       </Flex>
 
       <EventTags tags={event.tags} />
