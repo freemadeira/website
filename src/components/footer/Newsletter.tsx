@@ -16,7 +16,13 @@ export function Newsletter(): React.ReactElement {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    await axios.post('/api/mailerlite', { email });
+    if (!email) {
+      return;
+    }
+
+    const language = navigator.language;
+
+    await axios.post('/mailerlite', { email, language });
     setSubmitted(true);
 
     setTimeout(() => {
