@@ -22,11 +22,11 @@ export const Carousel: React.FC = () => {
         </Flex>
 
         <Flex gap={3} justifyContent="start" className="opacity-0 sm:justify-center sm:gap-4">
-          <IconButton fill="outlined" colour="white" className="border-[1.5px] opacity-50">
+          <IconButton colour="white" className="border-[1.5px] opacity-50">
             <ArrowLeft className="size-7 sm:size-8" strokeWidth={1.5} />
           </IconButton>
 
-          <IconButton fill="outlined" colour="white" className="border-[1.5px]">
+          <IconButton colour="white" className="border-[1.5px]">
             <ArrowRight className="size-7 sm:size-8" strokeWidth={1.5} />
           </IconButton>
         </Flex>

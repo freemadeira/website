@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 export const buttonVariants = tv({
   base: twJoin(
     'w-fit inline-flex cursor-pointer outline-none justify-center focus-visible:outline-primary-700',
-    'rounded-full py-3 px-5.5 transition duration-75',
+    'rounded-full py-3 px-5.5 transition duration-75 hover:bg-dark hover:text-white',
     'disabled:opacity-30 disabled:cursor-not-allowed',
   ),
   variants: {
@@ -16,11 +16,9 @@ export const buttonVariants = tv({
       false: 'active:transform active:scale-95',
     },
     fill: {
-      filled: 'bg-primary-400 text-dark hover:bg-primary-500/90 active:bg-primary-500/80',
+      filled: 'bg-primary-400 text-dark',
       outlined: twJoin(
-        'border border-dark text-dark',
-        'hover:border-dark hover:bg-dark hover:text-white',
-        'active:border-dark/85 active:bg-dark/90',
+        'border border-dark text-dark fill-dark hover:bg-dark hover:text-white hover:fill-white',
       ),
       ghost: twJoin(
         'text-primary-700',

@@ -17,12 +17,7 @@ export const Socials = (): React.ReactElement => {
   return (
     <Grid cols={4} gap={4}>
       {socials.map((social) => (
-        <SocialButton
-          key={social}
-          style="outlined"
-          social={social}
-          username={freeMadeiraSocials[social]}
-        />
+        <SocialButton key={social} social={social} username={freeMadeiraSocials[social]} />
       ))}
     </Grid>
   );

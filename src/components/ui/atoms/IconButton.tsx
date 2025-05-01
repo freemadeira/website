@@ -12,7 +12,7 @@ interface IconButtonProps
 
 export function IconButton({ children, className, ...props }: IconButtonProps): React.ReactElement {
   return (
-    <Button className={iconButtonVariants({ ...props, className })} {...props}>
+    <Button className={iconButtonVariants({ ...props, className })} fill="outlined" {...props}>
       {children}
     </Button>
   );

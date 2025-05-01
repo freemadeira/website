@@ -17,13 +17,7 @@ export function EventCard({ event }: EventCardProps): React.ReactElement {
       gap={5}
       className="w-[70vw] flex-1 border-dark border-b pb-6 sm:w-auto"
     >
-      {event.link ? (
-        <Link href={event.link} target="_blank" rel="noopener noreferrer">
-          {eventImage}
-        </Link>
-      ) : (
-        eventImage
-      )}
+      {event.link ? <EventLink href={event.link}>{eventImage}</EventLink> : eventImage}
 
       <Flex direction="column" gap={3} className="grow">
         <Text size="sm" className="text-mountain-mist-400 uppercase leading-4 tracking-[4%]">
