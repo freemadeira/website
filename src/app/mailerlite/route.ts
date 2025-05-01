@@ -6,7 +6,7 @@ import {
 import axios, { AxiosError } from 'axios';
 import { type NextRequest, NextResponse } from 'next/server';
 
-export async function POST(request: NextRequest, res: NextResponse) {
+export async function POST(request: NextRequest) {
   const { email, language } = await request.json();
   const languageGroupId = language.startsWith('pt')
     ? MAILERLITE_PORTUGUESE_GROUP_ID
@@ -33,7 +33,6 @@ export async function POST(request: NextRequest, res: NextResponse) {
     return NextResponse.json(data, { status: 200 });
   } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
-      console.error('Error:', error.response?.data);
       return NextResponse.json(
         { message: error.response?.statusText || 'Internal Server Error' },
         { status: error.response?.status || 500 },
