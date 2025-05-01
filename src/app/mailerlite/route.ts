@@ -1,4 +1,5 @@
 import {
+  DEV_ENV,
   MAILERLITE_ENGLISH_GROUP_ID,
   MAILERLITE_PORTUGUESE_GROUP_ID,
   MAILERLITE_WEBSITE_GROUP_ID,
@@ -28,9 +29,18 @@ export async function POST(request: NextRequest) {
       },
       { headers },
     );
-    const data = response.data;
 
-    return NextResponse.json(data, { status: 200 });
+    const responseData = response.data;
+
+    // A malicious actor may submit an email that is already subscribed to the newsletter to get
+    // additional data. To prevent this, we filter the response that is sent to the client.
+    const filteredResponse = {
+      success: true,
+      message: 'Subscriber added successfully.',
+      email: responseData.data.email,
+    };
+
+    return NextResponse.json(DEV_ENV ? responseData : filteredResponse, { status: 200 });
   } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
       return NextResponse.json(
@@ -38,6 +48,7 @@ export async function POST(request: NextRequest) {
         { status: error.response?.status || 500 },
       );
     }
+
     return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
   }
 }

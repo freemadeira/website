@@ -27,8 +27,8 @@ export function Newsletter(): React.ReactElement {
 
     setTimeout(() => {
       setSubmitted(false);
-      setEmail(null);
-    }, 4000);
+      setEmail('');
+    }, 2000);
   };
 
   return (
@@ -43,6 +43,7 @@ export function Newsletter(): React.ReactElement {
           aria-label="Email address"
           className="grow rounded-full bg-white px-6 py-2.5 text-dark text-sm placeholder:text-dark/40 focus:outline-none focus:ring-0"
           onChange={handleChange}
+          value={email || ''}
         />
         <IconButton
           onClick={handleSubmit}
