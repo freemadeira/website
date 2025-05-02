@@ -12,6 +12,7 @@ export const EventImage: React.FC<EventImageProps> = ({ imgSrc }) => (
       fill
       alt="Event"
       className="h-48 w-full object-cover"
+      sizes="(max-width: 640px) 70vw, 25vw" // TODO: Update this when breakpoints are corrected
     />
   </div>
 );

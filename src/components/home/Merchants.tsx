@@ -28,7 +28,13 @@ export function Merchants(): React.ReactElement {
         </Flex>
 
         <div className="relative h-64 w-full sm:h-auto sm:w-1/2">
-          <Image src={merchantMapLight} alt="Merchant Map" className="object-cover" fill />
+          <Image
+            src={merchantMapLight}
+            alt="Merchant Map"
+            className="object-cover"
+            fill
+            sizes="(max-width: 640px) 100vw, 50vw" // TODO: Update this when breakpoints are corrected
+          />
         </div>
       </Flex>
     </Container>
