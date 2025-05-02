@@ -20,6 +20,7 @@ export const buttonVariants = tv({
       outlined: twJoin(
         'border border-dark text-dark fill-dark hover:bg-dark hover:text-white hover:fill-white',
       ),
+      // TODO: Review this variant
       ghost: twJoin(
         'text-primary-700',
         'hover:text-foreground hover:bg-gray-100',

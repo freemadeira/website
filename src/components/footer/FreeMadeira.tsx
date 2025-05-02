@@ -28,6 +28,7 @@ export function FreeMadeira(): React.ReactElement {
   return (
     <Flex direction="column" gap={3} alignItems="start" className="border-y-[1.5px] py-8">
       {/* This svg is the full 'FREE MADEIRA' line to be shown on desktop */}
+      {/* TODO: Use the Svg component */}
       <svg
         viewBox="0 0 1410.75 128.55"
         className="hidden sm:block"
