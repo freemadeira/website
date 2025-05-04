@@ -42,6 +42,9 @@ export const buttonVariants = tv({
     underlined: {
       true: 'underline underline-offset-2',
     },
+    groupHover: {
+      true: 'group-hover:bg-dark group-hover:text-white group-active:transform group-active:scale-95',
+    },
     colour: {
       white: 'border-white text-white',
       black: '',
@@ -72,6 +75,7 @@ export function Button<T extends React.ElementType = 'button'>({
   discrete,
   textColor,
   underlined,
+  groupHover,
   ...props
 }: ButtonProps<T> & Omit<React.ComponentProps<T>, keyof ButtonProps<T>>): React.ReactElement {
   const Component = as || 'button';
@@ -93,6 +97,7 @@ export function Button<T extends React.ElementType = 'button'>({
         noAnimation,
         textColor,
         underlined,
+        groupHover,
         items,
         className,
       })}
