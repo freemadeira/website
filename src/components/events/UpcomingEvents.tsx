@@ -12,13 +12,13 @@ export interface Event {
 
 const events: Event[] = [
   {
-    date: 'May 7, 2025, 18:30–20:30',
-    title: 'Monthly FREE Madeira Bitcoin Meetup',
+    date: 'May 22, 2025, 13:00',
+    title: 'Bitcoin Pizza Day',
     description:
-      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up',
-    tags: ['Meetup', 'In-person'],
-    imgSrc: '/images/events/meetup.jpg',
-    link: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/306791287/',
+      "Join us for lunch at Xarambinha restaurant in Funchal and pay your pizza with bitcoin. In partnership with CoinCorner, we'll be giving away the Bolt Card as an exclusive souvenir to those who come celebrate with us.",
+    tags: ['Pizza Day', 'In-person'],
+    imgSrc: '/images/events/xarambinha.jpg',
+    link: 'https://x.com/FREEMadeiraOrg/status/1920050507743113251',
   },
   {
     date: 'June 4, 2025, 18:30–20:30',
