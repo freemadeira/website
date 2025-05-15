@@ -1,0 +1,10 @@
+{
+  "callback": "https://blink.sv:443/lnurlp/freemadeira/callback",
+  "minSendable": 1000,
+  "maxSendable": 100000000000,
+  "metadata": "[[\"text/plain\",\"Payment to FREE Madeira\"],[\"text/identifier\",\"info@freemadeira.org\"]]",
+  "commentAllowed": 0,
+  "tag": "payRequest",
+  "allowsNostr": true,
+  "nostrPubkey": "cad00c48a8c689d32d7c770b90221124d6a68bbc6b1d31c2039a84d5ab90cf7b"
+}
