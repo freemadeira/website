@@ -9,7 +9,7 @@ import { DownloadCard } from './DownloadCard';
 const sentences = [
   'We promote local Bitcoin Education',
   'We support Bitcoin adoption in Portugal, particularly in the Madeira Archipelago',
-  'We assist the local community (both individuals and companies) during this monetary transition',
+  'We assist the local community, both individuals and companies, during this monetary transition',
   'We position the Madeira Archipelago as a technology leader, attracting local and international investment',
   'We support energy sustainability by contributing to local mining projects based on sustainable energy',
 ];
@@ -27,8 +27,8 @@ export function WhoWeAre(): React.ReactElement {
       <Flex gap={8} direction="column" className="mb-4 lg:mb-7 lg:flex-row">
         <Flex direction="column" gap={8} justifyContent="between" className="flex-3/5">
           <Heading size="h4" className="dark:text-white">
-            Founded in 2022, FREE Madeira is a non-profit organisation focused on education and
-            Bitcoin adoption in the Madeira Archipelago, Portugal
+            FREE stands for Fórum Regional para a Educação Económica — Regional Forum for Economic
+            Education
           </Heading>
 
           <Button as={Link} href="#">
@@ -38,11 +38,6 @@ export function WhoWeAre(): React.ReactElement {
 
         <Flex direction="column" gap={8} className="flex-2/5 lg:gap-18">
           <SentenceList sentences={sentences} />
-
-          <Text className="text-mountain-mist-400">
-            FREE stands for Regional Forum for Economic Education (Fórum Regional para a Educação
-            Económica).
-          </Text>
         </Flex>
       </Flex>
 
