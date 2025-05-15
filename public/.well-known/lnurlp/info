@@ -2,7 +2,7 @@
   "callback": "https://blink.sv:443/lnurlp/freemadeira/callback",
   "minSendable": 1000,
   "maxSendable": 100000000000,
-  "metadata": "[[\"text/plain\",\"Donation to FREE Madeira\"],[\"text/identifier\",\"donate@freemadeira.org\"]]",
+  "metadata": "[[\"text/plain\",\"Payment to FREE Madeira\"],[\"text/identifier\",\"info@freemadeira.org\"]]",
   "commentAllowed": 0,
   "tag": "payRequest",
   "allowsNostr": true,
