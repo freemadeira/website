@@ -1,10 +1,11 @@
+import type { Url } from '@/utils/types';
 import { ArrowDownToLine } from 'lucide-react';
 import Link from 'next/link';
 import { Flex, Heading, IconButton, Svg, type SvgProps } from '../ui/atoms';
 
 interface Props {
   title: string;
-  href: string;
+  href: Url;
   illustration: React.FC<SvgProps>;
 }
 
