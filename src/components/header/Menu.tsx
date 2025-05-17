@@ -29,10 +29,10 @@ const menuItems: MenuItem[] = [
 ];
 
 const buttonItems = [
-  {
-    name: 'Learn',
-    href: 'https://shop.freemadeira.org',
-  },
+  // {
+  //   name: 'Learn',
+  //   href: 'https://shop.freemadeira.org',
+  // },
   {
     name: 'Shop',
     href: 'https://shop.freemadeira.org',
