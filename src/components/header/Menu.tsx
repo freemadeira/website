@@ -68,15 +68,15 @@ export function Menu(): React.ReactElement {
         ))}
 
         <Flex gap={4}>
-          <Button
-            as={Link}
-            href="https://shop.freemadeira.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-disabled
-          >
-            Learn
-          </Button>
+          {/* <Button */}
+          {/*   as={Link} */}
+          {/*   href="https://shop.freemadeira.org" */}
+          {/*   target="_blank" */}
+          {/*   rel="noopener noreferrer" */}
+          {/*   aria-disabled */}
+          {/* > */}
+          {/*   Learn */}
+          {/* </Button> */}
 
           <Button
             as={Link}
