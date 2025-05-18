@@ -52,7 +52,9 @@ const flexVariants = tv({
   },
 });
 
-interface FlexProps<T> extends VariantProps<typeof flexVariants>, React.ComponentProps<'div'> {
+export interface FlexProps<T>
+  extends VariantProps<typeof flexVariants>,
+    React.ComponentProps<'div'> {
   as?: T;
 }
 

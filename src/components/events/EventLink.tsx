@@ -1,8 +1,9 @@
+import type { Url } from '@/utils/types';
 import Link from 'next/link';
 import type { Event } from './UpcomingEvents';
 
 interface EventLinkProps {
-  href: string;
+  href: Url;
   children: React.ReactNode;
 }
 

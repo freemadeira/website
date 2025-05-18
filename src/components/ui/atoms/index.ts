@@ -1,5 +1,6 @@
 export * from './Button';
 export * from './CategoryTag';
+export * from './ColourSection';
 export * from './Container';
 export * from './Flex';
 export * from './Grid';
@@ -9,3 +10,4 @@ export * from './SocialButton';
 export * from './Svg';
 export * from './Tag';
 export * from './Text';
+export * from './TextBlock';

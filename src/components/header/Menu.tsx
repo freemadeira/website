@@ -1,5 +1,6 @@
 'use client';
 
+import type { Url } from '@/utils/types';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { MenuIcon, XIcon } from 'lucide-react';
 import Link from 'next/link';
@@ -10,7 +11,7 @@ import { LogoHorizontal } from '../ui/svgs/LogoHorizontal';
 
 interface MenuItem {
   name: string;
-  href: string;
+  href: Url;
 }
 
 const menuItems: MenuItem[] = [
