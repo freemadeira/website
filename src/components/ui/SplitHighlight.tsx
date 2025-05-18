@@ -25,8 +25,14 @@ export const SplitHighlight: React.FC<Props> = ({
   const externalUrl = isExternalUrl(buttonLink);
 
   return (
-    <Container tight direction="row" gap={12} className="mt-32 mb-28" alignItems="center">
-      <Flex direction="column" gap={6} className="w-[53%]">
+    <Container
+      tight
+      direction="column"
+      gap={12}
+      className="mt-32 mb-28 md:flex-row"
+      alignItems="center"
+    >
+      <Flex direction="column" gap={6} className="md:w-[53%]">
         <Heading size="h4">{title}</Heading>
         <Heading size="h6">{children}</Heading>
 
@@ -43,7 +49,7 @@ export const SplitHighlight: React.FC<Props> = ({
         )}
       </Flex>
 
-      <Illustration className="w-[47%]" />
+      <Illustration className="md:w-[47%]" />
     </Container>
   );
 };

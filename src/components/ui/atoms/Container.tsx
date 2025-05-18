@@ -1,5 +1,5 @@
 import { type VariantProps, tv } from 'tailwind-variants';
-import { Flex, FlexProps } from './Flex';
+import { Flex, type FlexProps } from './Flex';
 
 // TODO: Rethink this component. It should stop expanding beyond the width of a 15" screen
 const containerVariants = tv({
@@ -10,7 +10,7 @@ const containerVariants = tv({
       false: 'px-4 sm:px-12',
     },
     tight: {
-      true: 'max-w-7xl mx-auto',
+      true: 'md:max-w-7xl md:mx-auto',
       false: '',
     },
     direction: {
