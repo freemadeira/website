@@ -20,7 +20,7 @@ export function WhoWeAre(): React.ReactElement {
       as={Container}
       direction="column"
       gap={12}
-      className="bg-bridal-50 pt-18 pb-20 sm:px-42 lg:gap-12 dark:bg-mountain-mist-950"
+      className="my-24 bg-bridal-50 pt-18 pb-20 sm:px-42 lg:gap-12 dark:bg-mountain-mist-950"
     >
       <CategoryTag>Who are we</CategoryTag>
 

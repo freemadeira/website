@@ -10,3 +10,4 @@ export * from './SocialButton';
 export * from './Svg';
 export * from './Tag';
 export * from './Text';
+export * from './TextBlock';

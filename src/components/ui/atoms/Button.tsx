@@ -62,7 +62,6 @@ export interface ButtonProps<T extends React.ElementType>
   as?: T;
   children?: React.ReactNode;
   inputRef?: React.Ref<HTMLButtonElement>;
-  discrete?: React.ReactNode;
 }
 
 export function Button<T extends React.ElementType = 'button'>({
@@ -72,22 +71,12 @@ export function Button<T extends React.ElementType = 'button'>({
   className,
   items,
   noAnimation,
-  discrete,
   textColor,
   underlined,
   groupHover,
   ...props
 }: ButtonProps<T> & Omit<React.ComponentProps<T>, keyof ButtonProps<T>>): React.ReactElement {
   const Component = as || 'button';
-
-  const content = discrete ? (
-    <Flex direction="row" gap={1.5}>
-      {children}
-      <ArrowRight />
-    </Flex>
-  ) : (
-    children
-  );
 
   return (
     <Component
@@ -103,7 +92,7 @@ export function Button<T extends React.ElementType = 'button'>({
       })}
       {...props}
     >
-      {content}
+      {children}
     </Component>
   );
 }

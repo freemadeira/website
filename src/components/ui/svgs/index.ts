@@ -2,6 +2,8 @@ export * from './Coin';
 export * from './FingerTouch';
 export * from './HandCoin';
 export * from './LogoHorizontal';
+export * from './NamasteB';
 export * from './Newspaper';
 export * from './OrangeFile';
+export * from './Planet';
 export * from './PortalHands';
