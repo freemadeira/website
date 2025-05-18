@@ -1,3 +1,4 @@
+import type { Url } from '@/utils/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { twJoin, twMerge } from 'tailwind-merge';
@@ -15,7 +16,7 @@ import {
 
 interface Partner {
   name: string;
-  href: string;
+  href: Url;
   logo: React.FC<SvgProps>;
   width?: string;
 }
