@@ -21,7 +21,7 @@ export default function About() {
       <SplitHighlight
         title="Bitcoin Business Hub"
         image={NamasteB}
-        // buttonLink='#' TODO: Add link
+        // buttonLink="#" TODO: Add link
         buttonText="Know more"
       >
         A Bitcoin what? Yes, a Bitcoin Business Hub. We will have a pub, an all-Bitcoin shop, a

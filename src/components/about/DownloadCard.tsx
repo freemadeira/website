@@ -1,15 +1,14 @@
 import type { Url } from '@/utils/types';
 import { ArrowDownToLine } from 'lucide-react';
-import Link from 'next/link';
-import { Flex, Heading, IconButton, Svg, type SvgProps } from '../ui/atoms';
+import { Flex, Heading, IconButton, Link, Svg, type SvgProps } from '../ui/atoms';
 
 interface Props {
   title: string;
   href: Url;
-  illustration: React.FC<SvgProps>;
+  image: React.FC<SvgProps>;
 }
 
-export const DownloadCard: React.FC<Props> = ({ title, href, illustration: Illustration }) => {
+export const DownloadCard: React.FC<Props> = ({ title, href, image: Illustration }) => {
   return (
     <Link
       href={href}

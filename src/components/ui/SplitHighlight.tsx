@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import { Button, Container, Flex, Heading } from './atoms';
+import { Button, Container, Flex, Heading, Link } from './atoms';
 import type { Planet } from './svgs';
-import { isExternalUrl } from '@/utils/functions';
+import { externalUrl } from '@/utils/functions';
 
 type Props = {
   title: string;
@@ -22,7 +21,7 @@ export const SplitHighlight: React.FC<Props> = ({
   reverse = false, // TODO: Add logic to reverse the order of the image and text
   children,
 }) => {
-  const externalUrl = isExternalUrl(buttonLink);
+  const isExternalUrl = externalUrl(buttonLink as string);
 
   return (
     <Container
@@ -37,13 +36,7 @@ export const SplitHighlight: React.FC<Props> = ({
         <Heading size="h6">{children}</Heading>
 
         {buttonText && buttonLink && (
-          <Button
-            as={Link}
-            href={buttonLink}
-            target={externalUrl ? '_blank' : undefined}
-            rel={externalUrl ? 'noopener noreferrer' : undefined}
-            className="mt-5"
-          >
+          <Button as={Link} href={buttonLink} className="mt-5">
             {buttonText}
           </Button>
         )}

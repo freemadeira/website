@@ -19,12 +19,15 @@ export function Merchants(): React.ReactElement {
             want to start receiving payments in bitcoin? We can assist you every step of the way.
           </Text>
 
+          {/* TODO: Extract to new component */}
           <Link
             href="mailto:info@freemadeira.org"
-            className="underline decoration-1 underline-offset-7 hover:decoration-primary-500"
+            className="underline decoration-1 underline-offset-7 hover:text-dark"
           >
             Send us an email
           </Link>
+
+          {/* TODO: Add discreet button to merchants directory when available */}
         </Flex>
 
         <div className="relative h-64 w-full sm:h-auto sm:w-1/2">

@@ -45,13 +45,13 @@ export function WhoWeAre(): React.ReactElement {
         <DownloadCard
           title="FREE Madeira Whitepaper"
           href="#"
-          illustration={() => <Newspaper className="absolute right-5 bottom-0 h-11/12" />}
+          image={() => <Newspaper className="absolute right-5 bottom-0 h-11/12" />}
         />
 
         <DownloadCard
           title="Media kit for all things FREE"
           href="#"
-          illustration={() => <OrangeFile className="absolute right-12 bottom-0 h-full" />}
+          image={() => <OrangeFile className="absolute right-12 bottom-0 h-full" />}
         />
       </Flex>
     </Flex>

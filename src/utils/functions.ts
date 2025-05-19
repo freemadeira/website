@@ -1,6 +1,7 @@
 import { CONFIG } from './constants';
+import type { Url } from './types';
 
-export function isExternalUrl(url: string | undefined, base = CONFIG.BASE_URL): boolean {
+export function externalUrl(url: string, base = CONFIG.BASE_URL): boolean {
   if (!url) return false;
 
   const parsedUrl = new URL(url, base);
