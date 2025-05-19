@@ -31,9 +31,10 @@ export const EducationGoals: React.FC = () => {
 
         <SentenceList sentences={sentences} />
 
-        <Button as={Link} href="#">
-          Education
-        </Button>
+        {/* TODO: Add link to education page */}
+        {/* <Button as={Link} href="#"> */}
+        {/*   Education */}
+        {/* </Button> */}
       </Flex>
     </ColourSection>
   );

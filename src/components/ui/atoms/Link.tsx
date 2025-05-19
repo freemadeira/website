@@ -4,11 +4,11 @@ import NextLink from 'next/link';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 const linkVariants = tv({
-  base: '',
+  base: 'w-fit decoration-1 underline-offset-7',
   variants: {
     underline: {
       true: 'underline hover:text-dark dark:hover:text-primary-400',
-      false: 'underline-offset-6 hover:underline',
+      false: 'hover:underline',
     },
     noDecoration: {
       true: 'hover:no-underline',

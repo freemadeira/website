@@ -24,7 +24,7 @@ export function Education(): React.ReactElement {
             content available to everyone.
           </p>
 
-          {/* TODO: Add button */}
+          {/* TODO: Add button link to Education page */}
         </Flex>
       </Flex>
     </Container>

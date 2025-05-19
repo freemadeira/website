@@ -1,4 +1,4 @@
-import { Button, Flex } from './atoms';
+import { Button, Flex, Link } from './atoms';
 
 interface Props {
   className?: string;
@@ -7,16 +7,11 @@ interface Props {
 export const ContributeButtons: React.FC<Props> = ({ className }) => {
   return (
     <Flex gap={4} className={className}>
-      <Button
-        as="a"
-        href="https://geyser.fund/project/freemadeira"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Button as={Link} href="https://geyser.fund/project/freemadeira">
         Donations
       </Button>
 
-      <Button as="a" href="mailto:info@freemadeira.org" fill="outlined">
+      <Button as={Link} href="mailto:info@freemadeira.org" fill="outlined">
         Partnerships
       </Button>
     </Flex>
