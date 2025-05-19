@@ -10,7 +10,8 @@ export const SentenceList: React.FC<Props> = ({ sentences }) => {
     <Flex direction="column">
       {sentences.map((sentence, index) => (
         <Text
-          key={sentence}
+          // biome-ignore lint/suspicious/noArrayIndexKey: Using index as key is acceptable here since the list is static and does not change.
+          key={`${sentence}-${index}`}
           className={twJoin(
             'border-mountain-mist-200 py-3.5',
             index === 0 && 'pt-0', // remove top padding for the first item
