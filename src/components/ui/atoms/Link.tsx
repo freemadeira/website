@@ -1,7 +1,9 @@
 import { externalUrl } from '@/utils/functions';
-import type { hrefTarget, Url } from '@/utils/types';
+import type { Url, hrefTarget } from '@/utils/types';
 import NextLink from 'next/link';
-import { tv, type VariantProps } from 'tailwind-variants';
+import { isValidElement } from 'react';
+import { type VariantProps, tv } from 'tailwind-variants';
+import { Text } from '.';
 
 const linkVariants = tv({
   base: 'w-fit decoration-1 underline-offset-7',
@@ -47,15 +49,17 @@ export const Link: React.FC<LinkProps> = ({
   ...props
 }) => {
   const isExternalUrl = externalUrl(typeof href === 'string' ? href : href.href); // If href is a UrlObject, use its href property
+  const childrenIsText =
+    typeof children === 'string' || (isValidElement(children) && children.type === Text); // isValidElement check to ensure children is a React element and avoid runtime errors
 
   return (
     <NextLink
       href={href}
-      target={target || isExternalUrl ? '_blank' : undefined}
+      target={target || (isExternalUrl ? '_blank' : undefined)}
       rel={target === '_blank' || isExternalUrl ? 'noopener noreferrer' : undefined}
       className={linkVariants({
         underline,
-        noDecoration: typeof children !== 'string', // Only possibly decorate if children is a string
+        noDecoration: !childrenIsText, // Only possibly decorate if children is a string
         size,
         className,
       })}
