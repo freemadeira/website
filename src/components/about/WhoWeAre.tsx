@@ -31,9 +31,10 @@ export function WhoWeAre(): React.ReactElement {
             Education
           </Heading>
 
-          <Button as={Link} href="#">
-            Our Mission
-          </Button>
+          {/* TODO: Add button */}
+          {/* <Button as={Link} href="#"> */}
+          {/*   Our Mission */}
+          {/* </Button> */}
         </Flex>
 
         <Flex direction="column" gap={8} className="flex-2/5 lg:gap-18">
@@ -42,11 +43,12 @@ export function WhoWeAre(): React.ReactElement {
       </Flex>
 
       <Flex direction="column" gap={5} className="w-full lg:flex-row lg:gap-8">
-        <DownloadCard
-          title="FREE Madeira Whitepaper"
-          href="#"
-          image={() => <Newspaper className="absolute right-5 bottom-0 h-11/12" />}
-        />
+        {/* TODO: Add card with FREE Whitepaper */}
+        {/* <DownloadCard */}
+        {/*   title="FREE Madeira Whitepaper" */}
+        {/*   href="#" */}
+        {/*   image={() => <Newspaper className="absolute right-5 bottom-0 h-11/12" />} */}
+        {/* /> */}
 
         <DownloadCard
           title="Media kit for all things FREE"
