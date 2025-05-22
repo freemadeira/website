@@ -4,6 +4,7 @@ import {
   MAILERLITE_PORTUGUESE_GROUP_ID,
   MAILERLITE_WEBSITE_GROUP_ID,
 } from '@/utils/constants';
+import { secureHex } from '@/utils/functions';
 import axios, { AxiosError } from 'axios';
 import { type NextRequest, NextResponse } from 'next/server';
 
@@ -27,7 +28,7 @@ export async function POST(request: NextRequest) {
         groups: [MAILERLITE_WEBSITE_GROUP_ID, languageGroupId],
         fields: {
           language,
-          uid: crypto.randomUUID(), // Generate a unique ID, which will be used to authenticate the subscriber in the preferences page.
+          token: secureHex(), // The token will be used to authenticate the subscriber in the preferences page.
         },
       },
       { headers },
