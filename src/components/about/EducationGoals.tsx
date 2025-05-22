@@ -14,12 +14,15 @@ const sentences = [
 export const EducationGoals: React.FC = () => {
   return (
     <ColourSection gap={12} stackOnMobile>
-      <Image
-        src={educationGoals}
-        alt="Education Goals"
-        sizes="(max-width: 640px) 100vw, 50vw"
-        className="w-full sm:w-1/2 sm:gap-9"
-      />
+      <div className="relative h-[95vw] w-full md:h-[550px] md:w-1/2">
+        <Image
+          src={educationGoals}
+          alt="Education Goals"
+          sizes="(max-width: 640px) 100vw, 50vw"
+          className="object-cover"
+          fill
+        />
+      </div>
 
       <Flex
         direction="column"
