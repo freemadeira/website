@@ -22,7 +22,7 @@ export function Newsletter(): React.ReactElement {
 
     const language = navigator.language;
 
-    await axios.post('/mailerlite', { email, language });
+    await axios.post('/newsletter/subscribe', { email, language });
     setSubmitted(true);
 
     setTimeout(() => {
