@@ -22,7 +22,7 @@ const events: Event[] = [
   },
   {
     date: 'June 21, 2025, 10:00',
-    title: 'Workshop — Introdução ao Bitcoin',
+    title: 'Introdução ao Bitcoin',
     description:
       'This introductory workshop explores how money evolved into fiat currencies, what the problems are with it and how Bitcoin can be the solution. By the end of it, you will also be able to use bitcoin for everyday savings and payments. This workshop is carried out in Portuguese.',
     tags: ['Workshop', 'Online', 'Education'],
