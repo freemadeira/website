@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
     const response = await axios.get(`https://connect.mailerlite.com/api/subscribers/${email}`, {
       headers: mailerliteHeaders,
     });
-    const subscriberData = response.data.data; // The subscriberData property inside the response subscriberData contains the full subscriber details
+    const subscriberData = response.data.data; // The data property inside the response data contains the full subscriber details
 
     // Check if the token is valid
     if (subscriberData.fields.token !== token) {
