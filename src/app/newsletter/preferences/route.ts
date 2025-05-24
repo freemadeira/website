@@ -1,11 +1,6 @@
 import { DEV_ENV } from '@/utils/constants';
 import { secureHex } from '@/utils/functions';
-import {
-  LANGUAGE,
-  type Language,
-  languagesFromGroupIds,
-  mailerliteHeaders,
-} from '@/utils/mailerlite';
+import { type Language, languagesFromGroupIds, mailerliteHeaders } from '@/utils/mailerlite';
 import axios, { AxiosError } from 'axios';
 import { type NextRequest, NextResponse } from 'next/server';
 
