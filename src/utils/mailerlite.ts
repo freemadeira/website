@@ -19,6 +19,7 @@ const LANGUAGE_GROUPS = [
 export type Language = (typeof LANGUAGE_GROUPS)[number]['language'];
 export type LanguageGroupId = (typeof LANGUAGE_GROUPS)[number]['groupId'];
 
+// These functions convert an array of language group IDs to an array of languages and vice versa
 export const languagesFromGroupIds = (groupIds: LanguageGroupId[]): Language[] =>
   groupIds
     .map((id) => LANGUAGE_GROUPS.find((group) => group.groupId === id)?.language)
