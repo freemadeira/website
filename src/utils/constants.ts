@@ -1,6 +1,9 @@
 import type { Social } from '@/components/ui/atoms/SocialButton';
 
+const prod = { BASE_URL: 'https://freemadeira.org' };
+const dev = { BASE_URL: 'http://localhost:3000' };
 export const DEV_ENV = process.env.NODE_ENV === 'development';
+export const CONFIG = DEV_ENV ? dev : prod;
 
 // These IDs are used to add subscribers to groups on MailerLite, based on subscription source and preferred language
 export const MAILERLITE_WEBSITE_GROUP_ID = '153157474249082044'; // Group ID for website subscribers
