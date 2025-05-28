@@ -15,10 +15,10 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  // {
-  //   name: 'About',
-  //   href: '/about',
-  // },
+  {
+    name: 'About',
+    href: '/about',
+  },
   // {
   //   name: 'Madeira',
   //   href: '#',
