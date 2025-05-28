@@ -42,7 +42,7 @@ const events: Event[] = [
     date: 'September–October (schedule TBC), 2025',
     title: 'Diploma Bitcoin',
     description:
-      '10-week course with 10 recorded classes and 10 weekly live Q&A sessions where students will be able to review the class content, engage in discussions and get questions ansered. This course is a deeper introduction to Bitcoin and takes the student from zero to understanding what Bitcoin is and how it works, as well as learning to use it.',
+      '10-week course with recorded classes and weekly live Q&A sessions. This course is a deeper introduction to Bitcoin and takes the student from zero to understanding what Bitcoin is and how it works, as well as learning to use it.',
     tags: ['Course', 'Online'],
     imgSrc: '/images/events/diploma.png',
   },
@@ -58,7 +58,7 @@ const events: Event[] = [
 
 export function UpcomingEvents(): React.ReactElement {
   return (
-    <Container className="mx-0 gap-7" outer>
+    <Container className='mx-0 mb-16 gap-7' outer>
       <Heading size="h5" className="mx-4 sm:mx-0">
         Upcoming Events
       </Heading>

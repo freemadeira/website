@@ -1,5 +1,4 @@
 import { tv, type VariantProps } from 'tailwind-variants';
-
 import { Button } from './Button';
 
 const iconButtonVariants = tv({
@@ -12,7 +11,7 @@ interface IconButtonProps
 
 export function IconButton({ children, className, ...props }: IconButtonProps): React.ReactElement {
   return (
-    <Button className={iconButtonVariants({ ...props, className })} fill="outlined" {...props}>
+    <Button className={iconButtonVariants({ className })} fill="outlined" {...props}>
       {children}
     </Button>
   );

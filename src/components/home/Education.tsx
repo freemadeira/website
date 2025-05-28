@@ -4,10 +4,10 @@ import { Coin } from '@/components/ui/svgs';
 
 export function Education(): React.ReactElement {
   return (
-    <Container outer>
+    <Container outer className="my-24 sm:my-22">
       <Flex
         justifyContent="around"
-        className="relative z-0 my-24 flex-col gap-6 overflow-hidden bg-bridal-50 p-6 pt-28 sm:my-22 sm:flex-row sm:gap-8 sm:p-28 sm:pt-28 dark:bg-mountain-mist-950"
+        className="relative z-0 flex-col gap-6 overflow-hidden bg-bridal-50 p-6 pt-28 sm:flex-row sm:gap-8 sm:p-28 sm:pt-28 dark:bg-mountain-mist-950"
       >
         <Coin className="-z-10 sm:-translate-y-1/2 absolute top-0 left-0 p-8 sm:top-1/2 sm:right-0 sm:h-[140%] sm:translate-x-44" />
 
@@ -24,7 +24,7 @@ export function Education(): React.ReactElement {
             content available to everyone.
           </p>
 
-          {/* TODO: Add button */}
+          {/* TODO: Add button link to Education page */}
         </Flex>
       </Flex>
     </Container>

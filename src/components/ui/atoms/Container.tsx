@@ -1,27 +1,48 @@
 import { type VariantProps, tv } from 'tailwind-variants';
-
-import { Flex } from './Flex';
+import { Flex, type FlexProps } from './Flex';
 
 // TODO: Rethink this component. It should stop expanding beyond the width of a 15" screen
 const containerVariants = tv({
-  base: 'flex flex-col',
+  base: 'flex',
   variants: {
     outer: {
       true: 'mx-4 sm:mx-12',
       false: 'px-4 sm:px-12',
     },
+    tight: {
+      true: 'md:max-w-7xl md:mx-auto',
+      false: '',
+    },
+    direction: {
+      row: 'flex-row',
+      column: 'flex-col',
+    },
   },
   defaultVariants: {
     outer: false,
+    tight: false,
+    direction: 'column',
   },
 });
 
-interface ContainerProps
+interface ContainerProps<T extends React.ElementType = 'div'>
   extends VariantProps<typeof containerVariants>,
-    React.ComponentProps<'div'> {
+    FlexProps<T> {
   children: React.ReactNode;
 }
 
-export function Container({ children, ...props }: ContainerProps): React.ReactElement {
-  return <Flex className={containerVariants(props)}>{children}</Flex>;
+export function Container({
+  outer,
+  tight,
+  direction,
+  children,
+  className,
+  as,
+  ...props
+}: ContainerProps): React.ReactElement {
+  return (
+    <Flex as={as} className={containerVariants({ outer, tight, direction, className })} {...props}>
+      {children}
+    </Flex>
+  );
 }

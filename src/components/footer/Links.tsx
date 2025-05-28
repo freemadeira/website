@@ -1,28 +1,25 @@
-import { Flex, Grid } from '@/components/ui/atoms';
-import Link from 'next/link';
+import { Flex, Grid, Link } from '@/components/ui/atoms';
 
 export function Links(): React.ReactElement {
   return (
     <Grid cols={2} gap={8} className="grow text-sm leading-[200%] sm:grid-cols-4">
+      {/* TODO: Add links to the footer as pages are created */}
+      <Flex direction="column">
+        <Link href="/about" className="font-bold">
+          About
+        </Link>
+      </Flex>
+
       {/* <Flex direction="column" /> */}
 
-      <Flex direction="column" />
-
       <Flex direction="column">
-        <Link
-          href="https://shop.freemadeira.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-bold"
-        >
+        <Link href="https://shop.freemadeira.org" className="font-bold">
           Shop
         </Link>
       </Flex>
 
       <Flex direction="column">
-        <Link href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noopener noreferrer">
-          Bitcoin Whitepaper
-        </Link>
+        <Link href="https://bitcoin.org/bitcoin.pdf">Bitcoin Whitepaper</Link>
       </Flex>
     </Grid>
   );
