@@ -52,7 +52,7 @@ export function WhoWeAre(): React.ReactElement {
 
         <DownloadCard
           title="Media kit for all things FREE"
-          href="#"
+          href="https://freemadeira.s3.eu-west-3.amazonaws.com/FREE_Madeira-Media_Kit.zip"
           image={() => <OrangeFile className="absolute right-12 bottom-0 h-full" />}
         />
       </Flex>

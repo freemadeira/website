@@ -1,9 +1,8 @@
-import { ArrowRight } from 'lucide-react';
-import { Flex, Text } from '.';
-import { IconButton } from './IconButton';
-import Link from 'next/link';
 import type { Url } from '@/utils/types';
-import { tv, type VariantProps } from 'tailwind-variants';
+import { ArrowRight } from 'lucide-react';
+import { type VariantProps, tv } from 'tailwind-variants';
+import { Flex, Link, Text } from '.';
+import { IconButton } from './IconButton';
 
 interface DiscreetButtonProps {
   href: Url;
