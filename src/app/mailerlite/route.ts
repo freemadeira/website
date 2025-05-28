@@ -4,6 +4,7 @@ import {
   MAILERLITE_PORTUGUESE_GROUP_ID,
   MAILERLITE_WEBSITE_GROUP_ID,
 } from '@/utils/constants';
+import { secureHex } from '@/utils/functions';
 import axios, { AxiosError } from 'axios';
 import { type NextRequest, NextResponse } from 'next/server';
 
@@ -25,15 +26,17 @@ export async function POST(request: NextRequest) {
       {
         email,
         groups: [MAILERLITE_WEBSITE_GROUP_ID, languageGroupId],
-        fields: { language },
+        fields: {
+          language,
+          token: secureHex(), // The token will be used to authenticate the subscriber in the preferences page.
+        },
       },
       { headers },
     );
 
     const responseData = response.data;
 
-    // A malicious actor may submit an email that is already subscribed to the newsletter to get
-    // additional data. To prevent this, we filter the response that is sent to the client.
+    // We filter the response sent to the client to prevent leaking data of an existing subscriber.
     const filteredResponse = {
       success: true,
       message: 'Subscriber added successfully.',
