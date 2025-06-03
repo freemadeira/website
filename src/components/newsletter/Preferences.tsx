@@ -87,11 +87,11 @@ export const Preferences: React.FC<Props> = ({ email, token }) => {
 
   return (
     // TODO: Dark mode
-    <Flex as={Container} direction="column" gap={8} className="mx-32 my-12">
+    <Flex as={Container} direction="column" gap={8} className="my-12 md:mx-32">
       <Heading size="h5">Newsletter preferences</Heading>
       {/* <div className="my-32 w-full px-4"> */}
       <Flex justifyContent="between">
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <div className="w-full max-w-md">
             <RadioGroup
               by={(a: Option | null, b: Option | null) => a?.key === b?.key}
