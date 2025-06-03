@@ -1,5 +1,3 @@
-import { isDefined } from './functions';
-
 export const mailerliteHeaders = {
   Authorization: `Bearer ${process.env.MAILERLITE_TOKEN}`,
   'Content-Type': 'application/json',
