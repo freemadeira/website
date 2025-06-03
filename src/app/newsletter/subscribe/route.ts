@@ -1,10 +1,11 @@
+import { DEV_ENV } from '@/utils/constants';
+import { secureHex } from '@/utils/functions';
 import {
-  DEV_ENV,
   MAILERLITE_ENGLISH_GROUP_ID,
   MAILERLITE_PORTUGUESE_GROUP_ID,
   MAILERLITE_WEBSITE_GROUP_ID,
-} from '@/utils/constants';
-import { secureHex } from '@/utils/functions';
+  mailerliteHeaders,
+} from '@/utils/mailerlite';
 import axios, { AxiosError } from 'axios';
 import { type NextRequest, NextResponse } from 'next/server';
 
@@ -13,12 +14,6 @@ export async function POST(request: NextRequest) {
   const languageGroupId = language.startsWith('pt')
     ? MAILERLITE_PORTUGUESE_GROUP_ID
     : MAILERLITE_ENGLISH_GROUP_ID;
-
-  const headers = {
-    Authorization: `Bearer ${process.env.MAILERLITE_TOKEN}`,
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-  };
 
   try {
     const response = await axios.post(
@@ -31,7 +26,7 @@ export async function POST(request: NextRequest) {
           token: secureHex(), // The token will be used to authenticate the subscriber in the preferences page.
         },
       },
-      { headers },
+      { headers: mailerliteHeaders },
     );
 
     const responseData = response.data;
