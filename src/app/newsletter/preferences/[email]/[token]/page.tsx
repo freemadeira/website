@@ -7,7 +7,7 @@ type PageProps = {
   };
 };
 
-export default async function Page({ params }: PageProps) {
+export default function Page({ params }: PageProps) {
   const { email, token } = params;
 
   // The request to fetch preferences needs to be made client-side so that the subscriber ID and groups can be saved in the session.
