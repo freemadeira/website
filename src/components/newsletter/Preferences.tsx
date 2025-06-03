@@ -94,7 +94,7 @@ export const Preferences: React.FC<Props> = ({ email, token }) => {
         <div className="w-1/2">
           <div className="w-full max-w-md">
             <RadioGroup
-              by="key"
+              by={(a: Option | null, b: Option | null) => a?.key === b?.key}
               value={selected}
               onChange={setSelected}
               aria-label="Language"
