@@ -19,7 +19,7 @@ export const Cards = () => {
         buttonText="Attend our next meetup"
       >
         <Text size="lg">
-          Every first Thursday of the month FREE holds a Bitcoin Meetup, bringing the community
+          Every first Wednesday of the month FREE holds a Bitcoin Meetup, bringing the community
           together to share knowledge, network and enjoy presentations by select guest speakers.
         </Text>
       </Card>
