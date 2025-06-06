@@ -15,7 +15,7 @@ export function Merchants(): React.ReactElement {
           <Heading size="h5">Free your business</Heading>
 
           <Text>
-            Over 140 businesses already accept bitcoin on Madeira Island. Do you own a business and
+            Over 150 businesses already accept bitcoin on Madeira Island. Do you own a business and
             want to start receiving payments in bitcoin? We can assist you every step of the way.
           </Text>
 

@@ -7,7 +7,7 @@ interface Props {
 export const ContributeButtons: React.FC<Props> = ({ className }) => {
   return (
     <Flex gap={4} className={className}>
-      <Button as={Link} href="https://geyser.fund/project/freemadeira">
+      <Button as={Link} href="https://pay.zaprite.com/pl_2ma4dHm939">
         Donations
       </Button>
 

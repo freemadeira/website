@@ -1,7 +1,6 @@
-import type { LucideIcon } from 'lucide-react';
-import { Flex, Heading, Text } from '../ui/atoms';
-import { DiscreetButton } from '../ui/atoms/DiscreetButton';
 import type { Url } from '@/utils/types';
+import type { LucideIcon } from 'lucide-react';
+import { DiscreetButton, Flex, Heading, Text } from '../ui/atoms';
 
 interface CardProps {
   icon: LucideIcon;

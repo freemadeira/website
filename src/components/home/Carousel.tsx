@@ -12,7 +12,7 @@ export const Carousel: React.FC = () => {
 
         <Flex direction="column" gap={6} className="w-full grow sm:w-3/5" justifyContent="center">
           <Heading size="h4">
-            With more than 100 businesses accepting Bitcoin and regular meetups, Madeira island has
+            With more than 150 businesses accepting Bitcoin and regular meetups, Madeira island has
             become a Bitcoin world reference.
           </Heading>
 

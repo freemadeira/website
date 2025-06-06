@@ -1,4 +1,4 @@
-import { Button, CategoryTag, Container, Flex, Heading } from '../ui/atoms';
+import { Button, CategoryTag, Container, DiscreetButton, Flex, Heading } from '../ui/atoms';
 import { HandCoin } from '../ui/svgs/HandCoin';
 
 export function About(): React.ReactElement {
@@ -15,9 +15,7 @@ export function About(): React.ReactElement {
             </Heading>
           </div>
 
-          <Button as="a" href="mailto:info@freemadeira.org" fill="outlined">
-            Partnerships
-          </Button>
+          <DiscreetButton href="/about">Our mission</DiscreetButton>
         </Flex>
 
         <HandCoin className="mt-14 mb-10 w-full sm:my-0 sm:w-3/7" />

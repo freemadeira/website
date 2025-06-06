@@ -10,7 +10,7 @@ export default function About() {
       <Hero title="A quest for freedom" buttonText="Join us" buttonHref="#" image={Planet}>
         FREE Madeira, founded in 2022, is a non-profit organisation dedicated to empowering
         individuals and businesses to take control of their financial future through education and
-        Bitcoin adoption in Madeira
+        Bitcoin adoption in Portugal, particularly in Madeira.
       </Hero>
 
       <WhoWeAre />
@@ -25,7 +25,7 @@ export default function About() {
         buttonText="Know more"
       >
         A Bitcoin what? Yes, a Bitcoin Business Hub. We will have a pub, an all-Bitcoin shop, a
-        coworking space, and more. A dream comes true!
+        coworking space, and more. A dream in the making!
       </SplitHighlight>
 
       <UpcomingEvents />
