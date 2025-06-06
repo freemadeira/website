@@ -7,7 +7,7 @@ import { Button, ColourSection, Container, Flex, Heading } from '../ui/atoms';
 const sentences = [
   'Increasing financial literacy and knowledge of new decentralised network protocols',
   'Promoting educational workshops and courses for all levels of knowledge',
-  'Creating Bitcoin-related content about the reality of Madeira',
+  'Creating Bitcoin-related content about the Portuguese reality',
   'Becoming the Portuguese reference in the Bitcoin world',
 ];
 
