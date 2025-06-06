@@ -1,6 +1,6 @@
 import { Flex, Grid, Link } from '@/components/ui/atoms';
 
-export function Links(): React.ReactElement {
+export function FooterMenu(): React.ReactElement {
   return (
     <Grid cols={2} gap={8} className="grow text-sm leading-[200%] sm:grid-cols-4">
       {/* TODO: Add links to the footer as pages are created */}
