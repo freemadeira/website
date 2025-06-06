@@ -2,6 +2,7 @@ export * from './Button';
 export * from './CategoryTag';
 export * from './ColourSection';
 export * from './Container';
+export * from './DiscreetButton';
 export * from './Flex';
 export * from './Grid';
 export * from './Heading';
