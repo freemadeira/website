@@ -12,7 +12,7 @@ export const buttonVariants = tv({
   variants: {
     noAnimation: {
       true: '',
-      false: 'active:transform active:scale-95',
+      false: 'active:transform active:scale-95 disabled:active:scale-100',
     },
     fill: {
       filled: 'bg-primary-400 text-dark',
@@ -46,7 +46,6 @@ export const buttonVariants = tv({
     },
     colour: {
       white: 'border-white text-white',
-      black: '',
     },
   },
   defaultVariants: {
