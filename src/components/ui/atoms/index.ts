@@ -8,6 +8,7 @@ export * from './Grid';
 export * from './Heading';
 export * from './IconButton';
 export * from './Link';
+export * from './ScreenReaderOnly';
 export * from './SocialButton';
 export * from './Svg';
 export * from './Tag';
