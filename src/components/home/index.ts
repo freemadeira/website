@@ -1,5 +1,5 @@
 export * from './About';
-export * from './Carousel';
+export * from './HomeCarousel';
 export * from './Contribute';
 export * from './Education';
 export * from './Merchants';

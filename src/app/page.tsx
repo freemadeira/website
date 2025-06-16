@@ -1,10 +1,7 @@
 import { UpcomingEvents } from '@/components/events';
-import { About, Carousel, Contribute, Education, Merchants, Partners } from '@/components/home';
+import { About, Contribute, Education, HomeCarousel, Merchants, Partners } from '@/components/home';
 import { Hero } from '@/components/ui';
-import { Container } from '@/components/ui/atoms';
 import { PortalHands } from '@/components/ui/svgs';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -21,7 +18,7 @@ export default function Home() {
 
       <UpcomingEvents />
       <Education />
-      <Carousel />
+      <HomeCarousel />
       <About />
       <Merchants />
       <Partners />
