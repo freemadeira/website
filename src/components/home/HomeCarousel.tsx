@@ -37,6 +37,8 @@ export const HomeCarousel: React.FC = () => {
             backgroundImage={bitcoinAtlantisImage}
             mainButtonHref="https://bitcoinatlantis.com/recap"
             mainButtonText="Watch the talks"
+            secondaryButtonHref="https://bitcoinatlantis.com"
+            secondaryButtonText="Visit the website"
           >
             Bitcoin Atlantis 2024 brought together the leading voices in Bitcoin for a three-day
             conference in Madeira, in the middle of the Atlantic.
