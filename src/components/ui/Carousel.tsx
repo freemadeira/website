@@ -4,7 +4,7 @@ import { cn } from '@/utils/classNames';
 import useEmblaCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import * as React from 'react';
-import { type Button, Flex, IconButton, ScreenReaderOnly } from './atoms';
+import { type Button, Container, Flex, IconButton, ScreenReaderOnly } from './atoms';
 import { capitalize } from '@/utils/functions';
 
 type CarouselApi = UseEmblaCarouselType[1];
@@ -253,6 +253,7 @@ function CarouselNext({ className, ...props }: React.ComponentProps<typeof Butto
 export function CarouselControls() {
   return (
     <Flex
+      as={Container}
       gap={3}
       justifyContent="start"
       className="absolute bottom-14 w-full sm:justify-center sm:gap-4"

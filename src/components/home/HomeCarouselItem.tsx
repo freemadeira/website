@@ -34,7 +34,7 @@ export function HomeCarouselItem({
 }: Props) {
   return (
     <CarouselItem>
-      <div className="relative h-screen w-full pt-14 pb-10 text-white sm:pt-16 sm:pb-14">
+      <div className='relative h-screen w-full select-none pt-14 pb-10 text-white sm:pt-16 sm:pb-14'>
         <Image
           src={backgroundImage}
           alt={title}
