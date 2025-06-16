@@ -1,5 +1,4 @@
 import { CONFIG } from './constants';
-import type { Url } from './types';
 
 export function externalUrl(url: string, base = CONFIG.BASE_URL): boolean {
   if (!url) return false;
@@ -22,3 +21,7 @@ export function secureHex(bytes = 16) {
   return Array.from(array, (b) => b.toString(16).padStart(2, '0')).join('');
 }
 
+export const capitalize = <T extends string>(s: T): Capitalize<T> => {
+  if (s.length === 0) return s as Capitalize<T>;
+  return (s.charAt(0).toUpperCase() + s.slice(1)) as Capitalize<T>;
+};
