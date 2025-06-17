@@ -82,7 +82,10 @@ const PartnerLogos: React.FC<{ className?: string }> = ({ className }) => (
         aria-label={`Visit ${partner.name}`}
       >
         <partner.logo
-          className={twMerge('w-44 fill-dark opacity-50 hover:opacity-100 sm:w-52', partner.width)}
+          className={twMerge(
+            'w-44 fill-dark opacity-50 hover:opacity-100 sm:w-52 dark:fill-white',
+            partner.width,
+          )}
           title={partner.name}
         />
       </Link>

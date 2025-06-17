@@ -8,6 +8,7 @@ export const buttonVariants = tv({
     'w-fit inline-flex cursor-pointer outline-none justify-center focus-visible:outline-primary-700',
     'rounded-full py-3 px-5.5 transition duration-75 hover:bg-dark hover:text-white',
     'hover:no-underline disabled:opacity-30 disabled:cursor-not-allowed',
+    'dark:hover:bg-white dark:hover:text-dark',
   ),
   variants: {
     noAnimation: {
@@ -18,6 +19,7 @@ export const buttonVariants = tv({
       filled: 'bg-primary-400 text-dark',
       outlined: twJoin(
         'border border-dark text-dark fill-dark hover:bg-dark hover:text-white hover:fill-white',
+        'dark:border-white dark:text-white',
       ),
       // TODO: Review this variant
       ghost: twJoin(
