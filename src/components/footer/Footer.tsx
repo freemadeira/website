@@ -1,12 +1,18 @@
 import { Container, Flex } from '@/components/ui/atoms';
+import { twJoin } from 'tailwind-merge';
+import { FooterMenu } from './FooterMenu';
 import { FreeMadeira } from './FreeMadeira';
 import { Newsletter } from './Newsletter';
 import { Socials } from './Socials';
-import { FooterMenu } from './FooterMenu';
 
 export function Footer(): React.ReactElement {
   return (
-    <footer className="border-dark bg-primary-400 fill-dark text-dark dark:border-primary-400 dark:bg-dark dark:fill-primary-400 dark:text-primary-400">
+    <footer
+      className={twJoin(
+        'border-dark bg-primary-400 fill-dark text-dark',
+        'dark:border-primary-400 dark:bg-mountain-mist-950 dark:fill-primary-400 dark:text-primary-400',
+      )}
+    >
       <Flex as={Container} direction="column" gap={12} className="py-16">
         <Flex gap={12} alignItems="start" className="md:gap-14" stackOnMobile>
           <Newsletter />
