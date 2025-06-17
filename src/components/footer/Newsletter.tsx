@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Flex, IconButton, Text } from '@/components/ui/atoms';
+import { Button, Flex, IconButton, ScreenReaderOnly, Text } from '@/components/ui/atoms';
 import axios from 'axios';
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
@@ -51,7 +51,7 @@ export function Newsletter(): React.ReactElement {
           disabled={submitted}
           className="size-12 items-center justify-center border-[1.5px]"
         >
-          <span className="sr-only">Sign up</span>
+          <ScreenReaderOnly>Sign up</ScreenReaderOnly>
           <ArrowRight strokeWidth={1.5} size={36} />
         </IconButton>
       </Flex>
