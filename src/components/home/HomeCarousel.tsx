@@ -5,6 +5,7 @@ import { HomeCarouselItem } from './HomeCarouselItem';
 import energySummitImage from '@/assets/images/carousel/energy-summit.jpg';
 import madeiraImage from '@/assets/images/carousel/madeira.jpg';
 import bitcoinAtlantisImage from '@/assets/images/carousel/bitcoin-atlantis.jpg';
+import shopImage from '@/assets/images/carousel/shop.jpg';
 
 export const HomeCarousel: React.FC = () => {
   return (
@@ -18,6 +19,16 @@ export const HomeCarousel: React.FC = () => {
         >
           With more than 150 businesses accepting Bitcoin and regular meetups, Madeira Island has
           become a world reference for Bitcoin.
+        </HomeCarouselItem>
+
+        <HomeCarouselItem
+          title="Shop"
+          backgroundImage={shopImage}
+          mainButtonHref="https://shop.freemadeira.org"
+          mainButtonText="Visit the shop"
+        >
+          Buy hardware wallets, backup solutions, books, and other Bitcoin-related products in our
+          online shop.
         </HomeCarouselItem>
 
         <HomeCarouselItem
