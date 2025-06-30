@@ -11,7 +11,7 @@ const schibstedGrotesk = Schibsted_Grotesk({
 
 export const metadata: Metadata = {
   title: 'FREE Madeira',
-  description: 'New website coming soon!',
+  description: 'A Bitcoin community in the Atlantic.',
 };
 
 export default function RootLayout({
