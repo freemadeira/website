@@ -1,4 +1,4 @@
-import { Container, Flex, Heading } from '@/components/ui/atoms';
+import { Container, Flex, Heading, Link } from '@/components/ui/atoms';
 import { EventCard, type EventTag } from './';
 
 export interface Event {
@@ -7,7 +7,7 @@ export interface Event {
   description: string;
   tags: EventTag[];
   imgSrc?: string;
-  link?: string;
+  href?: string;
 }
 
 const events: Event[] = [
@@ -18,7 +18,7 @@ const events: Event[] = [
       'This introductory workshop explores how money evolved into fiat currencies, what the problems are with it and how Bitcoin can be the solution. By the end of it, you will also be able to use bitcoin for everyday savings and payments. This workshop is carried out in Portuguese.',
     tags: ['Workshop', 'Online', 'Education'],
     imgSrc: '/images/events/workshop-intro.jpg',
-    link: 'https://forms.gle/umsn2vX1WSVk9d6RA',
+    href: 'https://forms.gle/umsn2vX1WSVk9d6RA',
   },
   {
     date: 'June 28, 2025, 10:00',
@@ -27,7 +27,7 @@ const events: Event[] = [
       'For merchants who want to learn about the potential of Bitcoin for their business and the customers they attract by accepting Bitcoin. This workshop will teach how to integrate bitcoin payments in your business and how to safely manage your funds. This workshop is carried out in Portuguese.',
     tags: ['Workshop', 'Online', 'Education'],
     imgSrc: '/images/events/workshop-merchants.jpg',
-    link: 'https://forms.gle/RrmXK8sovXJppesk8',
+    href: 'https://forms.gle/RrmXK8sovXJppesk8',
   },
   {
     date: 'September–October (schedule TBC), 2025',
