@@ -19,7 +19,7 @@ export const DownloadCard: React.FC<Props> = ({ title, href, image: Illustration
           {title}
         </Heading>
 
-        <IconButton fill="filled" className="z-10" groupHover>
+        <IconButton fill="filled" className="z-10">
           <ArrowDownToLine strokeWidth={1} size={34} absoluteStrokeWidth />
         </IconButton>
       </Flex>

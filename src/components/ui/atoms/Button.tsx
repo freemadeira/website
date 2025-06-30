@@ -6,21 +6,17 @@ import { Flex } from './';
 export const buttonVariants = tv({
   base: twJoin(
     'w-fit inline-flex cursor-pointer outline-none justify-center focus-visible:outline-primary-700',
-    'rounded-full py-3 px-5.5 transition duration-75 hover:bg-dark hover:text-white',
+    'rounded-full py-3 px-5.5 transition duration-75',
     'hover:no-underline disabled:opacity-30 disabled:cursor-not-allowed',
-    'dark:hover:bg-white dark:hover:text-dark',
   ),
   variants: {
     noAnimation: {
-      true: '',
-      false: 'active:transform active:scale-95 disabled:active:scale-100',
+      false:
+        'active:transform active:scale-95 disabled:active:scale-100 group-active:transform group-active:scale-95',
     },
     fill: {
-      filled: 'bg-primary-400 text-dark',
-      outlined: twJoin(
-        'border border-dark text-dark fill-dark hover:bg-dark hover:text-white hover:fill-white',
-        'dark:border-white dark:text-white',
-      ),
+      filled: 'bg-primary-400',
+      outlined: 'border',
       // TODO: Review this variant
       ghost: twJoin(
         'text-primary-700',
@@ -43,17 +39,21 @@ export const buttonVariants = tv({
     underlined: {
       true: 'underline underline-offset-2',
     },
-    groupHover: {
-      true: 'group-hover:bg-dark group-hover:text-white group-active:transform group-active:scale-95',
-    },
     colour: {
-      white: 'border-white text-white',
+      dark: twJoin(
+        'border-dark text-dark hover:bg-dark hover:text-white hover:fill-white',
+        'group-hover:bg-dark group-hover:text-white group-hover:fill-white',
+        'dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-dark',
+      ),
+      white:
+        'border-white text-white hover:bg-white hover:text-dark group-hover:bg-white group-hover:text-dark',
     },
   },
   defaultVariants: {
     fill: 'filled',
     noAnimation: false,
     align: 'center',
+    colour: 'dark',
   },
 });
 
@@ -73,7 +73,6 @@ export function Button<T extends React.ElementType = 'button'>({
   noAnimation,
   textColor,
   underlined,
-  groupHover,
   ...props
 }: ButtonProps<T> & Omit<React.ComponentProps<T>, keyof ButtonProps<T>>): React.ReactElement {
   const Component = as || 'button';
@@ -86,7 +85,6 @@ export function Button<T extends React.ElementType = 'button'>({
         noAnimation,
         textColor,
         underlined,
-        groupHover,
         items,
         className,
       })}

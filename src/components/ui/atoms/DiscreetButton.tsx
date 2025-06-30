@@ -15,7 +15,7 @@ export const DiscreetButton: React.FC<DiscreetButtonProps> = ({ href, children }
       <Flex gap={4} alignItems="center">
         <Text className="underline-offset-6 group-hover:underline">{children}</Text>
 
-        <IconButton fill="filled" className="p-1" groupHover>
+        <IconButton fill="filled" className="p-1">
           <ArrowRight strokeWidth={1.2} size={22} />
         </IconButton>
       </Flex>

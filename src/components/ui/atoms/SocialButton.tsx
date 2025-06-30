@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { Flex, IconButton } from './';
+import { IconButton, Link } from './';
 import { type VariantProps, tv } from 'tailwind-variants';
 import {
   Facebook,
@@ -109,8 +108,6 @@ export function SocialButton({
       as={Link}
       href={href(social, username)}
       className={socialButtonVariants({ style })}
-      target="_blank"
-      rel="noopener noreferrer"
       title={socialNetwork.title}
       {...props}
     >

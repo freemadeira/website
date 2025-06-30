@@ -1,4 +1,4 @@
-import { Container, Flex, Heading } from '@/components/ui/atoms';
+import { Container, Flex, Heading, Link } from '@/components/ui/atoms';
 import { EventCard, type EventTag } from './';
 
 export interface Event {
@@ -7,7 +7,7 @@ export interface Event {
   description: string;
   tags: EventTag[];
   imgSrc?: string;
-  link?: string;
+  href?: string;
 }
 
 const events: Event[] = [
@@ -18,7 +18,7 @@ const events: Event[] = [
       'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
-    link: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/306809020/',
+    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/306809020/',
   },
   {
     date: 'August 6, 2025, 18:30',
@@ -27,7 +27,7 @@ const events: Event[] = [
       'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
-    link: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/ngjpqtyhclbjb/',
+    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/ngjpqtyhclbjb/',
   },
   {
     date: 'September–October (schedule TBC), 2025',
