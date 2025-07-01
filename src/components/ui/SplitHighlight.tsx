@@ -21,7 +21,7 @@ export const SplitHighlight: React.FC<Props> = ({
 }) => {
   return (
     <Container
-      tight
+      width="tight"
       direction="column"
       gap={12}
       className="mt-32 mb-28 md:flex-row"

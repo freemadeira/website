@@ -1,17 +1,14 @@
 import { type VariantProps, tv } from 'tailwind-variants';
 import { Flex, type FlexProps } from './Flex';
+import { twMerge } from 'tailwind-merge';
 
 // TODO: Rethink this component. It should stop expanding beyond the width of a 15" screen
 const containerVariants = tv({
-  base: 'flex',
+  base: 'flex mx-auto',
   variants: {
-    outer: {
-      true: 'mx-4 sm:mx-12',
-      false: 'px-4 sm:px-12',
-    },
-    tight: {
-      true: 'md:max-w-7xl md:mx-auto',
-      false: '',
+    width: {
+      normal: 'max-w-full',
+      tight: 'max-w-7xl',
     },
     direction: {
       row: 'flex-row',
@@ -19,8 +16,7 @@ const containerVariants = tv({
     },
   },
   defaultVariants: {
-    outer: false,
-    tight: false,
+    width: 'normal',
     direction: 'column',
   },
 });
@@ -28,21 +24,28 @@ const containerVariants = tv({
 interface ContainerProps<T extends React.ElementType = 'div'>
   extends VariantProps<typeof containerVariants>,
     FlexProps<T> {
+  wrapperClasses?: string;
   children: React.ReactNode;
 }
 
 export function Container({
-  outer,
-  tight,
+  width,
   direction,
   children,
+  wrapperClasses,
   className,
-  as,
   ...props
 }: ContainerProps): React.ReactElement {
   return (
-    <Flex as={as} className={containerVariants({ outer, tight, direction, className })} {...props}>
-      {children}
-    </Flex>
+    <div
+      className={twMerge(
+        'mx-auto w-full max-w-[1536px] px-4 sm:px-8 md:px-10 xl:px-12',
+        wrapperClasses,
+      )}
+    >
+      <Flex className={containerVariants({ width, direction, className })} {...props}>
+        {children}
+      </Flex>
+    </div>
   );
 }
