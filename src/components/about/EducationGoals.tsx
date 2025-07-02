@@ -11,7 +11,7 @@ const sentences = [
   'Becoming the Portuguese reference in the Bitcoin world',
 ];
 
-export const EducationGoals: React.FC = () => {
+export const EducationGoals = (): React.ReactElement => {
   return (
     <Background color="bridal">
       <Container className="gap-12 py-16 lg:gap-20" size="tight" stackOnMobile>
