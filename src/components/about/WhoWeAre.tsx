@@ -35,7 +35,8 @@ export function WhoWeAre(): React.ReactElement {
           </Flex>
         </Flex>
 
-        <Flex direction="column" gap={5} className="w-full lg:flex-row lg:gap-8">
+        {/* TODO: Remove `lg:w-1/2` when we have two cards */}
+        <Flex direction="column" gap={5} className="w-full lg:w-1/2 lg:flex-row lg:gap-8">
           {/* TODO: Add card with FREE Whitepaper */}
           {/* <DownloadCard */}
           {/*   title="FREE Madeira Whitepaper" */}
