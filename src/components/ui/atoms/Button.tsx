@@ -1,7 +1,5 @@
-import { ArrowRight } from 'lucide-react';
 import { twJoin } from 'tailwind-merge';
 import { type VariantProps, tv } from 'tailwind-variants';
-import { Flex } from './';
 
 export const buttonVariants = tv({
   base: twJoin(
@@ -44,9 +42,13 @@ export const buttonVariants = tv({
         'border-dark text-dark hover:bg-dark hover:text-white hover:fill-white',
         'group-hover:bg-dark group-hover:text-white group-hover:fill-white',
         'dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-dark',
+        'disabled:hover:bg-transparent disabled:hover:text-dark disabled:hover:fill-dark',
+        'dark:disabled:hover:bg-transparent dark:disabled:hover:text-white dark:disabled:hover:fill-white',
       ),
-      white:
+      white: twJoin(
         'border-white text-white hover:bg-white hover:text-dark group-hover:bg-white group-hover:text-dark',
+        'disabled:hover:bg-transparent disabled:hover:text-white disabled:hover:fill-white',
+      ),
     },
   },
   defaultVariants: {
