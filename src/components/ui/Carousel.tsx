@@ -252,15 +252,16 @@ function CarouselNext({ className, ...props }: React.ComponentProps<typeof Butto
 
 export function CarouselControls() {
   return (
-    <Flex
-      as={Container}
+    <Container
+      direction="row"
       gap={3}
       justifyContent="start"
-      className="absolute bottom-14 w-full sm:justify-center sm:gap-4"
+      className="md:justify-center md:gap-4"
+      wrapperClasses="absolute inset-x-0 bottom-14 mx-auto"
     >
       <CarouselPrevious />
       <CarouselNext />
-    </Flex>
+    </Container>
   );
 }
 

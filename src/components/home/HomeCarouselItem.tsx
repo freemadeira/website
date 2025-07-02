@@ -34,7 +34,7 @@ export function HomeCarouselItem({
 }: Props) {
   return (
     <CarouselItem>
-      <div className='relative h-screen w-full select-none pt-14 pb-10 text-white sm:pt-16 sm:pb-14'>
+      <div className="relative h-screen w-full select-none pt-14 pb-10 text-white sm:pt-16 sm:pb-14">
         <Image
           src={backgroundImage}
           alt={title}
@@ -52,10 +52,20 @@ export function HomeCarouselItem({
           )}
         />
 
-        <Flex as={Container} direction="column" gap={8} className="relative z-10 h-full">
+        <Container
+          direction="column"
+          gap={8}
+          className="relative z-10 h-full"
+          wrapperClasses="h-full"
+        >
           <CategoryTag>{title}</CategoryTag>
 
-          <Flex direction="column" gap={6} className="w-full grow sm:w-3/5" justifyContent="center">
+          <Flex
+            direction="column"
+            gap={6}
+            className="w-full grow md:w-4/5 lg:w-3/5"
+            justifyContent="center"
+          >
             <Heading size="h4">{children}</Heading>
 
             {mainButtonHref && (
@@ -71,7 +81,7 @@ export function HomeCarouselItem({
               </Flex>
             )}
           </Flex>
-        </Flex>
+        </Container>
       </div>
     </CarouselItem>
   );
