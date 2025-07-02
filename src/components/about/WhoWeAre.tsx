@@ -36,7 +36,7 @@ export function WhoWeAre(): React.ReactElement {
         </Flex>
 
         {/* TODO: Remove `lg:w-1/2` when we have two cards */}
-        <Flex direction="column" gap={5} className="w-full lg:w-1/2 lg:flex-row lg:gap-8">
+        <Flex direction="column" gap={5} className="h-56 w-full lg:w-1/2 lg:flex-row lg:gap-8">
           {/* TODO: Add card with FREE Whitepaper */}
           {/* <DownloadCard */}
           {/*   title="FREE Madeira Whitepaper" */}
@@ -47,7 +47,9 @@ export function WhoWeAre(): React.ReactElement {
           <DownloadCard
             title="Media kit for all things FREE"
             href="https://freemadeira.s3.eu-west-3.amazonaws.com/FREE_Madeira-Media_Kit.zip"
-            image={() => <OrangeFile className="absolute right-12 bottom-0 h-full" />}
+            image={() => (
+              <OrangeFile className="absolute right-4 bottom-0 h-[162px] lg:right-12 lg:h-full" />
+            )}
           />
         </Flex>
       </Container>
