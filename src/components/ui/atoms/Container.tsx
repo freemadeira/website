@@ -6,9 +6,10 @@ import { twMerge } from 'tailwind-merge';
 const containerVariants = tv({
   base: 'flex mx-auto',
   variants: {
-    width: {
+    size: {
       normal: 'max-w-full',
       tight: 'max-w-7xl',
+      tighter: 'max-w-5xl',
     },
     direction: {
       row: 'flex-row',
@@ -16,7 +17,7 @@ const containerVariants = tv({
     },
   },
   defaultVariants: {
-    width: 'normal',
+    size: 'normal',
     direction: 'column',
   },
 });
@@ -29,7 +30,7 @@ interface ContainerProps<T extends React.ElementType = 'div'>
 }
 
 export function Container({
-  width,
+  size,
   direction,
   children,
   wrapperClasses,
@@ -43,7 +44,7 @@ export function Container({
         wrapperClasses,
       )}
     >
-      <Flex className={containerVariants({ width, direction, className })} {...props}>
+      <Flex className={containerVariants({ size, direction, className })} {...props}>
         {children}
       </Flex>
     </div>

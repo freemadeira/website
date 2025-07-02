@@ -14,7 +14,7 @@ const sentences = [
 export const EducationGoals: React.FC = () => {
   return (
     <Background color="bridal">
-      <Container className="gap-12 py-16 lg:gap-20" width="tight" stackOnMobile>
+      <Container className="gap-12 py-16 lg:gap-20" size="tight" stackOnMobile>
         <div className="relative h-[95vw] w-full md:h-[550px] md:w-1/2">
           <Image
             src={educationGoals}

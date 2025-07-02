@@ -3,7 +3,7 @@ import { Container, Flex, Heading, Text, TextBlock } from '../ui/atoms';
 
 export const Donations: React.FC = () => {
   return (
-    <Container width="tight" className="my-28">
+    <Container size="tight" className="my-28">
       <Flex direction="column" gap={8}>
         <Heading size="h3">Donations</Heading>
 
