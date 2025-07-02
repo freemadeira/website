@@ -4,7 +4,7 @@ import { Coin } from '@/components/ui/svgs';
 
 export function Education(): React.ReactElement {
   return (
-    <Container outer className="my-24 sm:my-22">
+    <Container className="my-24 sm:my-22">
       <Flex
         justifyContent="around"
         className="relative z-0 flex-col gap-6 overflow-hidden bg-bridal-50 p-6 pt-28 sm:flex-row sm:gap-8 sm:p-28 sm:pt-28 dark:bg-mountain-mist-950"
