@@ -71,7 +71,7 @@ const socialMedia: Record<Social, socialType> = {
   },
   nostr: {
     title: 'Nostr',
-    baseUrl: 'https://nostr.com/',
+    baseUrl: 'https://njump.me/',
     icon: Nostr,
   },
   github: {
