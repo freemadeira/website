@@ -1,6 +1,4 @@
-import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselControls, CarouselItem } from '../ui';
-import { Button, CategoryTag, Container, Flex, Heading, IconButton, Link } from '../ui/atoms';
+import { Carousel, CarouselContent, CarouselControls } from '../ui';
 import { HomeCarouselItem } from './HomeCarouselItem';
 import energySummitImage from '@/assets/images/carousel/energy-summit.jpg';
 import madeiraImage from '@/assets/images/carousel/madeira.jpg';

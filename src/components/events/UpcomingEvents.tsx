@@ -1,4 +1,4 @@
-import { Container, Flex, Heading, Link } from '@/components/ui/atoms';
+import { Container, Flex, Heading } from '@/components/ui/atoms';
 import { EventCard, type EventTag } from './';
 
 export interface Event {
@@ -49,7 +49,7 @@ const events: Event[] = [
 
 export function UpcomingEvents(): React.ReactElement {
   return (
-    <Container className="mx-0 mb-16 gap-7" outer>
+    <Container wrapperClasses="mb-16 px-0" className="gap-7">
       <Heading size="h5" className="mx-4 sm:mx-0">
         Upcoming Events
       </Heading>
