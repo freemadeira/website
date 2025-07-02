@@ -1,8 +1,6 @@
 import type { Url } from '@/utils/types';
-import Image from 'next/image';
-import Link from 'next/link';
 import { twJoin, twMerge } from 'tailwind-merge';
-import { Flex, Heading, Svg, type SvgProps } from '../ui/atoms';
+import { Flex, Heading, Link, type SvgProps } from '../ui/atoms';
 
 import {
   BitcoinBrabant,
@@ -64,7 +62,7 @@ const partners: Partner[] = [
   },
 ];
 
-const PartnerLogos: React.FC<{ className?: string }> = ({ className }) => (
+const PartnerLogos = ({ className }: { className?: string }): React.ReactElement => (
   <Flex
     gap={10}
     className={twJoin(
@@ -76,9 +74,7 @@ const PartnerLogos: React.FC<{ className?: string }> = ({ className }) => (
       <Link
         key={partner.name}
         href={partner.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex-1 text-center"
+        className="flex-shrink-0 text-center"
         aria-label={`Visit ${partner.name}`}
       >
         <partner.logo
@@ -93,7 +89,7 @@ const PartnerLogos: React.FC<{ className?: string }> = ({ className }) => (
   </Flex>
 );
 
-export function Partners(): React.ReactElement {
+export const Partners = (): React.ReactElement => {
   return (
     <Flex direction="column" gap={12} className="my-20 sm:my-28">
       <Heading size="h6" className="text-center">
@@ -102,8 +98,11 @@ export function Partners(): React.ReactElement {
 
       <Flex className="group overflow-hidden">
         <PartnerLogos />
+        {/* Repeated sets prevent gaps during scroll animation on wide displays */}
+        <PartnerLogos className="aria-hidden" />
+        <PartnerLogos className="aria-hidden" />
         <PartnerLogos className="aria-hidden" />
       </Flex>
     </Flex>
   );
-}
+};
