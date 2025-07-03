@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  env: {
+    BUILD_YEAR: new Date().toLocaleString('pt-PT', {
+      timeZone: 'Atlantic/Madeira',
+      year: 'numeric',
+    }),
+  },
 };
 
 export default nextConfig;

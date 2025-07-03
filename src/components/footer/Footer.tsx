@@ -32,7 +32,7 @@ export function Footer(): React.ReactElement {
               <div />
             </Flex>
 
-            <p>© 2025 FREE Madeira. All rights reserved</p>
+            <p>© {process.env.BUILD_YEAR} FREE Madeira. All rights reserved</p>
           </Flex>
         </Flex>
       </Flex>
