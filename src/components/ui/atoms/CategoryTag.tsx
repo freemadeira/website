@@ -1,12 +1,14 @@
+import { twMerge } from 'tailwind-merge';
 import { Text } from './Text';
 
 type Props = {
+  className?: string;
   children: React.ReactNode;
 };
 
-export function CategoryTag({ children }: Props): React.ReactElement {
+export function CategoryTag({ className, children }: Props): React.ReactElement {
   return (
-    <Text size="lg" className="leading-[150%] tracking-[1%]">
+    <Text size="lg" className={twMerge('flex items-center leading-[150%]', className)}>
       {children}
     </Text>
   );

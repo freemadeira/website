@@ -114,7 +114,7 @@ export const Preferences: React.FC<Props> = ({ email, token }) => {
                     <CircleDot className="me-4 size-6 fill-mountain-mist-200/60 text-white transition group-data-checked:fill-yellow-400 group-data-checked:text-bridal-100" />
 
                     <Flex direction="column" className="grow text-sm/6">
-                      <Text className="text-[20px] leading-[150%] tracking-[1%] sm:text-xl sm:tracking-normal">
+                      <Text className="text-[20px] leading-[150%] sm:text-xl sm:tracking-normal">
                         {option.name}
                       </Text>
 

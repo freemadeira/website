@@ -10,7 +10,7 @@ export const headingStyles = tv({
       h3: 'text-[40px] leading-[54px] sm:text-[56px] sm:leading-[64px]',
       h4: 'text-[32px] leading-[40px] sm:text-[40px] sm:leading-[51px]',
       h5: 'text-[24px] leading-[32px] sm:text-[32px] sm:leading-normal',
-      h6: 'text-[20px] leading-[150%] tracking-[1%] sm:text-2xl sm:tracking-normal',
+      h6: 'text-[20px] leading-[150%] sm:text-2xl sm:tracking-normal',
     },
     align: {
       left: 'text-left',
