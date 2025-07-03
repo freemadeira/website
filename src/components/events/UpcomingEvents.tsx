@@ -12,15 +12,6 @@ export interface Event {
 
 const events: Event[] = [
   {
-    date: 'July 2, 2025, 18:30',
-    title: 'FREE Madeira Bitcoin Meetup',
-    description:
-      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
-    tags: ['Meetup', 'In-person'],
-    imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/306809020/',
-  },
-  {
     date: 'August 6, 2025, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
     description:
@@ -28,6 +19,15 @@ const events: Event[] = [
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
     href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/ngjpqtyhclbjb/',
+  },
+  {
+    date: 'September 3, 2025, 18:30',
+    title: 'FREE Madeira Bitcoin Meetup',
+    description:
+      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+    tags: ['Meetup', 'In-person'],
+    imgSrc: '/images/events/meetup.jpg',
+    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/308813664/',
   },
   {
     date: 'September–October (schedule TBC), 2025',
