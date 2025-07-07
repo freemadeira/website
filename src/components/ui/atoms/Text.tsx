@@ -16,7 +16,7 @@ const textVariants = tv({
       right: 'text-right',
     },
     color: {
-      gray: 'text-gray-500',
+      gray: 'text-mountain-mist-500',
       muted: 'text-muted',
       green: 'text-green-500',
       supernova: 'text-primary-400',
@@ -68,7 +68,7 @@ const textVariants = tv({
   },
 });
 
-interface TextProps extends VariantProps<typeof textVariants> {
+export interface TextProps extends VariantProps<typeof textVariants> {
   children: React.ReactNode;
   className?: string;
   id?: string;
