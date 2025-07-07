@@ -1,8 +1,8 @@
-import { externalUrl } from '@/utils/functions';
-import type { Url, hrefTarget } from '@/utils/types';
 import NextLink from 'next/link';
 import { isValidElement } from 'react';
-import { type VariantProps, tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
+import { externalUrl } from '@/utils/functions';
+import type { hrefTarget, Url } from '@/utils/types';
 import { Text } from '.';
 
 const linkVariants = tv({
@@ -10,22 +10,19 @@ const linkVariants = tv({
   variants: {
     underline: {
       true: 'underline hover:text-dark dark:hover:text-primary-400',
-      false: 'hover:underline',
     },
     noDecoration: {
       true: 'hover:no-underline',
-      false: '',
+      false: 'hover:underline',
     },
     size: {
       sm: 'text-sm',
-      md: '',
       lg: 'text-lg',
     },
   },
   defaultVariants: {
     underline: false,
     noDecoration: false,
-    size: 'md',
   },
 });
 
