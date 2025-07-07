@@ -30,7 +30,7 @@ const events: Event[] = [
     href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/308813664/',
   },
   {
-    date: 'September–October (schedule TBC), 2025',
+    date: 'September–November (schedule TBC), 2025',
     title: 'Diploma Bitcoin',
     description:
       '10-week course with recorded classes and weekly live Q&A sessions. This course is a deeper introduction to Bitcoin and takes the student from zero to understanding what Bitcoin is and how it works, as well as learning to use it.',
