@@ -28,7 +28,7 @@
           "fix": "safe",
           "options": {
             "attributes": ["wrapperClasses"],
-            "functions": ["twMerge", "twJoin", "clsx"]
+            "functions": ["twMerge", "twJoin", "tv", "clsx", "cn"]
           }
         }
       },
