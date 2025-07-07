@@ -1,4 +1,4 @@
-import { Flex, Heading, Link, Text } from '@/components/ui/atoms';
+import { Flex, Heading, Info, Link, Text } from '@/components/ui/atoms';
 import { Labels } from '../ui';
 import { type Event, EventImage } from './';
 
@@ -19,9 +19,7 @@ export function EventCard({ event }: EventCardProps): React.ReactElement {
       <EventImage imgSrc={event.imgSrc} link={event.href} />
 
       <Flex direction="column" gap={3} className="grow">
-        <Text size="sm" className="text-mountain-mist-400 uppercase leading-4 tracking-[4%]">
-          {event.date}
-        </Text>
+        <Info color="lighter">{event.date}</Info>
 
         <Heading size="h6">{event.title}</Heading>
 
