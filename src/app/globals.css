@@ -36,12 +36,18 @@
   /* Mountain Mist */
   --color-mountain-mist-200: #d0d0d1;
   --color-mountain-mist-400: #949598;
+  --color-mountain-mist-500: #6b6d6f;
   --color-mountain-mist-800: #444546;
   --color-mountain-mist-950: #252527;
   /* Gray */
   --color-gray-500: #6b6d6f;
 
+  /* Atomic Tangerine */
   --color-tangerine: #ff9567;
+  --color-tangerine-400: #fe6939;
+
+  /* Watercourse */
+  --color-watercourse-400: #2fd89d;
 
   --animate-loop-scroll: loop-scroll 50s linear infinite;
 
