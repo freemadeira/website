@@ -1,5 +1,6 @@
 import { Flex, Heading, Link, Text } from '@/components/ui/atoms';
-import { type Event, EventImage, EventTags } from './';
+import { Labels } from '../ui';
+import { type Event, EventImage } from './';
 
 type EventCardProps = {
   event: Event;
@@ -27,7 +28,7 @@ export function EventCard({ event }: EventCardProps): React.ReactElement {
         <Text className="grow">{event.description}</Text>
       </Flex>
 
-      <EventTags tags={event.tags} />
+      <Labels tags={event.tags} />
     </Flex>
   );
 }

@@ -1,11 +1,12 @@
 import { Container, Flex, Heading } from '@/components/ui/atoms';
-import { EventCard, type EventTag } from './';
+import { EventCard } from './';
+import type { TagLabel } from '../ui';
 
 export interface Event {
   date: string;
   title: string;
   description: string;
-  tags: EventTag[];
+  tags: TagLabel[];
   imgSrc?: string;
   href?: string;
 }
