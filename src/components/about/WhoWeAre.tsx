@@ -15,7 +15,7 @@ export function WhoWeAre(): React.ReactElement {
   return (
     <Background color="bridal" className="my-24">
       <Container gap={12} className="pt-18 pb-20" size="tight">
-        <CategoryTag>Who are we</CategoryTag>
+        <CategoryTag>Who we are</CategoryTag>
 
         <Flex gap={8} direction="column" className="mb-4 lg:mb-7 lg:flex-row">
           <Flex direction="column" gap={8} justifyContent="between" className="flex-3/5">
