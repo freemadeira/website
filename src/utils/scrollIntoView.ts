@@ -26,6 +26,6 @@ export function scrollIntoView(
       });
     }
   } else {
-    console.warn(`ScrollButton: Element with selector "${id}" not found`);
+    console.warn(`scrollIntoView: Element with id "${id}" not found`);
   }
 }
