@@ -1,4 +1,5 @@
 import type { Category } from '@/components/education';
+import { buildKey } from '@/utils/functions';
 import { Container, Flex, Heading } from '../atoms';
 import type { LabelTag } from '../Labels';
 import { FeaturedCard } from './FeaturedCard';
@@ -19,7 +20,7 @@ type Props = {
 
 export function FeaturedGrid({ title, items }: Props): React.ReactElement {
   return (
-    <Container wrapperClasses="mb-16 px-0" className="gap-7">
+    <Container wrapperClasses="my-16 px-0" className="gap-7">
       {title && (
         <Heading size="h5" className="mx-4 sm:mx-0">
           {title}
@@ -28,8 +29,8 @@ export function FeaturedGrid({ title, items }: Props): React.ReactElement {
 
       <div className="no-scrollbar overflow-x-auto">
         <Flex gap={8} className="w-fit overflow-x-auto px-4 sm:px-0">
-          {items.map((item) => (
-            <FeaturedCard key={item.info + item.title} item={item} />
+          {items.map((item, index) => (
+            <FeaturedCard key={buildKey(index, item.title)} item={item} />
           ))}
         </Flex>
       </div>
