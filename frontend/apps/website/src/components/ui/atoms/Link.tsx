@@ -35,7 +35,7 @@ interface LinkProps
   className?: string;
 }
 
-export const Link: React.FC<LinkProps> = ({
+export const Link = ({
   href,
   target,
   children,
@@ -44,7 +44,7 @@ export const Link: React.FC<LinkProps> = ({
   size,
   className,
   ...props
-}) => {
+}: LinkProps) => {
   const isExternalUrl = externalUrl(typeof href === 'string' ? href : href.href); // If href is a UrlObject, use its href property
   const childrenIsText =
     typeof children === 'string' || (isValidElement(children) && children.type === Text); // isValidElement check to ensure children is a React element and avoid runtime errors
