@@ -27,3 +27,5 @@ export const capitalize = <T extends string>(s: T): Capitalize<T> => {
 };
 
 export const possessive = (name: string) => name + (name.toLowerCase().endsWith('s') ? "'" : "'s");
+export const buildKey = (...parts: (string | number | undefined)[]): string =>
+  parts.filter((part) => part !== undefined && part !== null).join('-');
