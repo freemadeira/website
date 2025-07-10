@@ -27,4 +27,8 @@ export const capitalize = <T extends string>(s: T): Capitalize<T> => {
 };
 
 export const buildKey = (...parts: (string | number | undefined)[]): string =>
-  parts.filter((part) => part !== undefined && part !== null).join('-');
+  parts
+    .filter((part) => part !== undefined && part !== null)
+    .join('-')
+    .toLowerCase()
+    .replace(/\s+/g, '-');
