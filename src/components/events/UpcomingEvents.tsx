@@ -21,7 +21,7 @@ const events: Event[] = [
     href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/ngjpqtyhclbjb/',
   },
   {
-    date: 'September 3, 2025, 18:30',
+    date: 'August 28, 2025, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
     description:
       'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
