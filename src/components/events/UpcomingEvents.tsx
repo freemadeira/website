@@ -21,6 +21,15 @@ const events: Event[] = [
     href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/ngjpqtyhclbjb/',
   },
   {
+    date: 'August 15–16, 2025',
+    title: 'The FREE team at BTC HEL',
+    description:
+      'We’re heading to BTC HEL with a team of four! Two of us will be on stage as guest speakers and we will have a booth to share our mission and give you a sneak peek at our online store. Stop by and say hello — we’ve got a few surprises waiting for you!',
+    tags: ['Conference'],
+    imgSrc: '/images/events/btc-hel.png',
+    href: 'https://btchel.com',
+  },
+  {
     date: 'August 28, 2025, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
     description:
@@ -30,21 +39,21 @@ const events: Event[] = [
     href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/308813664/',
   },
   {
-    date: 'September–November (schedule TBC), 2025',
+    date: 'September 27–November 29, 2025',
     title: 'Diploma Bitcoin',
     description:
       '10-week course with recorded classes and weekly live Q&A sessions. This course is a deeper introduction to Bitcoin and takes the student from zero to understanding what Bitcoin is and how it works, as well as learning to use it.',
     tags: ['Course', 'Online'],
     imgSrc: '/images/events/diploma.png',
   },
-  {
-    date: 'EXACT DATES TBC, 2028',
-    title: 'Bitcoin Atlantis 2028',
-    description:
-      'After the huge success of the first edition in 2024, Bitcoin Atlantis will return in 2028. We will once again celebrate Bitcoin in a halving year.',
-    tags: ['Conference'],
-    imgSrc: '/images/events/ba28.jpg',
-  },
+  // {
+  //   date: 'EXACT DATES TBC, 2028',
+  //   title: 'Bitcoin Atlantis 2028',
+  //   description:
+  //     'After the huge success of the first edition in 2024, Bitcoin Atlantis will return in 2028. We will once again celebrate Bitcoin in a halving year.',
+  //   tags: ['Conference'],
+  //   imgSrc: '/images/events/ba28.jpg',
+  // },
 ];
 
 export function UpcomingEvents(): React.ReactElement {
