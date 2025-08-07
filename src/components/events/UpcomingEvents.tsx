@@ -12,15 +12,6 @@ export interface Event {
 
 const events: Event[] = [
   {
-    date: 'August 6, 2025, 18:30',
-    title: 'FREE Madeira Bitcoin Meetup',
-    description:
-      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
-    tags: ['Meetup', 'In-person'],
-    imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/ngjpqtyhclbjb/',
-  },
-  {
     date: 'August 15–16, 2025',
     title: 'The FREE team at BTC HEL',
     description:
@@ -46,14 +37,14 @@ const events: Event[] = [
     tags: ['Course', 'Online'],
     imgSrc: '/images/events/diploma.png',
   },
-  // {
-  //   date: 'EXACT DATES TBC, 2028',
-  //   title: 'Bitcoin Atlantis 2028',
-  //   description:
-  //     'After the huge success of the first edition in 2024, Bitcoin Atlantis will return in 2028. We will once again celebrate Bitcoin in a halving year.',
-  //   tags: ['Conference'],
-  //   imgSrc: '/images/events/ba28.jpg',
-  // },
+  {
+    date: 'EXACT DATES TBC, 2028',
+    title: 'Bitcoin Atlantis 2028',
+    description:
+      'After the huge success of the first edition in 2024, Bitcoin Atlantis will return in 2028. We will once again celebrate Bitcoin in a halving year.',
+    tags: ['Conference'],
+    imgSrc: '/images/events/ba28.jpg',
+  },
 ];
 
 export function UpcomingEvents(): React.ReactElement {
