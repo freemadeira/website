@@ -1,5 +1,6 @@
-import { cn } from '@/utils/classNames';
 import React from 'react';
+
+import { cn } from '@/utils/classes';
 
 /**
  * A component that renders content visually hidden but accessible to screen readers.
