@@ -13,6 +13,7 @@ export * from './IconButton';
 export * from './Info';
 export * from './Link';
 export * from './ScreenReaderOnly';
+export * from './ScrollButton';
 export * from './SocialButton';
 export * from './Svg';
 export * from './Tag';
