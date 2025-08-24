@@ -3,8 +3,8 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Collapsible } from 'radix-ui';
 import * as React from 'react';
-import { Text } from './Text';
 import { Flex } from './Flex';
+import { Text } from './Text';
 
 type CollapsibleProps = {
   title: string;
