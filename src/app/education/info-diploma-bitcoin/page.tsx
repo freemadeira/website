@@ -67,10 +67,10 @@ const table = (
 
     <tbody>
       {calendarTable.map((item) => (
-        <tr key={item.chapter} className="h-8">
+        <tr key={item.chapter} className="h-10 border-mountain-mist-200 border-b">
           <td>{item.chapter}</td>
-          <td>{item.theoryClass}</td>
-          <td>{item.practiceClass}</td>
+          <td className="text-nowrap">{item.theoryClass}</td>
+          <td className="text-nowrap">{item.practiceClass}</td>
         </tr>
       ))}
     </tbody>
@@ -162,7 +162,7 @@ const faq = [
   },
   {
     question: 'Qual o prazo para me inscrever?',
-    answer: 'As inscrições estarão abertas até dia 25 de Set.',
+    answer: 'As inscrições estarão abertas até dia 25 de Setembro.',
   },
   {
     question: 'Porque não me posso inscrever a meio do curso?',
@@ -177,7 +177,7 @@ const faq = [
   {
     question: 'Existe algum material de suporte ao curso?',
     answer:
-      'Sim, o manual Diploma Bitcoin é o material de apoio principal. Podes fazer o download gratuito aqui. Se preferires adquiri-lo em formato físico podes comprá-lo aqui. Para além do manual, também as apresentações das aulas teóricas e práticas serão partilhadas.',
+      'Sim, o manual Diploma Bitcoin é o material de apoio principal. Podes fazer o download gratuito do mesmo. Se preferires adquiri-lo em formato físico podes comprá-lo na nossa loja online. Para além do manual, também as apresentações das aulas teóricas e práticas serão partilhadas. As ligações para download e para compra do manual estão disponíveis acima, na secção "Manual do aluno".',
   },
 ];
 
