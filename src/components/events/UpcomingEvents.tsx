@@ -1,4 +1,5 @@
 import { Container, Flex, Heading } from '@/components/ui/atoms';
+
 import { EventCard, type EventTag } from './';
 
 export interface Event {
@@ -11,15 +12,6 @@ export interface Event {
 }
 
 const events: Event[] = [
-  {
-    date: 'August 15–16, 2025',
-    title: 'The FREE team at BTC HEL',
-    description:
-      'We’re heading to BTC HEL with a team of four! Two of us will be on stage as guest speakers and we will have a booth to share our mission and give you a sneak peek at our online store. Stop by and say hello — we’ve got a few surprises waiting for you!',
-    tags: ['Conference'],
-    imgSrc: '/images/events/btc-hel.png',
-    href: 'https://btchel.com',
-  },
   {
     date: 'August 28, 2025, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
@@ -36,6 +28,15 @@ const events: Event[] = [
       '10-week course with recorded classes and weekly live Q&A sessions. This course is a deeper introduction to Bitcoin and takes the student from zero to understanding what Bitcoin is and how it works, as well as learning to use it.',
     tags: ['Course', 'Online'],
     imgSrc: '/images/events/diploma.png',
+  },
+  {
+    date: 'October 1, 2025, 18:30',
+    title: 'FREE Madeira Bitcoin Meetup',
+    description:
+      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+    tags: ['Meetup', 'In-person'],
+    imgSrc: '/images/events/meetup.jpg',
+    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/308813665/',
   },
   {
     date: 'EXACT DATES TBC, 2028',
