@@ -28,6 +28,7 @@ const events: Event[] = [
       '10-week course with recorded classes and weekly live Q&A sessions. This course is a deeper introduction to Bitcoin and takes the student from zero to understanding what Bitcoin is and how it works, as well as learning to use it.',
     tags: ['Course', 'Online'],
     imgSrc: '/images/events/diploma.png',
+    href: '/education/info-diploma-bitcoin',
   },
   {
     date: 'October 1, 2025, 18:30',
