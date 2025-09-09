@@ -162,7 +162,8 @@ const faq = [
   },
   {
     question: 'Qual o prazo para me inscrever?',
-    answer: 'As inscrições estarão abertas até dia 25 de Setembro.',
+    answer:
+      'As inscrições estarão abertas até dia 25 de Setembro ou até ser atingido o número máximo de participantes',
   },
   {
     question: 'Porque não me posso inscrever a meio do curso?',
