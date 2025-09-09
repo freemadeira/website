@@ -13,15 +13,6 @@ export interface Event {
 
 const events: Event[] = [
   {
-    date: 'August 28, 2025, 18:30',
-    title: 'FREE Madeira Bitcoin Meetup',
-    description:
-      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
-    tags: ['Meetup', 'In-person'],
-    imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/308813664/',
-  },
-  {
     date: 'September 27–November 29, 2025',
     title: 'Diploma Bitcoin',
     description:
@@ -38,6 +29,15 @@ const events: Event[] = [
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
     href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/308813665/',
+  },
+  {
+    date: 'November 5, 2025, 18:30',
+    title: 'FREE Madeira Bitcoin Meetup',
+    description:
+      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+    tags: ['Meetup', 'In-person'],
+    imgSrc: '/images/events/meetup.jpg',
+    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/306911619/',
   },
   {
     date: 'EXACT DATES TBC, 2028',
