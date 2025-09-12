@@ -107,7 +107,8 @@ const faq = [
   },
   {
     question: 'Quando e a que horas serão dadas as aulas práticas?',
-    answer: 'As aulas práticas acontecerão aos sábados, às 10 da manhã.',
+    answer:
+      'As aulas práticas acontecerão aos sábados, às 10 da manhã (hora de Portugal Continental e Madeira).',
   },
   {
     question: 'Como posso aceder às aulas práticas?',
