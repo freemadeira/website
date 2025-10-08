@@ -22,15 +22,6 @@ const events: Event[] = [
     href: '/education/info-diploma-bitcoin',
   },
   {
-    date: 'October 1, 2025, 18:30',
-    title: 'FREE Madeira Bitcoin Meetup',
-    description:
-      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
-    tags: ['Meetup', 'In-person'],
-    imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/308813665/',
-  },
-  {
     date: 'November 5, 2025, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
     description:
@@ -38,6 +29,15 @@ const events: Event[] = [
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
     href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/306911619/',
+  },
+  {
+    date: 'December 3, 2025, 18:30',
+    title: 'FREE Madeira Bitcoin Meetup',
+    description:
+      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+    tags: ['Meetup', 'In-person'],
+    imgSrc: '/images/events/meetup.jpg',
+    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/308813666/',
   },
   {
     date: 'EXACT DATES TBC, 2028',
