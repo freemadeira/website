@@ -1,11 +1,11 @@
 'use client';
 
-import type { Url } from '@/utils/types';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { MenuIcon, XIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { twJoin, twMerge } from 'tailwind-merge';
+import type { Url } from '@/utils/types';
 import { Button, Flex } from '../ui/atoms';
 import { LogoHorizontal } from '../ui/svgs/LogoHorizontal';
 
@@ -18,6 +18,10 @@ const menuItems: MenuItem[] = [
   {
     name: 'About',
     href: '/about',
+  },
+  {
+    name: 'Bitcoin Atlantis',
+    href: 'https://bitcoinatlantis.com/',
   },
   // {
   //   name: 'Madeira',
