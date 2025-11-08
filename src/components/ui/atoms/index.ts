@@ -8,6 +8,7 @@ export * from './Flex';
 export * from './Grid';
 export * from './Heading';
 export * from './IconButton';
+export * from './Info';
 export * from './Link';
 export * from './ScreenReaderOnly';
 export * from './SocialButton';

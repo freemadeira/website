@@ -1,15 +1,15 @@
-import { externalUrl } from '@/utils/functions';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
-import { IconButton } from '../ui/atoms';
-import type { Event } from './UpcomingEvents';
+import { externalUrl } from '@/utils/functions';
+import { IconButton } from '../atoms';
+import type { FeaturedItem } from './FeaturedGrid';
 
-interface EventImageProps {
-  imgSrc?: Event['imgSrc'];
-  link?: Event['href'];
+interface Props {
+  imgSrc?: FeaturedItem['imgSrc'];
+  link?: FeaturedItem['href'];
 }
 
-export const EventImage: React.FC<EventImageProps> = ({ imgSrc, link }) => (
+export const FeaturedCardImage = ({ imgSrc, link }: Props): React.ReactElement => (
   <div className="relative h-48 w-full">
     <Image
       src={imgSrc || '/images/events/placeholder.png'}
