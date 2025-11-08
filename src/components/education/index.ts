@@ -1,2 +1,4 @@
 export * from './Category';
-export * from './TableOfContents';
+export * from './FeaturedEducation';
+export * from './table-of-contents';
+export * from './types';

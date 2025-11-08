@@ -9,7 +9,7 @@ const containerVariants = tv({
       normal: 'max-w-full',
       tight: 'max-w-7xl',
       tighter: 'max-w-5xl',
-      extraTight: 'max-w-3xl',
+      extraTight: 'max-w-[50rem]', // 50rem = 200 =
     },
     direction: {
       row: 'flex-row',
