@@ -1,11 +1,12 @@
 'use client';
 
-import { cn } from '@/utils/classNames';
 import useEmblaCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import * as React from 'react';
-import { type Button, Container, Flex, IconButton, ScreenReaderOnly } from './atoms';
+
+import { cn } from '@/utils/classes';
 import { capitalize } from '@/utils/functions';
+import { type Button, Container, IconButton, ScreenReaderOnly } from './atoms';
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -164,7 +165,9 @@ function Carousel({
         autoPlayInterval,
       }}
     >
-      <section
+      {/** biome-ignore lint/a11y/useSemanticElements: linting conflict */}
+      <div
+        role="region"
         onKeyDownCapture={handleKeyDown}
         onMouseEnter={autoPlay ? handleMouseEnter : undefined}
         onMouseLeave={autoPlay ? handleMouseLeave : undefined}
@@ -175,7 +178,7 @@ function Carousel({
         {...props}
       >
         {children}
-      </section>
+      </div>
     </CarouselContext.Provider>
   );
 }
