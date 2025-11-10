@@ -3,12 +3,22 @@ import { HomeCarouselItem } from './HomeCarouselItem';
 import energySummitImage from '@/assets/images/carousel/energy-summit.jpg';
 import madeiraImage from '@/assets/images/carousel/madeira.jpg';
 import bitcoinAtlantisImage from '@/assets/images/carousel/bitcoin-atlantis.jpg';
-import shopImage from '@/assets/images/carousel/shop.jpg';
+// import shopImage from '@/assets/images/carousel/shop.jpg';
+import blackFridayImage from '@/assets/images/carousel/black-friday.jpg';
 
 export const HomeCarousel: React.FC = () => {
   return (
     <Carousel title="Projects">
       <CarouselContent>
+        <HomeCarouselItem
+          title="Black Friday"
+          backgroundImage={blackFridayImage}
+          mainButtonHref="https://shop.freemadeira.org"
+          mainButtonText="Go to shop"
+        >
+          Discounts up to 80% in our shop!
+        </HomeCarouselItem>
+
         <HomeCarouselItem
           title="Adoption"
           backgroundImage={madeiraImage}
@@ -19,15 +29,15 @@ export const HomeCarousel: React.FC = () => {
           become a world reference for Bitcoin.
         </HomeCarouselItem>
 
-        <HomeCarouselItem
-          title="Shop"
-          backgroundImage={shopImage}
-          mainButtonHref="https://shop.freemadeira.org"
-          mainButtonText="Visit the shop"
-        >
-          Buy hardware wallets, backup solutions, books, and other Bitcoin-related products in our
-          online shop.
-        </HomeCarouselItem>
+        {/* <HomeCarouselItem */}
+        {/*   title="Shop" */}
+        {/*   backgroundImage={shopImage} */}
+        {/*   mainButtonHref="https://shop.freemadeira.org" */}
+        {/*   mainButtonText="Visit the shop" */}
+        {/* > */}
+        {/*   Buy hardware wallets, backup solutions, books, and other Bitcoin-related products in our */}
+        {/*   online shop. */}
+        {/* </HomeCarouselItem> */}
 
         <HomeCarouselItem
           title="Energy Summit"
