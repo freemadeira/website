@@ -11,12 +11,12 @@ export const HomeCarousel: React.FC = () => {
     <Carousel title="Projects">
       <CarouselContent>
         <HomeCarouselItem
-          title="Black Friday"
+          title="Shop"
           backgroundImage={blackFridayImage}
-          mainButtonHref="https://shop.freemadeira.org"
-          mainButtonText="Go to shop"
+          mainButtonHref="https://shop.freemadeira.org/pages/21-days-of-discounts"
+          mainButtonText="See the deals"
         >
-          Discounts up to 80% in our shop!
+          Up to 80% off during our Black Friday sale.
         </HomeCarouselItem>
 
         <HomeCarouselItem
