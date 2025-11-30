@@ -47,24 +47,26 @@ export default function About() {
               first to know about discounts in our online shop.
             </Text>
 
-            <input
-              type="email"
-              required
-              placeholder="Email address"
-              aria-label="Email address"
-              className="grow rounded-full bg-white px-6 py-2.5 text-dark text-sm placeholder:text-dark/40 focus:outline-none focus:ring-0"
-              onChange={handleChange}
-              value={email || ''}
-            />
+            <Flex gap={2} className="my-12">
+              <input
+                type="email"
+                required
+                placeholder="Email address"
+                aria-label="Email address"
+                className="rounded-full border bg-white px-6 py-2.5 text-dark text-sm placeholder:text-dark/40 focus:outline-primary-400 focus:ring-0"
+                onChange={handleChange}
+                value={email || ''}
+              />
 
-            <Button
-              onClick={handleSubmit}
-              type="button"
-              disabled={submitted}
-              // className="size-12 items-center justify-center border-[1.5px]"
-            >
-              Subscribe
-            </Button>
+              <Button
+                onClick={handleSubmit}
+                type="button"
+                disabled={submitted}
+                // className="size-12 items-center justify-center border-[1.5px]"
+              >
+                Subscribe
+              </Button>
+            </Flex>
           </div>
         </div>
 
