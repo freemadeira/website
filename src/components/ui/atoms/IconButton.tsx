@@ -2,7 +2,7 @@ import { tv, type VariantProps } from 'tailwind-variants';
 import { Button } from './Button';
 
 const iconButtonVariants = tv({
-  base: 'p-2 rounded-full dark:border-yellow-400 dark:hover:bg-yellow-400 dark:fill-yellow-400 dark:hover:fill-dark dark:text-yellow-400 dark:hover:text-dark',
+  base: 'rounded-full p-2 dark:border-yellow-400 dark:fill-yellow-400 dark:text-yellow-400 dark:hover:bg-yellow-400 dark:hover:fill-dark dark:hover:text-dark',
 });
 
 interface IconButtonProps
