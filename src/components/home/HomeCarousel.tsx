@@ -1,24 +1,14 @@
-import { Carousel, CarouselContent, CarouselControls } from '../ui';
-import { HomeCarouselItem } from './HomeCarouselItem';
+import bitcoinAtlantisImage from '@/assets/images/carousel/bitcoin-atlantis.jpg';
 import energySummitImage from '@/assets/images/carousel/energy-summit.jpg';
 import madeiraImage from '@/assets/images/carousel/madeira.jpg';
-import bitcoinAtlantisImage from '@/assets/images/carousel/bitcoin-atlantis.jpg';
-// import shopImage from '@/assets/images/carousel/shop.jpg';
-import blackFridayImage from '@/assets/images/carousel/black-friday.jpg';
+import shopImage from '@/assets/images/carousel/shop.jpg';
+import { Carousel, CarouselContent, CarouselControls } from '../ui';
+import { HomeCarouselItem } from './HomeCarouselItem';
 
 export const HomeCarousel: React.FC = () => {
   return (
     <Carousel title="Projects">
       <CarouselContent>
-        <HomeCarouselItem
-          title="Shop"
-          backgroundImage={blackFridayImage}
-          mainButtonHref="https://shop.freemadeira.org/pages/21-days-of-discounts"
-          mainButtonText="See the deals"
-        >
-          Up to 80% off during our Black Friday sale.
-        </HomeCarouselItem>
-
         <HomeCarouselItem
           title="Adoption"
           backgroundImage={madeiraImage}
@@ -29,15 +19,15 @@ export const HomeCarousel: React.FC = () => {
           become a world reference for Bitcoin.
         </HomeCarouselItem>
 
-        {/* <HomeCarouselItem */}
-        {/*   title="Shop" */}
-        {/*   backgroundImage={shopImage} */}
-        {/*   mainButtonHref="https://shop.freemadeira.org" */}
-        {/*   mainButtonText="Visit the shop" */}
-        {/* > */}
-        {/*   Buy hardware wallets, backup solutions, books, and other Bitcoin-related products in our */}
-        {/*   online shop. */}
-        {/* </HomeCarouselItem> */}
+        <HomeCarouselItem
+          title="Shop"
+          backgroundImage={shopImage}
+          mainButtonHref="https://shop.freemadeira.org"
+          mainButtonText="Visit the shop"
+        >
+          Buy hardware wallets, backup solutions, books, and other Bitcoin-related products in our
+          online shop.
+        </HomeCarouselItem>
 
         <HomeCarouselItem
           title="Energy Summit"
