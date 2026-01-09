@@ -1,7 +1,7 @@
 import type { Social } from '@/components/ui/atoms/SocialButton';
 
 const prod = { BASE_URL: 'https://freemadeira.org' };
-const dev = { BASE_URL: 'http://localhost:3000' };
+const dev = { BASE_URL: 'http://localhost:4010' };
 export const DEV_ENV = process.env.NODE_ENV === 'development';
 export const CONFIG = DEV_ENV ? dev : prod;
 
