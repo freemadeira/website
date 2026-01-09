@@ -33,7 +33,7 @@ const events: Event[] = [
     date: 'February 4, 2026, 18:30–20:00',
     title: 'Introdução ao lado técnico do Bitcoin',
     description:
-      'Workshop entirely in Portuguese. Este workshop é recomendado para quem queira entender os mecanismos que garantem segurança, escassez e operação descentralizada do Bitcoin.',
+      'Workshop entirely in Portuguese. Este workshop é recomendado para quem queira entender os mecanismos que garantem segurança, escassez e funcionamento descentralizado do Bitcoin.',
     imgSrc: '/images/events/workshop-intro.jpg',
     tags: ['Workshop', 'Online'],
   },
