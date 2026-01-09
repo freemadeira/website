@@ -38,13 +38,22 @@ const events: Event[] = [
     tags: ['Workshop', 'Online'],
   },
   {
-    date: 'EXACT DATES TBC, 2028',
-    title: 'Bitcoin Atlantis 2028',
+    date: 'February 25, 2026, 18:30',
+    title: 'FREE Madeira Bitcoin Meetup',
     description:
-      'After the huge success of the first edition in 2024, Bitcoin Atlantis will return in 2028. We will once again celebrate Bitcoin in a halving year.',
-    tags: ['Conference'],
-    imgSrc: '/images/events/ba28.jpg',
+      'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+    tags: ['Meetup', 'In-person'],
+    imgSrc: '/images/events/meetup.jpg',
+    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/312459853/',
   },
+  // {
+  //   date: 'EXACT DATES TBC, 2028',
+  //   title: 'Bitcoin Atlantis 2028',
+  //   description:
+  //     'After the huge success of the first edition in 2024, Bitcoin Atlantis will return in 2028. We will once again celebrate Bitcoin in a halving year.',
+  //   tags: ['Conference'],
+  //   imgSrc: '/images/events/ba28.jpg',
+  // },
 ];
 
 export function UpcomingEvents(): React.ReactElement {
