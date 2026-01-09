@@ -16,7 +16,7 @@ const events: Event[] = [
     date: 'January 28, 2026, 18:30–20:00',
     title: 'Introdução ao Bitcoin',
     description:
-      'Workshop entirely in Portuguese. This workshop covers the basics of what money is and how Bitcoin improves it. Registrations open soon.',
+      'Workshop entirely in Portuguese. Este workshop apresenta Bitcoin como dinheiro. Exploramos a importância do dinheiro, a sua origem e evolução, e como Bitcoin representa o futuro do mesmo.',
     imgSrc: '/images/events/workshop-intro.jpg',
     tags: ['Workshop', 'Online'],
   },
@@ -33,7 +33,7 @@ const events: Event[] = [
     date: 'February 4, 2026, 18:30–20:00',
     title: 'Introdução ao lado técnico do Bitcoin',
     description:
-      'Workshop entirely in Portuguese. This workshop covers the basics of how Bitcoin works under the hood. Registrations open soon.',
+      'Workshop entirely in Portuguese. Este workshop é recomendado para quem queira entender os mecanismos que garantem segurança, escassez e operação descentralizada do Bitcoin.',
     imgSrc: '/images/events/workshop-intro.jpg',
     tags: ['Workshop', 'Online'],
   },
