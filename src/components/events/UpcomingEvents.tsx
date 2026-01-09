@@ -13,30 +13,29 @@ export interface Event {
 
 const events: Event[] = [
   {
-    date: 'December 3, 2025, 18:30',
-    title: 'FREE Madeira Bitcoin Meetup',
+    date: 'January 28, 2026, 18:30–20:00',
+    title: 'Introdução ao Bitcoin',
     description:
-      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
-    tags: ['Meetup', 'In-person'],
-    imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/308813666/',
+      'Workshop entirely in Portuguese. This workshop covers the basics of what money is and how Bitcoin improves it. Registrations open soon.',
+    imgSrc: '/images/events/workshop-intro.jpg',
+    tags: ['Workshop', 'Online'],
   },
   {
-    date: 'September 27–November 29, 2025',
-    title: 'Diploma Bitcoin',
-    description:
-      '10-week course with recorded classes and weekly live Q&A sessions. This course is a deeper introduction to Bitcoin and takes the student from zero to understanding what Bitcoin is and how it works, as well as learning to use it.',
-    tags: ['Course', 'Online'],
-    imgSrc: '/images/events/diploma.png',
-    href: '/education/info-diploma-bitcoin',
-  },
-  {
-    date: 'January 7, 2026, 18:30',
+    date: 'January 28, 2026, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
     description:
-      'Every first Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+      'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
+    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/312457728/',
+  },
+  {
+    date: 'February 4, 2026, 18:30–20:00',
+    title: 'Introdução ao lado técnico do Bitcoin',
+    description:
+      'Workshop entirely in Portuguese. This workshop covers the basics of how Bitcoin works under the hood. Registrations open soon.',
+    imgSrc: '/images/events/workshop-intro.jpg',
+    tags: ['Workshop', 'Online'],
   },
   {
     date: 'EXACT DATES TBC, 2028',
@@ -49,20 +48,19 @@ const events: Event[] = [
 ];
 
 export function UpcomingEvents(): React.ReactElement {
-  return <></>;
-  // return (
-  //   <Container wrapperClasses="mb-16 px-0" className="gap-7">
-  //     <Heading size="h5" className="mx-4 sm:mx-0">
-  //       Upcoming Events
-  //     </Heading>
-  //
-  //     <div className="no-scrollbar overflow-x-auto">
-  //       <Flex gap={8} className="w-fit overflow-x-auto px-4 sm:px-0">
-  //         {events.map((event) => (
-  //           <EventCard key={event.date + event.title} event={event} />
-  //         ))}
-  //       </Flex>
-  //     </div>
-  //   </Container>
-  // );
+  return (
+    <Container wrapperClasses="mb-16 px-0" className="gap-7">
+      <Heading size="h5" className="mx-4 sm:mx-0">
+        Upcoming Events
+      </Heading>
+
+      <div className="no-scrollbar overflow-x-auto">
+        <Flex gap={8} className="w-fit overflow-x-auto px-4 sm:px-0">
+          {events.map((event) => (
+            <EventCard key={event.date + event.title} event={event} />
+          ))}
+        </Flex>
+      </div>
+    </Container>
+  );
 }
