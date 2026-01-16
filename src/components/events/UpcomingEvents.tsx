@@ -24,7 +24,7 @@ const events: Event[] = [
     date: 'January 28, 2026, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
     description:
-      'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+      'In the month of January we welcome Sylvia Brinded-Püls, from A Place to Be, for an open and inspiring talk on sovereignty, community, and practical ways of living beyond the system.',
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
     href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/312457728/',
