@@ -6,7 +6,7 @@ import { IconButton } from './IconButton';
 
 interface DiscreetButtonProps {
   href: Url;
-  children: string;
+  children: string | string[];
 }
 
 export const DiscreetButton: React.FC<DiscreetButtonProps> = ({ href, children }) => {
