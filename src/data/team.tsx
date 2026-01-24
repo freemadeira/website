@@ -58,7 +58,6 @@ export const teamMembers: TeamMember[] = [
     lastName: 'Silva',
     sex: 'female',
     categories: ['Designer'],
-    picture: '/images/team-and-advisory-board/female-avatar.svg',
     socials: { instagram: 'instagram' },
   },
 ];

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { TeamMember } from '@/data/team';
 import { DiscreetButton, Flex, Grid, Heading, SocialButton, Tag } from '@/components/ui/atoms';
 import { possessive } from '@/utils/functions';
+import { FemaleAvatar } from '../ui/svgs/FemaleAvatar';
 
 type PersonProps = {
   person: TeamMember;
@@ -15,21 +16,23 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
     <Flex direction='column' gap={5} className='w-[70vw] flex-1 sm:w-auto'>
       <Flex direction='column' gap={3} className='grow'>
         <div className='relative aspect-square w-full'>
-          <Image
-            src={
-              person.picture ||
-              `/images/team-and-advisory-board/${person.sex}-avatar.svg`
-            }
-            fill
-            alt='Event'
-            className='-z-10 size-full object-cover'
-          />
+          {person.picture ? (
+            <Image
+              src={person.picture}
+              fill
+              alt='Event'
+              className='-z-10 size-full object-cover'
+            />
+          ) : (
+            <FemaleAvatar />
+          )}
+
           <Flex
             direction='row'
             justifyContent='end'
             className='absolute top-4 right-4 left-4'
           >
-            <Grid cols={1} gap={1}>
+            <Grid cols={1} gap={2}>
               {socialKeys.map((social) => {
                 const username = person.socials?.[social];
                 if (!username) return null;
