@@ -12,10 +12,10 @@ import {
 } from '../svgs/socials';
 
 const socialButtonVariants = tv({
-  base: 'w-10 h-10 rounded-full p-[9px]',
+  base: 'h-10 w-10 rounded-full p-2.5',
   variants: {
     style: {
-      filled: 'bg-white fill-dark',
+      filled: 'border-transparent bg-white fill-dark',
       outlined: 'border border-dark fill-dark',
     },
   },
