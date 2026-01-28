@@ -49,6 +49,9 @@ export const buttonVariants = tv({
         'border-white text-white hover:bg-white hover:text-dark group-hover:bg-white group-hover:text-dark',
         'disabled:hover:bg-transparent disabled:hover:text-white disabled:hover:fill-white',
       ),
+      transparent: twJoin(
+        'border-transparent text-dark hover:bg-mountain-mist-50 hover:text-dark',
+      )
     },
   },
   defaultVariants: {

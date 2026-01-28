@@ -12,8 +12,7 @@ import {
   Tag,
 } from '@/components/ui/atoms';
 import { possessive } from '@/utils/functions';
-import { FemaleAvatar } from '../ui/svgs/FemaleAvatar';
-import { MaleAvatar } from '../ui/svgs/MaleAvatar';
+import { FemaleAvatar, MaleAvatar } from '../ui/svgs';
 import { Modal } from './Modal';
 
 type PersonProps = {
@@ -68,7 +67,7 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
 
           <div className='group space-y-2'>
             {
-              <Heading size='h6'>
+              <Heading size='h4'>
                 {person.firstName} {person.lastName}
               </Heading>
             }

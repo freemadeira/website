@@ -6,7 +6,7 @@ type Props = {
   className?: string;
 };
 
-export function Cross({ className }: Props): React.ReactElement {
+export function X({ className }: Props): React.ReactElement {
   const darkMode = useDarkMode();
 
   if (darkMode) {
