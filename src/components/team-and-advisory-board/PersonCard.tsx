@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { AdvisoryBoardMember } from '@/data/advisoryBoard';
 import type { TeamMember } from '@/data/team';
 import {
   DiscreetButton,
@@ -16,13 +17,13 @@ import { FemaleAvatar, MaleAvatar } from '../ui/svgs';
 import { Modal } from './Modal';
 
 type PersonProps = {
-  person: TeamMember;
+  person: TeamMember | AdvisoryBoardMember;
 };
 
 type Social = keyof TeamMember['socials'];
-const socialKeys: Social[] = ['x', 'nostr', 'instagram'];
 
 export function PersonCard({ person }: PersonProps): React.ReactElement {
+  const socialKeys = Object.keys(person.socials) as Social[];
   const [open, setOpen] = useState(false);
 
   return (
@@ -72,11 +73,13 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
               </Heading>
             }
 
-            <Flex gap={2.5} className='mb-4'>
-              {person.categories.map((category: string) => (
-                <Tag key={category} name={category} />
-              ))}
-            </Flex>
+            {person.categories && (
+              <Flex gap={2.5} className='mb-4'>
+                {person.categories.map((category: string) => (
+                  <Tag key={category} name={category} />
+                ))}
+              </Flex>
+            )}
 
             {person.bio && (
               <DiscreetButton onClick={() => setOpen(true)}>
