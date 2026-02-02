@@ -77,9 +77,7 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
             }
 
             {'role' in person && person.role && (
-              <Text size='lg'>
-                {person.role}
-              </Text>
+              <Text size='lg'>{person.role}</Text>
             )}
 
             {'category' in person && person.category && (
