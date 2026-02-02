@@ -81,6 +81,6 @@ export const teamMembers: TeamMember[] = [
     socials: {
       nostr: 'npub1yaz5asg4uzj2zckgq2n5sjkwj7u7cdmz0hk2905xgkuc7d5vj98qwyhh3p',
     },
-    bio: 'Inês Louro is a software developer and Bitcoin enthusiast who enjoys teaching. She has taught coding and now teaches Bitcoin, designing and creating educational content to empower others through knowledge.',
+    bio: 'Software developer and Bitcoin enthusiast who enjoys teaching. She builds applications and turns ideas into working software. She has taught coding and now teaches Bitcoin, designing and creating educational content to make Bitcoin more accessible and encourage its adoption as a better form of money.',
   },
 ];
