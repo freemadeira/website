@@ -1,3 +1,4 @@
+import type { StaticImageData } from 'next/image';
 import type { Social } from '@/components/ui/atoms/SocialButton';
 import { pictures } from '@/assets/images/team';
 
@@ -5,9 +6,9 @@ export interface TeamMember {
   firstName: string;
   lastName: string;
   sex: 'male' | 'female';
-  categories: string[];
-  picture?: string;
-  socials: Partial<Record<Social, string>>;
+  role: string;
+  picture?: StaticImageData;
+  socials?: Partial<Record<Social, string>>;
   bio?: string;
 }
 
@@ -16,7 +17,7 @@ export const teamMembers: TeamMember[] = [
     firstName: 'André',
     lastName: 'Loja',
     sex: 'male',
-    categories: ['Founder'],
+    role: 'Founder',
     picture: pictures.andreLoja,
     socials: {
       x: 'andreloja',
@@ -28,8 +29,9 @@ export const teamMembers: TeamMember[] = [
   {
     firstName: 'Henrique',
     lastName: 'Albuquerque',
+    picture: pictures.henriqueAlbuquerque,
     sex: 'male',
-    categories: ['Head of Education'],
+    role: 'Head of Education',
     socials: {
       nostr: 'npub1e6yjcxup0d90x3kvty7m54kc0r4c4smpggsvajvhtlyyeyfrkjtqhcl44p',
       x: 'liberspace',
@@ -40,35 +42,45 @@ export const teamMembers: TeamMember[] = [
     lastName: 'Brazão',
     sex: 'female',
     picture: pictures.mafaldaBrazao,
-    categories: ['Senior Project Manager'],
-    socials: {},
+    role: 'Senior Project Manager',
+    bio: 'She coordinates and delivers projects, connecting people, ideas, and resources — with a clear focus on solving problems and making things happen.',
   },
   {
     firstName: 'Luísa',
     lastName: 'Costa',
     sex: 'female',
-    categories: ['Project Manager'],
-    socials: {},
+    role: 'Project Manager',
+    picture: pictures.luisaCosta,
   },
   {
     firstName: 'Marília',
     lastName: 'Marques',
+    picture: pictures.mariliaMarques,
     sex: 'female',
-    categories: ['Marketing & Communication'],
-    socials: {},
+    role: 'Social Media Manager',
+    socials: {
+      x: 'mariliasm03',
+      nostr: 'npub1lt5sun5fgd2vce2p5yeku9njyka8s6e4e4nkpvncycx84vv8xf9q032gtn',
+    },
+    bio: 'Bitcoin enthusiast working in digital communication, with experience in content creation, video editing, and social media management. Her work aims to deepen Bitcoin education and increase awareness of its economic, technological, and cultural relevance.',
   },
   {
     firstName: 'Carolina',
     lastName: 'Roovers',
+    picture: pictures.carolinaRoovers,
     sex: 'female',
-    categories: ['Designer'],
-    socials: {},
+    role: 'Designer & Project Manager',
+    bio: 'A designer who combines creativity and strategy, and supports event coordination by connecting concepts, people, and experiences.',
   },
   {
     firstName: 'Inês',
     lastName: 'Louro',
+    picture: pictures.inesLouro,
     sex: 'female',
-    categories: ['Education', 'Developer'],
-    socials: {},
+    role: 'Education Builder & Software Developer',
+    socials: {
+      nostr: 'npub1yaz5asg4uzj2zckgq2n5sjkwj7u7cdmz0hk2905xgkuc7d5vj98qwyhh3p',
+    },
+    bio: 'Inês Louro is a software developer and Bitcoin enthusiast who enjoys teaching. She has taught coding and now teaches Bitcoin, designing and creating educational content to empower others through knowledge.',
   },
 ];

@@ -3,7 +3,7 @@ import {
   DialogBackdrop,
   DialogPanel,
 } from '@headlessui/react';
-import { AdvisoryBoardMember } from '@/data/advisoryBoard';
+import type { AdvisoryBoardMember } from '@/data/advisoryBoard';
 import type { TeamMember } from '@/data/team';
 import { Flex, Heading, SocialButton, Text, CloseButton } from '../ui/atoms';
 import Image from 'next/image';
@@ -20,7 +20,7 @@ export function Modal({
   open,
   setOpen,
 }: ModalProps): React.ReactElement {
-  const socialKeys = Object.keys(person.socials) as Social[];
+  const socialKeys = Object.keys(person.socials ?? {}) as Social[];
 
   return (
     <Dialog open={open} onClose={setOpen} className='relative'>
@@ -65,19 +65,21 @@ export function Modal({
                   <Text size='lg' className='py-8 sm:pt-0 sm:pb-10'>
                     {person.bio}
                   </Text>
-                  <Flex gap={2}>
-                    {socialKeys.map((social) => {
-                      const username = person.socials?.[social];
-                      if (!username) return null;
-                      return (
-                        <SocialButton
-                          key={social}
-                          social={social}
-                          username={username}
-                        />
-                      );
-                    })}
-                  </Flex>
+                  {person.socials && (
+                    <Flex gap={2}>
+                      {socialKeys.map((social) => {
+                        const username = person.socials?.[social];
+                        if (!username) return null;
+                        return (
+                          <SocialButton
+                            key={social}
+                            social={social}
+                            username={username}
+                          />
+                        );
+                      })}
+                    </Flex>
+                  )}
                 </div>
               </div>
             </Flex>

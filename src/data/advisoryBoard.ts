@@ -5,9 +5,9 @@ export interface AdvisoryBoardMember {
   firstName: string;
   lastName: string;
   sex: 'male' | 'female';
-  categories?: string[];
+  category?: string;
   picture?: StaticImageData;
-  socials: Partial<Record<Social, string>>;
+  socials?: Partial<Record<Social, string>>;
   bio?: string;
 }
 
@@ -19,7 +19,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'adam_nili',
       nostr:
-      'nprofile1qqsr34ep228fks80a5pqef0je3jacw9kzdu8n3fk9g87j36yt2gu8fghcygh4',
+        'nprofile1qqsr34ep228fks80a5pqef0je3jacw9kzdu8n3fk9g87j36yt2gu8fghcygh4',
       linkedin: 'adam-nili',
     },
     picture: pictures.adamNili,
@@ -29,7 +29,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'André',
     lastName: 'Loja',
     sex: 'male',
-    categories: ['General'],
+    category: 'General',
     socials: {
       x: 'andreloja',
       nostr: 'npub1tdc9um9kqfp9cqvjqtwswzsvqzdsgzkpn9swamed3286kfwpaljsrr8r0y',
@@ -42,7 +42,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Bert',
     lastName: 'de Groot',
     sex: 'male',
-    categories: ['Energy'],
+    category: 'Energy',
     socials: {
       x: 'BdGBertdeGroot',
       nostr: 'npub1jqs0u7zhh53e94gyhm4eu458wm6sw7z0kk66jjhhkhh346tcq2ysfgr247',
@@ -55,8 +55,9 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Daniel',
     lastName: 'Prince',
     sex: 'male',
-    categories: ['Strategy'],
+    category: 'Strategy',
     socials: {
+      x: 'Princey21M',
       nostr: 'npub1hghnjjpnvkz8t6gkszuf37d7puwc2qtxc65rnklqsngzv6kkug9qhhfyz2',
     },
     picture: pictures.danielPrince,
@@ -66,12 +67,12 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Hermann',
     lastName: 'Vivier',
     sex: 'male',
-    categories: ['Community'],
+    category: 'Community',
     socials: {
       x: 'BitcoinEkasi',
     },
     picture: pictures.hermannVivier,
-    bio: '',
+    bio: 'Hermann Buhr Vivier is the founder of Bitcoin Ekasi, est. 2021. Bitcoin Ekasi is a Bitcoin circular economy project based in Mossel Bay, South Africa. The project is inspired by Bitcoin Beach (El Salvador) and utilizes The Surfer Kids, a social development & youth empowerment non-profit that Hermann co-founded in 2010, as a community platform. Hermann’s involvement with Bitcoin dates back to late 2013 when he stumbled across an early print copy of Bitcoin Magazine. Later, in 2015, an international tourism business he co-owns with his wife was separated from its client base due to financial sanctions. Bitcoin became a way to receive payments, bypassing sanctions and saving their business. This experience triggered a deep interest in Bitcoin as a solution to immediate problems, related specifically to its use as an uncensorable medium of exchange.',
   },
   {
     firstName: 'Janet',
@@ -88,7 +89,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Jeff',
     lastName: 'Booth',
     sex: 'male',
-    categories: ['Strategy'],
+    category: 'Strategy',
     socials: {
       x: 'JeffBooth',
       nostr: 'npub1s05p3ha7en49dv8429tkk07nnfa9pcwczkf5x5qrdraqshxdje9sq6eyhe',
@@ -101,7 +102,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Joe',
     lastName: 'Nakamoto',
     sex: 'male',
-    categories: ['Marketing & Events'],
+    category: 'Marketing & Events',
     socials: {
       x: 'JoeNakamoto',
       nostr: 'npub1lr2zzf989mvf393y0tv39ara6a4vddkd6y87z784up9vl6ks6j3qtudl6a',
@@ -114,8 +115,9 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'John',
     lastName: 'Dennehy',
     sex: 'male',
-    categories: ['Education'],
+    category: 'Education',
     socials: {
+      x: 'jdennehy_writes',
       nostr:
         'nprofile1qqsywnwsaj4jk7amaq90su86s4uzvmhjgyk53pgzjlw5wg7unh543ecdpnxs0',
     },
@@ -126,7 +128,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Knut',
     lastName: 'Svanholm',
     sex: 'male',
-    categories: ['Strategy'],
+    category: 'Strategy',
     socials: {
       x: 'knutsvanholm',
       nostr: 'npub1jt97tpsul3fp8hvf7zn0vzzysmu9umcrel4hpgflg4vnsytyxwuqt8la9y',
@@ -139,7 +141,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Max',
     lastName: 'DeMarco',
     sex: 'male',
-    categories: ['Marketing & Events'],
+    category: 'Marketing & Events',
     socials: {
       x: 'itsmaxdemarco',
       nostr: 'npub1lelkh3hhxw9hdwlcpk6q9t0xt9f7yze0y0nxazvzqjmre3p98x3sthkvyz',
@@ -152,7 +154,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Max',
     lastName: 'Hillebrand',
     sex: 'male',
-    categories: ['Technology'],
+    category: 'Technology',
     socials: {
       nostr: 'npub1klkk3vrzme455yh9rl2jshq7rc8dpegj3ndf82c3ks2sk40dxt7qulx3vt',
     },
@@ -174,7 +176,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Paulo',
     lastName: 'Pereira',
     sex: 'male',
-    categories: ['Legal & Governance'],
+    category: 'Legal & Governance',
     socials: {
       x: 'PauloPe63416386',
       linkedin: 'paulo-pereira-82803579',
@@ -189,7 +191,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'petermiyoung',
       nostr:
-      'nprofile1qqs0cfrsa5vksqwa4nju9093fffl5hhflq0wxedlf9v0jnrpzlv7ufcvg8qer',
+        'nprofile1qqs0cfrsa5vksqwa4nju9093fffl5hhflq0wxedlf9v0jnrpzlv7ufcvg8qer',
       linkedin: 'peter-young-70b80a42',
     },
     picture: pictures.peterYoung,
@@ -199,7 +201,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Rob',
     lastName: 'Brinded',
     sex: 'male',
-    categories: ['Education'],
+    category: 'Education',
     socials: {
       x: 'RobBrinded',
       linkedin: 'rob-brinded-4887817',
@@ -211,7 +213,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Samson',
     lastName: 'Mow',
     sex: 'male',
-    categories: ['Strategy'],
+    category: 'Strategy',
     socials: {
       x: 'Excellion',
       linkedin: 'samson',
@@ -223,11 +225,11 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     firstName: 'Stiven',
     lastName: 'Kerestegian',
     sex: 'male',
-    categories: ['Strategy'],
+    category: 'Strategy',
     socials: {
       x: 'stiven_hey_',
       nostr:
-      'nprofile1qqsqu8ua4wwccjpmujttq6p6v5thnxvdg8fxlemj4fgy3gergvshj8qhpguq6',
+        'nprofile1qqsqu8ua4wwccjpmujttq6p6v5thnxvdg8fxlemj4fgy3gergvshj8qhpguq6',
       linkedin: 'stivenk',
     },
     picture: pictures.stivenKerestegian,

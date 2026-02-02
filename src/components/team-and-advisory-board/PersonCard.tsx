@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { AdvisoryBoardMember } from '@/data/advisoryBoard';
+import type { AdvisoryBoardMember } from '@/data/advisoryBoard';
 import type { TeamMember } from '@/data/team';
 import {
   DiscreetButton,
@@ -11,6 +11,7 @@ import {
   Heading,
   SocialButton,
   Tag,
+  Text,
 } from '@/components/ui/atoms';
 import { possessive } from '@/utils/functions';
 import { FemaleAvatar, MaleAvatar } from '../ui/svgs';
@@ -23,7 +24,7 @@ type PersonProps = {
 type Social = keyof TeamMember['socials'];
 
 export function PersonCard({ person }: PersonProps): React.ReactElement {
-  const socialKeys = Object.keys(person.socials) as Social[];
+  const socialKeys = Object.keys(person.socials ?? {}) as Social[];
   const [open, setOpen] = useState(false);
 
   return (
@@ -49,40 +50,44 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
               justifyContent='end'
               className='absolute top-4 right-4 left-4'
             >
-              <Grid cols={1} gap={2}>
-                {socialKeys.map((social) => {
-                  const username = person.socials?.[social];
-                  if (!username) return null;
-                  return (
-                    <SocialButton
-                      style='filled'
-                      key={social}
-                      social={social}
-                      username={username}
-                    />
-                  );
-                })}
-              </Grid>
+              {person.socials && (
+                <Grid cols={1} gap={2}>
+                  {socialKeys.map((social) => {
+                    const username = person.socials?.[social];
+                    if (!username) return null;
+                    return (
+                      <SocialButton
+                        style='filled'
+                        key={social}
+                        social={social}
+                        username={username}
+                      />
+                    );
+                  })}
+                </Grid>
+              )}
             </Flex>
           </div>
 
-          <div className='group space-y-2'>
+          <div className='group space-y-3.5'>
             {
               <Heading size='h4'>
                 {person.firstName} {person.lastName}
               </Heading>
             }
 
-            {person.categories && (
-              <Flex gap={2.5} className='mb-4'>
-                {person.categories.map((category: string) => (
-                  <Tag key={category} name={category} />
-                ))}
-              </Flex>
+            {'role' in person && person.role && (
+              <Text size='lg'>
+                {person.role}
+              </Text>
+            )}
+
+            {'category' in person && person.category && (
+              <Tag name={person.category} />
             )}
 
             {person.bio && (
-              <DiscreetButton onClick={() => setOpen(true)}>
+              <DiscreetButton className='pt-2.5' onClick={() => setOpen(true)}>
                 Read {possessive(person.firstName)} full bio
               </DiscreetButton>
             )}

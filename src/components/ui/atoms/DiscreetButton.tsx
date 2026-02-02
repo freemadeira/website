@@ -2,10 +2,12 @@ import type { Url } from '@/utils/types';
 import { ArrowRight } from 'lucide-react';
 import { Flex, Link, Text } from '.';
 import { tv } from 'tailwind-variants';
+import { twMerge } from 'tailwind-merge';
 interface DiscreetButtonProps {
   href?: Url;
   children: string | string[];
   onClick?: () => void;
+  className?: string;
 }
 
 const iconVariants = tv({
@@ -16,6 +18,7 @@ export const DiscreetButton: React.FC<DiscreetButtonProps> = ({
   href,
   onClick,
   children,
+  className,
 }) => {
   const handleClick = (event: React.MouseEvent) => {
     if (onClick) {
@@ -37,11 +40,16 @@ export const DiscreetButton: React.FC<DiscreetButtonProps> = ({
   );
 
   return (
-    <div className='group w-fit'>
+    <div className={twMerge('group w-fit', className)}>
       {href ? (
         <Link href={href}>{InnerContent()}</Link>
       ) : (
-        <button type='button' onClick={handleClick} tabIndex={0} className='cursor-pointer'>
+        <button
+          type='button'
+          onClick={handleClick}
+          tabIndex={0}
+          className='cursor-pointer'
+        >
           {InnerContent()}
         </button>
       )}
