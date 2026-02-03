@@ -66,7 +66,7 @@ const socialMedia: Record<Social, socialType> = {
   },
   linkedin: {
     title: 'LinkedIn',
-    baseUrl: 'https://www.linkedin.com/',
+    baseUrl: 'https://www.linkedin.com/in/',
     icon: Linkedin,
   },
   nostr: {

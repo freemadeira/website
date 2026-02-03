@@ -18,8 +18,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     sex: 'male',
     socials: {
       x: 'adam_nili',
-      nostr:
-        'nprofile1qqsr34ep228fks80a5pqef0je3jacw9kzdu8n3fk9g87j36yt2gu8fghcygh4',
+      nostr: 'npub18rtjz55wndqwlmgzpjjl9nr9msutvymc08znv2s0a9r5gk53cwjstc8a7u',
       linkedin: 'adam-nili',
     },
     picture: pictures.adamNili,
@@ -46,7 +45,6 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'BdGBertdeGroot',
       nostr: 'npub1jqs0u7zhh53e94gyhm4eu458wm6sw7z0kk66jjhhkhh346tcq2ysfgr247',
-      linkedin: 'bertdegroot1',
     },
     picture: pictures.bertDeGroot,
     bio: 'Bert de Groot keeps companies warm with bitcoin miners and helps businesses, families and plebs on their bitcoin journey. Green houses, workshops, warehouses and offices are being heated with bitcoin miners. In one of the greenhouses flowers are being grown. His company bitcoinbrabant.com is the official reseller of open source signing devices (hardware wallets). He has helped thousands of people with storage and payment solutions, Dutch bitcoin books, and much more.',
@@ -93,7 +91,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'JeffBooth',
       nostr: 'npub1s05p3ha7en49dv8429tkk07nnfa9pcwczkf5x5qrdraqshxdje9sq6eyhe',
-      linkedin: 'jeffbooth',
+      linkedin: 'jeffdbooth',
     },
     picture: pictures.jeffBooth,
     bio: "Jeff Booth is a visionary leader, technology entrepreneur, Founding Partner at ego death capital and best-selling author of The Price of Tomorrow – Why Deflation is Key to an Abundant Future.  With a profound grasp of technology, system thinking, and design, he stands at the forefront of a shift from an outdated economic model to one designed for tomorrow. Jeff's insights and achievements have earned him the BC Technology Industry Association's Person of the Year in 2015 and in October 2023, he was honored with induction into the prestigious BCTIA's Hall of Fame.  Furthermore, in 2016, he gained recognition from Goldman Sachs, who named him one of the 100 Most Intriguing Entrepreneurs. In addition to his work investing and helping entrepreneurs build on the rails of Bitcoin, he is a Co-Founder of addy and NocNoc. Jeff also actively serves on the boards of Core Scientific, Fedi, and Breez, in addition to several advisory boards. A dedicated member of the Young Presidents Organization since 2004, he further contributes as a Founding Fellow at the Creative Destruction Lab.",
