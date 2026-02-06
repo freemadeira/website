@@ -13,21 +13,21 @@ export interface Event {
 
 const events: Event[] = [
   {
-    date: 'February 4, 2026, 18:30–20:00',
-    title: 'Introdução ao lado técnico do Bitcoin',
-    description:
-      'Workshop entirely in Portuguese. Este workshop é recomendado para quem queira entender os mecanismos que garantem segurança, escassez e funcionamento descentralizado do Bitcoin.',
-    imgSrc: '/images/events/workshop-intro.jpg',
-    tags: ['Workshop', 'Online'],
-  },
-  {
     date: 'February 25, 2026, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
     description:
       'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/312459853/',
+    href: 'https://www.satlantis.io/events/1691/FREE-Madeira-Bitcoin-Meetup',
+  },
+  {
+    date: 'March 24, 2026, 18:30',
+    title: 'Backup & Segurança',
+    description:
+      'Workshop entirely in Portuguese. Como manter o teu Bitcon seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
+    imgSrc: '/images/events/workshop-intro.jpg',
+    tags: ['Workshop', 'In-person'],
   },
   {
     date: 'March 25, 2026, 18:30',
@@ -36,16 +36,24 @@ const events: Event[] = [
       'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/312459864/',
+    href: 'https://www.satlantis.io/events/1692/FREE-Madeira-Bitcoin-Meetup',
   },
   {
-    date: 'EXACT DATES TBC, 2028',
-    title: 'Bitcoin Atlantis 2028',
+    date: 'March 26, 2026, 18:30',
+    title: 'Carteiras Físicas & Soluções de Backup',
     description:
-      'After the huge success of the first edition in 2024, Bitcoin Atlantis will return in 2028. We will once again celebrate Bitcoin in a halving year.',
-    tags: ['Conference'],
-    imgSrc: '/images/events/ba28.jpg',
+      'Workshop entirely in Portuguese. Como usar carteiras físicas e outras soluções de backup para manter o teu bitcoin seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
+    imgSrc: '/images/events/workshop-intro.jpg',
+    tags: ['Workshop', 'In-person'],
   },
+  // {
+  //   date: 'EXACT DATES TBC, 2028',
+  //   title: 'Bitcoin Atlantis 2028',
+  //   description:
+  //     'After the huge success of the first edition in 2024, Bitcoin Atlantis will return in 2028. We will once again celebrate Bitcoin in a halving year.',
+  //   tags: ['Conference'],
+  //   imgSrc: '/images/events/ba28.jpg',
+  // },
 ];
 
 export function UpcomingEvents(): React.ReactElement {
