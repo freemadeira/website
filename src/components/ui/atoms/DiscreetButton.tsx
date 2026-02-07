@@ -1,24 +1,58 @@
 import type { Url } from '@/utils/types';
 import { ArrowRight } from 'lucide-react';
-import { type VariantProps, tv } from 'tailwind-variants';
 import { Flex, Link, Text } from '.';
-import { IconButton } from './IconButton';
-
+import { tv } from 'tailwind-variants';
+import { twMerge } from 'tailwind-merge';
 interface DiscreetButtonProps {
-  href: Url;
-  children: string;
+  href?: Url;
+  children: string | string[];
+  onClick?: () => void;
+  className?: string;
 }
 
-export const DiscreetButton: React.FC<DiscreetButtonProps> = ({ href, children }) => {
-  return (
-    <Link href={href} className="group w-fit">
-      <Flex gap={4} alignItems="center">
-        <Text className="underline-offset-6 group-hover:underline">{children}</Text>
+const iconVariants = tv({
+  base: 'rounded-full bg-primary-400 p-1 text-black',
+});
 
-        <IconButton fill="filled" className="p-1">
-          <ArrowRight strokeWidth={1.2} size={22} />
-        </IconButton>
-      </Flex>
-    </Link>
+export const DiscreetButton: React.FC<DiscreetButtonProps> = ({
+  href,
+  onClick,
+  children,
+  className,
+}) => {
+  const handleClick = (event: React.MouseEvent) => {
+    if (onClick) {
+      event.preventDefault();
+      onClick();
+    }
+  };
+
+  const InnerContent = () => (
+    <Flex gap={4} alignItems='center'>
+      <Text className='underline-offset-6 group-hover:underline'>
+        {children}
+      </Text>
+
+      <div className={iconVariants()}>
+        <ArrowRight strokeWidth={1.2} size={22} />
+      </div>
+    </Flex>
+  );
+
+  return (
+    <div className={twMerge('group w-fit', className)}>
+      {href ? (
+        <Link href={href}>{InnerContent()}</Link>
+      ) : (
+        <button
+          type='button'
+          onClick={handleClick}
+          tabIndex={0}
+          className='cursor-pointer'
+        >
+          {InnerContent()}
+        </button>
+      )}
+    </div>
   );
 };
