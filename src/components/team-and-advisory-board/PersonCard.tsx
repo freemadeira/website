@@ -65,7 +65,7 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
             </Flex>
           </div>
 
-          <div className="group space-y-3.5">
+          <div className="space-y-3.5">
             {
               <Heading size="h4">
                 {person.firstName} {person.lastName}
