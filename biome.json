@@ -17,6 +17,10 @@
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
+    "domains": {
+      "react": "recommended",
+      "next": "recommended"
+    },
     "rules": {
       "recommended": true,
       "a11y": {

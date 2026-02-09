@@ -1,4 +1,4 @@
-import { Zap, MessagesSquare } from 'lucide-react';
+import { MessagesSquare, Zap } from 'lucide-react';
 import { Container, Flex, Text } from '../ui/atoms';
 import { Card } from './Card';
 
@@ -20,7 +20,7 @@ export const Cards = () => {
       <Card
         icon={MessagesSquare}
         title="Meetups"
-        buttonHref="https://www.meetup.com/madeira-bitcoin-meetup-group/events/"
+        buttonHref="https://www.satlantis.io/c/74/FREE-Madeira-Bitcoin-Meetups"
         buttonText="Attend our next meetup"
       >
         <Text size="lg">

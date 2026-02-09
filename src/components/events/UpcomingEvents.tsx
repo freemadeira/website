@@ -13,38 +13,38 @@ export interface Event {
 
 const events: Event[] = [
   {
-    date: 'January 28, 2026, 18:30–20:00',
-    title: 'Introdução ao Bitcoin',
-    description:
-      'Workshop entirely in Portuguese. Este workshop apresenta Bitcoin como dinheiro. Exploramos a importância do dinheiro, a sua origem e evolução, e como Bitcoin representa o futuro do mesmo.',
-    imgSrc: '/images/events/workshop-intro.jpg',
-    tags: ['Workshop', 'Online'],
-  },
-  {
-    date: 'January 28, 2026, 18:30',
-    title: 'FREE Madeira Bitcoin Meetup',
-    description:
-      'In the month of January we welcome Sylvia Brinded-Püls, from A Place to Be, for an open and inspiring talk on sovereignty, community, and practical ways of living beyond the system.',
-    tags: ['Meetup', 'In-person'],
-    imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/312457728/',
-  },
-  {
-    date: 'February 4, 2026, 18:30–20:00',
-    title: 'Introdução ao lado técnico do Bitcoin',
-    description:
-      'Workshop entirely in Portuguese. Este workshop é recomendado para quem queira entender os mecanismos que garantem segurança, escassez e funcionamento descentralizado do Bitcoin.',
-    imgSrc: '/images/events/workshop-intro.jpg',
-    tags: ['Workshop', 'Online'],
-  },
-  {
     date: 'February 25, 2026, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
     description:
       'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.meetup.com/madeira-bitcoin-meetup-group/events/312459853/',
+    href: 'https://www.satlantis.io/events/1691/FREE-Madeira-Bitcoin-Meetup',
+  },
+  {
+    date: 'March 24, 2026, 18:30',
+    title: 'Backup & Segurança',
+    description:
+      'Workshop entirely in Portuguese. Como manter o teu Bitcon seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
+    imgSrc: '/images/events/workshop-intro.jpg',
+    tags: ['Workshop', 'In-person'],
+  },
+  {
+    date: 'March 25, 2026, 18:30',
+    title: 'FREE Madeira Bitcoin Meetup',
+    description:
+      'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+    tags: ['Meetup', 'In-person'],
+    imgSrc: '/images/events/meetup.jpg',
+    href: 'https://www.satlantis.io/events/1692/FREE-Madeira-Bitcoin-Meetup',
+  },
+  {
+    date: 'March 26, 2026, 18:30',
+    title: 'Carteiras Físicas & Soluções de Backup',
+    description:
+      'Workshop entirely in Portuguese. Como usar carteiras físicas e outras soluções de backup para manter o teu bitcoin seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
+    imgSrc: '/images/events/workshop-intro.jpg',
+    tags: ['Workshop', 'In-person'],
   },
   // {
   //   date: 'EXACT DATES TBC, 2028',
