@@ -32,6 +32,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     category: 'Education',
     socials: {
       x: 'RobBrinded',
+      nostr: 'npub1de8jsek5aykkng5ytlvhvjxjwmdnpjwjcly0q6mu3566tfm00g5sfy0ezd',
       linkedin: 'rob-brinded-4887817',
     },
     picture: pictures.robBrinded,
