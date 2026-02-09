@@ -12,10 +12,10 @@ import {
 } from '../svgs/socials';
 
 const socialButtonVariants = tv({
-  base: 'w-10 h-10 rounded-full p-[9px]',
+  base: 'size-10 rounded-full p-[9px]',
   variants: {
     style: {
-      filled: 'bg-white fill-dark',
+      filled: 'border-transparent bg-white fill-dark',
       outlined: 'border border-dark fill-dark',
     },
   },
@@ -66,7 +66,7 @@ const socialMedia: Record<Social, socialType> = {
   },
   linkedin: {
     title: 'LinkedIn',
-    baseUrl: 'https://www.linkedin.com/',
+    baseUrl: 'https://www.linkedin.com/in/',
     icon: Linkedin,
   },
   nostr: {

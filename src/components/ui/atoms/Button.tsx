@@ -10,7 +10,7 @@ export const buttonVariants = tv({
   variants: {
     noAnimation: {
       false:
-        'active:transform active:scale-95 disabled:active:scale-100 group-active:transform group-active:scale-95',
+        'active:scale-95 active:transform disabled:active:scale-100 group-active:scale-95 group-active:transform',
     },
     fill: {
       filled: 'bg-primary-400',
@@ -49,6 +49,7 @@ export const buttonVariants = tv({
         'border-white text-white hover:bg-white hover:text-dark group-hover:bg-white group-hover:text-dark',
         'disabled:hover:bg-transparent disabled:hover:text-white disabled:hover:fill-white',
       ),
+      transparent: 'text-dark hover:bg-mountain-mist-50',
     },
   },
   defaultVariants: {

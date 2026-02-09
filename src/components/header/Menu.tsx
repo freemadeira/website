@@ -20,6 +20,10 @@ const menuItems: MenuItem[] = [
     href: '/about',
   },
   {
+    name: 'Team & Advisory Board',
+    href: '/team-and-advisory-board',
+  },
+  {
     name: 'Bitcoin Atlantis',
     href: 'https://bitcoinatlantis.com/',
   },

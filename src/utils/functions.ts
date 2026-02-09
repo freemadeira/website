@@ -25,3 +25,5 @@ export const capitalize = <T extends string>(s: T): Capitalize<T> => {
   if (s.length === 0) return s as Capitalize<T>;
   return (s.charAt(0).toUpperCase() + s.slice(1)) as Capitalize<T>;
 };
+
+export const possessive = (name: string) => name + (name.toLowerCase().endsWith('s') ? "'" : "'s");
