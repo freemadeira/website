@@ -3,12 +3,22 @@ import { ArrowRight } from 'lucide-react';
 import { Flex, Link, Text } from '.';
 import { tv } from 'tailwind-variants';
 import { twMerge } from 'tailwind-merge';
-interface DiscreetButtonProps {
-  href?: Url;
+interface BaseDiscreetButtonProps {
   children: string | string[];
-  onClick?: () => void;
   className?: string;
 }
+
+interface DiscreetButtonWithHref extends BaseDiscreetButtonProps {
+  href: Url;
+  onClick?: never;
+}
+
+interface DiscreetButtonWithOnClick extends BaseDiscreetButtonProps {
+  onClick: () => void;
+  href?: never;
+}
+
+type DiscreetButtonProps = DiscreetButtonWithHref | DiscreetButtonWithOnClick;
 
 const iconVariants = tv({
   base: 'rounded-full bg-primary-400 p-1 text-black',
@@ -28,10 +38,8 @@ export const DiscreetButton: React.FC<DiscreetButtonProps> = ({
   };
 
   const InnerContent = () => (
-    <Flex gap={4} alignItems='center'>
-      <Text className='underline-offset-6 group-hover:underline'>
-        {children}
-      </Text>
+    <Flex gap={4} alignItems="center">
+      <Text className="underline-offset-6 group-hover:underline">{children}</Text>
 
       <div className={iconVariants()}>
         <ArrowRight strokeWidth={1.2} size={22} />
@@ -44,12 +52,7 @@ export const DiscreetButton: React.FC<DiscreetButtonProps> = ({
       {href ? (
         <Link href={href}>{InnerContent()}</Link>
       ) : (
-        <button
-          type='button'
-          onClick={handleClick}
-          tabIndex={0}
-          className='cursor-pointer'
-        >
+        <button type="button" onClick={handleClick} tabIndex={0} className="cursor-pointer">
           {InnerContent()}
         </button>
       )}

@@ -1,8 +1,4 @@
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-} from '@headlessui/react';
+import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react';
 import type { AdvisoryBoardMember } from '@/data/advisoryBoard';
 import type { TeamMember } from '@/data/team';
 import { Flex, Heading, SocialButton, Text, CloseButton } from '../ui/atoms';
@@ -15,54 +11,40 @@ interface ModalProps {
 
 type Social = keyof TeamMember['socials'];
 
-export function Modal({
-  person,
-  open,
-  setOpen,
-}: ModalProps): React.ReactElement {
+export function Modal({ person, open, setOpen }: ModalProps): React.ReactElement {
   const socialKeys = Object.keys(person.socials ?? {}) as Social[];
 
   return (
-    <Dialog open={open} onClose={setOpen} className='relative'>
+    <Dialog open={open} onClose={setOpen} className="relative">
       <DialogBackdrop
         transition
-        className='fixed inset-0 bg-mountain-mist-600 mix-blend-multiply transition-opacity data-closed:opacity-0 data-enter:duration-300 data-leave:duration-200 data-enter:ease-out data-leave:ease-in'
+        className="fixed inset-0 bg-mountain-mist-600 mix-blend-multiply transition-opacity data-closed:opacity-0 data-enter:duration-300 data-leave:duration-200 data-enter:ease-out data-leave:ease-in"
       />
 
-      <div className='fixed inset-0 z-10 w-screen'>
-        <div className='flex min-h-full items-end justify-center text-center sm:items-center'>
+      <div className="fixed inset-0 z-10 w-screen">
+        <div className="flex min-h-full items-end justify-center text-center sm:items-center">
           <DialogPanel
             transition
-            className='no-scrollbar relative max-h-[80vh] transform overflow-auto bg-bridal-50 px-4 pb-16 text-left transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-leave:duration-200 data-enter:ease-out data-leave:ease-in sm:m-8 sm:max-w-5xl sm:py-8 sm:pl-8 data-closed:sm:translate-y-0 data-closed:sm:scale-95'
+            className="no-scrollbar relative max-h-[80vh] transform overflow-auto bg-bridal-50 px-4 pb-16 text-left transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-leave:duration-200 data-enter:ease-out data-leave:ease-in sm:m-8 sm:max-w-5xl sm:py-8 sm:pl-8 data-closed:sm:translate-y-0 data-closed:sm:scale-95"
           >
-            <div className='sticky top-0 z-20 bg-bridal-50 pt-4 pb-3 text-right sm:absolute sm:top-4 sm:right-4 sm:bg-transparent sm:pt-1 sm:pb-1'>
+            <div className="sticky top-0 z-20 bg-bridal-50 pt-4 pb-3 text-right sm:absolute sm:top-4 sm:right-4 sm:bg-transparent sm:pt-1 sm:pb-1">
               <CloseButton onClick={() => setOpen(false)} />
             </div>
 
-            <Flex
-              direction='column'
-              gap={8}
-              alignItems='start'
-              className='sm:flex-row'
-            >
+            <Flex direction="column" gap={8} alignItems="start" className="sm:flex-row">
               {person.picture && (
-                <div className='relative aspect-square w-full sm:w-1/3'>
-                  <Image
-                    src={person.picture}
-                    fill
-                    alt='Event'
-                    className='size-full object-cover'
-                  />
+                <div className="relative aspect-square w-full sm:w-1/3">
+                  <Image src={person.picture} fill alt="Event" className="size-full object-cover" />
                 </div>
               )}
               <div className={`${person.picture && 'sm:max-w-2/3'}`}>
-                <div className='sticky top-12 z-10 w-full bg-bridal-50 sm:absolute sm:pb-10'>
-                  <Heading size='h4'>
+                <div className="sticky top-12 z-10 w-full bg-bridal-50 sm:absolute sm:pb-10">
+                  <Heading size="h4">
                     {person.firstName} {person.lastName}
                   </Heading>
                 </div>
-                <div className='sm:mt-27 sm:max-h-96 sm:overflow-auto sm:pr-8'>
-                  <Text size='lg' className='py-8 sm:pt-0 sm:pb-10'>
+                <div className="sm:mt-27 sm:max-h-96 sm:overflow-auto sm:pr-8">
+                  <Text size="lg" className="py-8 sm:pt-0 sm:pb-10">
                     {person.bio}
                   </Text>
                   {person.socials && (
@@ -70,13 +52,7 @@ export function Modal({
                       {socialKeys.map((social) => {
                         const username = person.socials?.[social];
                         if (!username) return null;
-                        return (
-                          <SocialButton
-                            key={social}
-                            social={social}
-                            username={username}
-                          />
-                        );
+                        return <SocialButton key={social} social={social} username={username} />;
                       })}
                     </Flex>
                   )}

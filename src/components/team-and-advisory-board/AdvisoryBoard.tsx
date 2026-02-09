@@ -1,5 +1,5 @@
 import type { AdvisoryBoardMember } from '@/data/advisoryBoard';
-import { Container, Heading, } from '../ui/atoms';
+import { Container, Heading } from '../ui/atoms';
 import { PersonCardGrid } from './PersonCardGrid';
 
 export const AdvisoryBoard = ({
@@ -8,8 +8,8 @@ export const AdvisoryBoard = ({
   AdvisoryBoardMembers: AdvisoryBoardMember[];
 }): React.ReactElement => {
   return (
-    <Container className='my-16'>
-      <Heading size='h1'>Advisory Board</Heading>
+    <Container className="my-16">
+      <Heading size="h1">Advisory Board</Heading>
 
       <PersonCardGrid persons={AdvisoryBoardMembers} />
     </Container>

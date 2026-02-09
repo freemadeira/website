@@ -29,15 +29,15 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
 
   return (
     <>
-      <Flex direction='column' gap={5} className='w-full flex-1 sm:w-auto'>
-        <Flex direction='column' gap={3} className='grow'>
-          <div className='relative aspect-square w-full'>
+      <Flex direction="column" gap={5} className="w-full flex-1 sm:w-auto">
+        <Flex direction="column" gap={3} className="grow">
+          <div className="relative aspect-square w-full">
             {person.picture ? (
               <Image
                 src={person.picture}
                 fill
-                alt='Event'
-                className='-z-10 size-full object-cover'
+                alt="Event"
+                className="-z-10 size-full object-cover"
               />
             ) : person.sex === 'male' ? (
               <MaleAvatar />
@@ -45,11 +45,7 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
               <FemaleAvatar />
             )}
 
-            <Flex
-              direction='row'
-              justifyContent='end'
-              className='absolute top-4 right-4 left-4'
-            >
+            <Flex direction="row" justifyContent="end" className="absolute top-4 right-4 left-4">
               {person.socials && (
                 <Grid cols={1} gap={2}>
                   {socialKeys.map((social) => {
@@ -57,7 +53,7 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
                     if (!username) return null;
                     return (
                       <SocialButton
-                        style='filled'
+                        style="filled"
                         key={social}
                         social={social}
                         username={username}
@@ -69,23 +65,19 @@ export function PersonCard({ person }: PersonProps): React.ReactElement {
             </Flex>
           </div>
 
-          <div className='group space-y-3.5'>
+          <div className="group space-y-3.5">
             {
-              <Heading size='h4'>
+              <Heading size="h4">
                 {person.firstName} {person.lastName}
               </Heading>
             }
 
-            {'role' in person && person.role && (
-              <Text size='lg'>{person.role}</Text>
-            )}
+            {'role' in person && person.role && <Text size="lg">{person.role}</Text>}
 
-            {'category' in person && person.category && (
-              <Tag name={person.category} />
-            )}
+            {'category' in person && person.category && <Tag name={person.category} />}
 
             {person.bio && (
-              <DiscreetButton className='pt-2.5' onClick={() => setOpen(true)}>
+              <DiscreetButton className="pt-2.5" onClick={() => setOpen(true)}>
                 Read {possessive(person.firstName)} full bio
               </DiscreetButton>
             )}

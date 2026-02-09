@@ -12,7 +12,7 @@ import {
 } from '../svgs/socials';
 
 const socialButtonVariants = tv({
-  base: 'h-10 w-10 rounded-full p-2.5',
+  base: 'size-10 rounded-full p-[9px]',
   variants: {
     style: {
       filled: 'border-transparent bg-white fill-dark',

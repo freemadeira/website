@@ -57,8 +57,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     category: 'Education',
     socials: {
       x: 'jdennehy_writes',
-      nostr:
-        'nprofile1qqsywnwsaj4jk7amaq90su86s4uzvmhjgyk53pgzjlw5wg7unh543ecdpnxs0',
+      nostr: 'nprofile1qqsywnwsaj4jk7amaq90su86s4uzvmhjgyk53pgzjlw5wg7unh543ecdpnxs0',
     },
     picture: pictures.johnDennehy,
     bio: 'John Dennehy was born in New York and became an activist in the wake of September 11th. While in jail after protesting the Iraq War, he decided to leave the country and moved to Ecuador in 2005. He is a best-selling author, award-winning journalist and has written about Bitcoin in Latin America for places such as the Guardian, Al-Jazeera, and the BBC. He moved to El Salvador in August of 2021 to found My First Bitcoin. In a world at the crossroads, he sees Bitcoin as humanity’s best chance to build something better. His first child was born in San Salvador in 2023.',
@@ -104,8 +103,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     category: 'Strategy',
     socials: {
       x: 'stiven_hey_',
-      nostr:
-        'nprofile1qqsqu8ua4wwccjpmujttq6p6v5thnxvdg8fxlemj4fgy3gergvshj8qhpguq6',
+      nostr: 'nprofile1qqsqu8ua4wwccjpmujttq6p6v5thnxvdg8fxlemj4fgy3gergvshj8qhpguq6',
       linkedin: 'stivenk',
     },
     picture: pictures.stivenKerestegian,
@@ -226,8 +224,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     sex: 'male',
     socials: {
       x: 'petermiyoung',
-      nostr:
-        'nprofile1qqs0cfrsa5vksqwa4nju9093fffl5hhflq0wxedlf9v0jnrpzlv7ufcvg8qer',
+      nostr: 'nprofile1qqs0cfrsa5vksqwa4nju9093fffl5hhflq0wxedlf9v0jnrpzlv7ufcvg8qer',
       linkedin: 'peter-young-70b80a42',
     },
     picture: pictures.peterYoung,
