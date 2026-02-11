@@ -1,4 +1,5 @@
 export * from './ChevronDown';
+export * from './ChevronRight';
 export * from './Coin';
 export * from './FemaleAvatar';
 export * from './FingerTouch';

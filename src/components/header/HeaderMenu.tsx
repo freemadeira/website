@@ -8,8 +8,8 @@ import { useState } from 'react';
 import { twJoin, twMerge } from 'tailwind-merge';
 import type { HeaderMenuItem, LinkMenuItem, ParentMenuItem } from '@/data/header';
 import { buttonItems, menuItems } from '@/data/header';
-import { Button, Flex } from '../ui/atoms';
-import { ChevronDown } from '../ui/svgs/ChevronDown';
+import { Button, Flex, Heading, IconButton, Text } from '../ui/atoms';
+import { ChevronDown, ChevronRight } from '../ui/svgs';
 import { LogoHorizontal } from '../ui/svgs/LogoHorizontal';
 
 function isMenuItem(item: HeaderMenuItem): item is ParentMenuItem {
@@ -20,21 +20,52 @@ function isChildOfMenuItem(item: HeaderMenuItem): item is LinkMenuItem {
   return 'href' in item && typeof item.href === 'string';
 }
 
-const menuItemClasses =
-  'border-b border-b-transparent pb-2 text-dark hover:border-b-dark active:border-b-dark cursor-pointer ring-0 focus-visible:outline-none data-[headlessui-state*="open"]:border-b-dark';
-
-const mobileMenuItemClasses = twJoin(
+const menuItemClasses = twJoin(
   'border-b border-b-transparent pb-2 text-dark hover:border-b-dark active:border-b-dark',
-  'block py-2 text-4xl/9',
+  'cursor-pointer ring-0 focus-visible:outline-none data-[headlessui-state*="open"]:border-b-dark',
 );
-
-const menuIconClasses =
-  '-m-2.5 cursor-pointer text-dark hover:text-primary-900 active:text-primary-950';
 
 export function HeaderMenu(): React.ReactElement {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeParent, setActiveParent] = useState<ParentMenuItem | null>(null);
 
   const pathname = usePathname();
+
+  type MobileMenuHeaderProps = {
+    isChildrenMenu?: boolean;
+    onClose: () => void;
+  };
+
+  const MobileMenuHeader: React.FC<MobileMenuHeaderProps> = ({
+    isChildrenMenu = false,
+    onClose,
+  }) => (
+    <Flex
+      className={twMerge(
+        'items-center justify-between bg-white px-4 py-4 sm:justify-end sm:px-0 sm:py-0',
+        isChildrenMenu ? 'sm:bg-dark' : 'sm:bg-primary-400',
+      )}
+    >
+      <Link href="/" className="-ms-2 sm:hidden">
+        <span className="sr-only">FREE Madeira</span>
+        <LogoHorizontal className="h-18" />
+      </Link>
+
+      <IconButton
+        className="flex aspect-square items-center justify-center"
+        onClick={onClose}
+        fill="ghost"
+        colour="transparent"
+      >
+        <span className="sr-only">Close menu</span>
+        <XIcon
+          aria-hidden="true"
+          size={40}
+          className={twMerge(isChildrenMenu ? 'text-white' : 'text-dark')}
+        />
+      </IconButton>
+    </Flex>
+  );
 
   return (
     <>
@@ -53,7 +84,12 @@ export function HeaderMenu(): React.ReactElement {
 
                 <MenuItems
                   transition
-                  className="absolute z-10 mt-5 flex w-60 origin-top-left flex-col divide-y divide-mountain-mist-500 bg-dark px-6.5 py-2 ring-0 transition focus-visible:outline-none data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-leave:duration-75 data-enter:ease-out data-leave:ease-in"
+                  className={twJoin(
+                    'absolute z-10 mt-5 flex w-60 origin-top-left flex-col divide-y divide-mountain-mist-500',
+                    'bg-dark px-6.5 py-2 ring-0 transition focus-visible:outline-none data-closed:scale-95 ',
+                    'data-closed:transform data-closed:opacity-0 data-enter:duration-100',
+                    'data-leave:duration-75 data-enter:ease-out data-leave:ease-in',
+                  )}
                 >
                   {item.children.map((child) => {
                     if (isChildOfMenuItem(child)) {
@@ -106,69 +142,165 @@ export function HeaderMenu(): React.ReactElement {
       </Flex>
 
       {/* Mobile Menu */}
+      {/* Mobile Menu Button */}
       <Flex className="lg:hidden">
-        <button
-          type="button"
+        <IconButton
+          className="flex aspect-square items-center justify-center"
           onClick={() => setMobileMenuOpen(true)}
-          className={twJoin(menuIconClasses, 'p-2.5')}
+          fill="ghost"
+          colour="transparent"
         >
           <span className="sr-only">Open main menu</span>
           <MenuIcon size={40} aria-hidden />
-        </button>
+        </IconButton>
       </Flex>
 
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+      {/* Main Mobile Menu */}
+      <Dialog
+        open={mobileMenuOpen && !activeParent}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
         <Flex
           as={DialogPanel}
           direction="column"
-          className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-dark/10"
+          justifyContent="between"
+          className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary-400 sm:max-w-md sm:px-4 sm:py-8"
         >
-          <Flex className="items-center justify-between sm:justify-end">
-            <Link href="/" className="-ms-2 sm:hidden">
-              <span className="sr-only">FREE Madeira</span>
-              <LogoHorizontal className="h-18" />
-            </Link>
+          {/* Header */}
+          <MobileMenuHeader onClose={() => setMobileMenuOpen(false)} />
 
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 cursor-pointer text-dark hover:text-primary-900 active:text-primary-950"
-            >
-              <span className="sr-only">Close menu</span>
-              <XIcon aria-hidden="true" size={40} />
-            </button>
-          </Flex>
-
+          {/* Menu Items */}
           <Flex
             direction="column"
             justifyContent="between"
-            className="-my-6 mt-6 flow-root h-full grow divide-y divide-dark/10"
+            className="h-full px-4 py-8 sm:pt-2 sm:pb-0"
           >
-            <Flex direction="column" className="grow space-y-2 py-6">
-              {menuItems.map((item) => (
-                <Link key={item.name} href={item.href} className={mobileMenuItemClasses}>
-                  {item.name}
-                </Link>
-              ))}
+            <Flex direction="column" className="divide-y divide-dark">
+              {menuItems.map((item) => {
+                if (isMenuItem(item)) {
+                  // Parent with children → open new dialog
+                  return (
+                    <Flex
+                      key={item.name}
+                      justifyContent="between"
+                      alignItems="center"
+                      className="cursor-pointer py-6"
+                      onClick={() => setActiveParent(item)}
+                    >
+                      <Heading size="h4">{item.name}</Heading>
+                      <ChevronRight className="h-4 w-8" />
+                    </Flex>
+                  );
+                }
+
+                // Single link item
+                if (isChildOfMenuItem(item)) {
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <Heading
+                        size="h4"
+                        className={twMerge('py-6', pathname === item.href && 'text-white')}
+                      >
+                        {item.name}
+                      </Heading>
+                    </Link>
+                  );
+                }
+
+                return null;
+              })}
             </Flex>
 
-            <Flex direction="column" className="sticky bottom-0 space-y-2 bg-white py-6">
+            {/* Buttons */}
+            <Flex direction="column" className="space-y-2">
               {buttonItems.map((item) => (
-                <Link
+                <Button
                   key={item.name}
+                  as={Link}
                   href={item.href}
-                  className={twMerge(
-                    mobileMenuItemClasses,
-                    'text-primary-900 hover:text-primary-800',
-                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-disabled
+                  fill={item.primary ? 'filled' : 'outlined'}
+                  className="w-full"
                 >
                   {item.name}
-                </Link>
+                </Button>
               ))}
             </Flex>
           </Flex>
         </Flex>
       </Dialog>
+
+      {/* Nested Dialog for Children */}
+      {activeParent && (
+        <Dialog
+          open={mobileMenuOpen && !!activeParent}
+          onClose={() => {
+            setActiveParent(null);
+            setMobileMenuOpen(false);
+          }}
+          className="lg:hidden"
+        >
+          <Flex
+            as={DialogPanel}
+            direction="column"
+            justifyContent="between"
+            className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-dark sm:max-w-md sm:px-4 sm:py-8"
+          >
+            {/* Header */}
+            <MobileMenuHeader isChildrenMenu onClose={() => setMobileMenuOpen(false)} />
+
+            {/* Active Parent Menu Item */}
+            <Flex
+              as="button"
+              onClick={() => setActiveParent(null)}
+              direction="column"
+              gap={8}
+              className="group cursor-pointer px-4 py-8 sm:pt-2 sm:pb-0"
+            >
+              <span className="sr-only">Go back</span>
+              <ChevronRight color="white" className="-ml-2 h-4 w-8 rotate-180" />
+              <Text
+                size="lg"
+                color="supernova"
+                className="w-fit border-transparent border-b pb-2 group-hover:border-primary-400 group-active:border-primary-400"
+              >
+                {activeParent.name}
+              </Text>
+            </Flex>
+
+            {/* Children */}
+            <Flex
+              direction="column"
+              className="divide-y divide-mountain-mist-300 px-4 py-8 text-mountain-mist-300 sm:pt-2 sm:pb-0"
+            >
+              {activeParent.children.map((child) => {
+                if (isChildOfMenuItem(child)) {
+                  return (
+                    <Link
+                      key={child.name}
+                      href={child.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={twMerge('block py-6', pathname === child.href && 'text-white')}
+                    >
+                      <Heading size="h5">{child.name}</Heading>
+                    </Link>
+                  );
+                }
+                return null;
+              })}
+            </Flex>
+          </Flex>
+        </Dialog>
+      )}
     </>
   );
 }
