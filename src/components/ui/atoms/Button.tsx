@@ -1,11 +1,11 @@
 import { twJoin } from 'tailwind-merge';
-import { type VariantProps, tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 
 export const buttonVariants = tv({
   base: twJoin(
-    'w-fit inline-flex cursor-pointer outline-none justify-center focus-visible:outline-primary-700',
-    'rounded-full py-3 px-5.5 transition duration-75',
-    'hover:no-underline disabled:opacity-30 disabled:cursor-not-allowed',
+    'inline-flex w-fit cursor-pointer justify-center outline-none focus-visible:outline-primary-700',
+    'rounded-full px-5.5 py-3 transition duration-75',
+    'hover:no-underline disabled:cursor-not-allowed disabled:opacity-30',
   ),
   variants: {
     noAnimation: {
@@ -18,7 +18,7 @@ export const buttonVariants = tv({
       // TODO: Review this variant
       ghost: twJoin(
         'text-primary-700',
-        'hover:text-foreground hover:bg-gray-100',
+        'hover:bg-gray-100 hover:text-foreground',
         'aria-checked:bg-primary-700 aria-checked:text-white',
         'aria-expanded:bg-gray-100 aria-expanded:text-gray-400',
       ),
@@ -37,17 +37,21 @@ export const buttonVariants = tv({
     underlined: {
       true: 'underline underline-offset-2',
     },
+    buttonColor: {
+      dark: 'bg-dark',
+      white: 'bg-white',
+    },
     colour: {
       dark: twJoin(
-        'border-dark text-dark hover:bg-dark hover:text-white hover:fill-white',
-        'group-hover:bg-dark group-hover:text-white group-hover:fill-white',
+        'border-dark text-dark hover:bg-dark hover:fill-white hover:text-white',
+        'group-hover:bg-dark group-hover:fill-white group-hover:text-white',
         'dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-dark',
-        'disabled:hover:bg-transparent disabled:hover:text-dark disabled:hover:fill-dark',
-        'dark:disabled:hover:bg-transparent dark:disabled:hover:text-white dark:disabled:hover:fill-white',
+        'disabled:hover:bg-transparent disabled:hover:fill-dark disabled:hover:text-dark',
+        'dark:disabled:hover:bg-transparent dark:disabled:hover:fill-white dark:disabled:hover:text-white',
       ),
       white: twJoin(
         'border-white text-white hover:bg-white hover:text-dark group-hover:bg-white group-hover:text-dark',
-        'disabled:hover:bg-transparent disabled:hover:text-white disabled:hover:fill-white',
+        'disabled:hover:bg-transparent disabled:hover:fill-white disabled:hover:text-white',
       ),
       transparent: 'text-dark hover:bg-mountain-mist-50',
     },

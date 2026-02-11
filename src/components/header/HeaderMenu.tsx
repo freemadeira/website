@@ -61,7 +61,7 @@ export function HeaderMenu(): React.ReactElement {
         <XIcon
           aria-hidden="true"
           size={40}
-          className={twMerge(isChildrenMenu ? 'text-white' : 'text-dark')}
+          className={twMerge(isChildrenMenu ? 'text-white hover:text-dark' : 'text-dark')}
         />
       </IconButton>
     </Flex>
@@ -219,6 +219,7 @@ export function HeaderMenu(): React.ReactElement {
             </Flex>
 
             {/* Buttons */}
+            {/* TODO: Fix the buttons styling */}
             <Flex direction="column" className="space-y-2">
               {buttonItems.map((item) => (
                 <Button
@@ -228,7 +229,9 @@ export function HeaderMenu(): React.ReactElement {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-disabled
-                  fill={item.primary ? 'filled' : 'outlined'}
+                  fill="filled"
+                  buttonColor={item.primary ? 'dark' : 'white'}
+                  colour={item.primary ? 'white' : 'dark'}
                   className="w-full"
                 >
                   {item.name}
@@ -252,7 +255,7 @@ export function HeaderMenu(): React.ReactElement {
           <Flex
             as={DialogPanel}
             direction="column"
-            justifyContent="between"
+            justifyContent="start"
             className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-dark sm:max-w-md sm:px-4 sm:py-8"
           >
             {/* Header */}
@@ -264,7 +267,7 @@ export function HeaderMenu(): React.ReactElement {
               onClick={() => setActiveParent(null)}
               direction="column"
               gap={8}
-              className="group cursor-pointer px-4 py-8 sm:pt-2 sm:pb-0"
+              className="group cursor-pointer px-4 py-8 sm:pt-4 sm:pb-0"
             >
               <span className="sr-only">Go back</span>
               <ChevronRight color="white" className="-ml-2 h-4 w-8 rotate-180" />
@@ -289,7 +292,10 @@ export function HeaderMenu(): React.ReactElement {
                       key={child.name}
                       href={child.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={twMerge('block py-6', pathname === child.href && 'text-white')}
+                      className={twMerge(
+                        'block py-6 hover:text-white',
+                        pathname === child.href && 'text-white',
+                      )}
                     >
                       <Heading size="h5">{child.name}</Heading>
                     </Link>
