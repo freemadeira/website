@@ -1,5 +1,5 @@
 import { Partners } from '@/components/partnerships/Partners';
-import { PartnershipCTA } from '@/components/partnerships/PartnershipCTA';
+import { PartnershipCta } from '@/components/partnerships/PartnershipCta';
 import { Hero } from '@/components/ui';
 import { HighFive } from '@/components/ui/svgs';
 
@@ -16,7 +16,7 @@ export default function About() {
         companies and Bitcoin adoption.
       </Hero>
 
-      <PartnershipCTA />
+      <PartnershipCta />
       <Partners />
     </>
   );

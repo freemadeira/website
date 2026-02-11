@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import partnershipCTAImage from '@/assets/images/partnership-cta-image.png';
-import { Container, DiscreetButton, Flex, Heading, Link, Text } from '../ui/atoms';
+import { Container, CtaLink, DiscreetButton, Flex, Heading, Text } from '../ui/atoms';
 
-export function PartnershipCTA(): React.ReactElement {
+export function PartnershipCta(): React.ReactElement {
   return (
     <Container className="mt-22 sm:mt-28">
-      <Flex stackOnMobile gap={0}>
+      <Flex stackOnMobileReverse gap={0}>
         <div className="relative h-64 w-full sm:h-auto sm:w-1/2">
           <Image
             src={partnershipCTAImage}
@@ -35,10 +35,9 @@ export function PartnershipCTA(): React.ReactElement {
             alignItems="start"
             className="sm:flex-row sm:gap-6 sm:align-items-center"
           >
-            {/* TODO: Extract to new component */}
-            <Link href="mailto:info@freemadeira.org" className="hover:text-dark" underline>
+            <CtaLink href="mailto:info@freemadeira.org" underline>
               Send us an email
-            </Link>
+            </CtaLink>
 
             {/* TODO: Add href */}
             <DiscreetButton href="#">Make a donation</DiscreetButton>

@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { Container, Flex, Heading, Link, Text } from '../ui/atoms';
-
 import merchantMapLight from '@/assets/images/merchant-map-light.png';
+import { Container, CtaLink, Flex, Heading, Text } from '../ui/atoms';
 
 export function Merchants(): React.ReactElement {
   return (
@@ -19,10 +18,9 @@ export function Merchants(): React.ReactElement {
             want to start receiving payments in bitcoin? We can assist you every step of the way.
           </Text>
 
-          {/* TODO: Extract to new component */}
-          <Link href="mailto:info@freemadeira.org" className="hover:text-dark" underline>
+          <CtaLink href="mailto:info@freemadeira.org" underline>
             Send us an email
-          </Link>
+          </CtaLink>
 
           {/* TODO: Add discreet button to merchants directory when available */}
         </Flex>
