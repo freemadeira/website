@@ -9,6 +9,7 @@ export function FooterMenu(): React.ReactElement {
           About
         </Link>
         <Link href="/team-and-advisory-board">Team & Advisory Board</Link>
+        <Link href="/partnerships">Partnerships</Link>
       </Flex>
 
       {/* <Flex direction="column" /> */}
