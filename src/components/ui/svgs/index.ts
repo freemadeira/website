@@ -2,6 +2,7 @@ export * from './Coin';
 export * from './FemaleAvatar';
 export * from './FingerTouch';
 export * from './HandCoin';
+export * from './HighFive';
 export * from './LogoHorizontal';
 export * from './MaleAvatar';
 export * from './NamasteB';
