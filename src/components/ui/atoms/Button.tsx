@@ -74,11 +74,9 @@ export interface ButtonProps<T extends React.ElementType>
 export function Button<T extends React.ElementType = 'button'>({
   children,
   as,
-  buttonColor,
   className,
   items,
   noAnimation,
-  textColor,
   underlined,
   ...props
 }: ButtonProps<T> & Omit<React.ComponentProps<T>, keyof ButtonProps<T>>): React.ReactElement {
@@ -88,9 +86,7 @@ export function Button<T extends React.ElementType = 'button'>({
     <Component
       className={buttonVariants({
         ...props,
-        buttonColor,
         noAnimation,
-        textColor,
         underlined,
         items,
         className,

@@ -10,12 +10,12 @@ const PartnerLogos = (): React.ReactElement => {
           key={partner.name}
           href={partner.href}
           aria-label={`Visit ${partner.name}`}
-          className="h-25 w-full rounded-[10px] bg-bridal-100 sm:h-31"
+          className="group h-25 w-full rounded-[10px] bg-bridal-100 sm:h-31"
         >
           <Flex className="h-full w-full px-4" alignItems="center" justifyContent="center">
             <partner.logo
               className={twMerge(
-                'w-26 fill-dark opacity-50 hover:opacity-100 sm:w-40 dark:fill-white',
+                'w-26 fill-dark opacity-50 group-hover:opacity-100 sm:w-40 dark:fill-white',
                 partner.width,
               )}
               title={partner.name}

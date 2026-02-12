@@ -34,6 +34,7 @@ export function HeaderMenu(): React.ReactElement {
   type MobileMenuHeaderProps = {
     isChildrenMenu?: boolean;
     onClose: () => void;
+    closeIconWhite?: boolean;
   };
 
   const MobileMenuHeader: React.FC<MobileMenuHeaderProps> = ({
@@ -61,7 +62,9 @@ export function HeaderMenu(): React.ReactElement {
         <XIcon
           aria-hidden="true"
           size={40}
-          className={twMerge(isChildrenMenu ? 'text-white hover:text-dark' : 'text-dark')}
+          className={twMerge(
+            isChildrenMenu ? 'text-dark hover:text-dark sm:text-white' : 'text-dark',
+          )}
         />
       </IconButton>
     </Flex>
@@ -69,6 +72,7 @@ export function HeaderMenu(): React.ReactElement {
 
   return (
     <>
+      {/* TODO: This component needs refactoring */}
       {/* Desktop Menu */}
       <Flex gap={8} className="hidden lg:flex" alignItems="center">
         {menuItems.map((item) => {
@@ -176,16 +180,16 @@ export function HeaderMenu(): React.ReactElement {
             justifyContent="between"
             className="h-full px-4 py-8 sm:pt-2 sm:pb-0"
           >
-            <Flex direction="column" className="divide-y divide-dark">
+            <Flex direction="column" className="divide-y divide-mountain-mist-700">
               {menuItems.map((item) => {
                 if (isMenuItem(item)) {
-                  // Parent with children → open new dialog
+                  // Menu with children → open new dialog
                   return (
                     <Flex
                       key={item.name}
                       justifyContent="between"
                       alignItems="center"
-                      className="cursor-pointer py-6"
+                      className="cursor-pointer py-6 text-mountain-mist-700 hover:text-dark active:text-dark"
                       onClick={() => setActiveParent(item)}
                     >
                       <Heading size="h4">{item.name}</Heading>
@@ -206,7 +210,10 @@ export function HeaderMenu(): React.ReactElement {
                     >
                       <Heading
                         size="h4"
-                        className={twMerge('py-6', pathname === item.href && 'text-white')}
+                        className={twMerge(
+                          'py-6 text-mountain-mist-700 hover:text-dark active:text-dark',
+                          pathname === item.href && 'text-dark',
+                        )}
                       >
                         {item.name}
                       </Heading>
@@ -219,7 +226,6 @@ export function HeaderMenu(): React.ReactElement {
             </Flex>
 
             {/* Buttons */}
-            {/* TODO: Fix the buttons styling */}
             <Flex direction="column" className="space-y-2">
               {buttonItems.map((item) => (
                 <Button
@@ -259,7 +265,13 @@ export function HeaderMenu(): React.ReactElement {
             className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-dark sm:max-w-md sm:px-4 sm:py-8"
           >
             {/* Header */}
-            <MobileMenuHeader isChildrenMenu onClose={() => setMobileMenuOpen(false)} />
+            <MobileMenuHeader
+              isChildrenMenu
+              onClose={() => {
+                setActiveParent(null);
+                setMobileMenuOpen(false);
+              }}
+            />
 
             {/* Active Parent Menu Item */}
             <Flex

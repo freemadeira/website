@@ -10,8 +10,14 @@ interface CtaLinkProps {
 
 export function CtaLink({ href, underline = true, className, children }: CtaLinkProps) {
   return (
-    // TODO: Check this hover effect
-    <Link href={href} className={twMerge('hover:text-dark', underline && 'underline', className)}>
+    <Link
+      href={href}
+      className={twMerge(
+        'hover:text-primary-500',
+        underline && 'underline underline-offset-6 group-hover:underline',
+        className,
+      )}
+    >
       {children}
     </Link>
   );

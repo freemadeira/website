@@ -33,14 +33,15 @@ export function PartnershipCta(): React.ReactElement {
             direction="column"
             gap={4}
             alignItems="start"
-            className="sm:flex-row sm:gap-6 sm:align-items-center"
+            className="sm:flex-row sm:items-center sm:gap-6"
           >
             <CtaLink href="mailto:info@freemadeira.org" underline>
               Send us an email
             </CtaLink>
 
-            {/* TODO: Add href */}
-            <DiscreetButton href="#">Make a donation</DiscreetButton>
+            <DiscreetButton href="https://pay.zaprite.com/pl_2ma4dHm939">
+              Make a donation
+            </DiscreetButton>
           </Flex>
         </Flex>
       </Flex>
