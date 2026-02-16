@@ -11,7 +11,7 @@ export const ContributeButtons: React.FC<Props> = ({ className }) => {
         Donations
       </Button>
 
-      <Button as={Link} href="mailto:info@freemadeira.org" fill="outlined">
+      <Button as={Link} href="/partnerships" fill="outlined">
         Partnerships
       </Button>
     </Flex>

@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { type VariantProps, tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 import { Container } from '.';
 import { Flex } from './Flex';
 

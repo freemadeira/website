@@ -25,8 +25,8 @@ export function PartnershipCta(): React.ReactElement {
 
           <Text>
             We seek investors who want to shape Madeira's future and drive global Bitcoin adoption.
-            Join us to align your investments with your values and contribute to a meaningful cause.
-            If you want to be part of the change, contact us. We look forward to hear from you.
+            Join us to align your investments with your values and help shape the future of money.
+            If you want to be part of the change, contact us. We look forward to hearing from you.
           </Text>
 
           <Flex

@@ -28,37 +28,37 @@ export const menuItems: HeaderMenuItem[] = [
         name: 'Team & Advisory Board',
         href: '/team-and-advisory-board',
       },
-      {
-        name: 'Business',
-        href: '#',
-      },
+      // {
+      //   name: 'Business',
+      //   href: '#',
+      // },
       {
         name: 'Partnerships',
         href: '/partnerships',
       },
-      {
-        name: 'Agenda',
-        href: '#',
-      },
+      // {
+      //   name: 'Agenda',
+      //   href: '#',
+      // },
     ],
   },
-  {
-    name: 'Resources',
-    children: [
-      {
-        name: 'Media',
-        href: '#',
-      },
-      {
-        name: 'FM Blog',
-        href: '#',
-      },
-      {
-        name: 'Education',
-        href: '#',
-      },
-    ],
-  },
+  // {
+  //   name: 'Resources',
+  //   children: [
+  //     {
+  //       name: 'Media',
+  //       href: '#',
+  //     },
+  //     {
+  //       name: 'FM Blog',
+  //       href: '#',
+  //     },
+  //     {
+  //       name: 'Education',
+  //       href: '#',
+  //     },
+  //   ],
+  // },
   {
     name: 'Bitcoin Atlantis',
     href: 'https://bitcoinatlantis.com/',

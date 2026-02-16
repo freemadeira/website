@@ -1,6 +1,6 @@
-import { externalUrl } from '@/utils/functions';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import { externalUrl } from '@/utils/functions';
 import { IconButton } from '../ui/atoms';
 import type { Event } from './UpcomingEvents';
 

@@ -41,6 +41,7 @@ export const buttonVariants = tv({
       dark: 'bg-dark',
       white: 'bg-white',
     },
+    // This colour refers to text colour or details colour
     colour: {
       dark: twJoin(
         'border-dark text-dark hover:bg-dark hover:fill-white hover:text-white',
@@ -75,9 +76,13 @@ export function Button<T extends React.ElementType = 'button'>({
   children,
   as,
   className,
-  items,
   noAnimation,
+  buttonColor,
   underlined,
+  fill,
+  size,
+  align,
+  colour,
   ...props
 }: ButtonProps<T> & Omit<React.ComponentProps<T>, keyof ButtonProps<T>>): React.ReactElement {
   const Component = as || 'button';
@@ -88,7 +93,11 @@ export function Button<T extends React.ElementType = 'button'>({
         ...props,
         noAnimation,
         underlined,
-        items,
+        fill,
+        buttonColor,
+        size,
+        align,
+        colour,
         className,
       })}
       {...props}

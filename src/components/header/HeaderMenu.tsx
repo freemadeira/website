@@ -235,7 +235,6 @@ export function HeaderMenu(): React.ReactElement {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-disabled
-                  fill="filled"
                   buttonColor={item.primary ? 'dark' : 'white'}
                   colour={item.primary ? 'white' : 'dark'}
                   className="w-full"

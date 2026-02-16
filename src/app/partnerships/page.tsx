@@ -12,7 +12,7 @@ export default function About() {
         layout="tight"
       >
         Places that embrace Bitcoin, and the companies that support them, will be the new
-        globalleaders. Madeira is well-positioned and has governmental support for technology
+        globalleaders. Madeira is well-positioned and has the perfect environment for technology
         companies and Bitcoin adoption.
       </Hero>
 
