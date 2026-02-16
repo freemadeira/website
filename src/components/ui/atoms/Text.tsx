@@ -1,4 +1,4 @@
-import { type VariantProps, tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 
 // TODO: Rethink variants
 const textVariants = tv({
@@ -19,6 +19,7 @@ const textVariants = tv({
       gray: 'text-gray-500',
       muted: 'text-muted',
       green: 'text-green-500',
+      supernova: 'text-primary-400',
     },
     muted: {
       true: 'text-muted',

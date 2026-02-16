@@ -1,4 +1,5 @@
-import { Team, AdvisoryBoard } from '@/components/team-and-advisory-board';
+import { Contribute } from '@/components/home/Contribute';
+import { AdvisoryBoard, Team } from '@/components/team-and-advisory-board';
 import { advisoryBoardMembers } from '@/data/advisoryBoard';
 import { teamMembers } from '@/data/team';
 
@@ -7,6 +8,7 @@ export default function TeamAndAdvisoryBoard() {
     <>
       <Team teamMembers={teamMembers} />
       <AdvisoryBoard AdvisoryBoardMembers={advisoryBoardMembers} />
+      <Contribute />
     </>
   );
 }
