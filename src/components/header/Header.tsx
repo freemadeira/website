@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Container, Flex } from '../ui/atoms';
 import { LogoHorizontal } from '../ui/svgs';
-import { Menu } from './Menu';
+import { HeaderMenu } from './HeaderMenu';
 
 export function Header(): React.ReactElement {
   return (
@@ -12,7 +12,7 @@ export function Header(): React.ReactElement {
             <LogoHorizontal className="h-18" />
           </Link>
 
-          <Menu />
+          <HeaderMenu />
         </Flex>
       </Container>
     </header>

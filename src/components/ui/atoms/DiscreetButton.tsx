@@ -1,8 +1,9 @@
-import type { Url } from '@/utils/types';
 import { ArrowRight } from 'lucide-react';
-import { Flex, Link, Text } from '.';
-import { tv } from 'tailwind-variants';
 import { twMerge } from 'tailwind-merge';
+import { tv } from 'tailwind-variants';
+import type { Url } from '@/utils/types';
+import { Flex, Link, Text } from '.';
+
 interface BaseDiscreetButtonProps {
   children: string | string[];
   className?: string;
