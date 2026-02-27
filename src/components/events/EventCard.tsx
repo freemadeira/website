@@ -1,5 +1,6 @@
 import { Flex, Heading, Link, Text } from '@/components/ui/atoms';
-import { type Event, EventImage, EventTags } from './';
+import type { Event } from '@/data/upcomingEvents';
+import { EventImage, EventTags } from './';
 
 type EventCardProps = {
   event: Event;
