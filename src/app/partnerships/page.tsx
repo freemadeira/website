@@ -1,14 +1,14 @@
-import { Partners } from '@/components/partnerships/Partners';
-import { PartnershipCta } from '@/components/partnerships/PartnershipCta';
+import { Partners, PartnershipCta } from '@/components/partnerships';
 import { Hero } from '@/components/ui';
 import { HighFive } from '@/components/ui/svgs';
 
-export default function About() {
+export default function Partnerships() {
   return (
     <>
       <Hero
         title="Partnerships"
-        image={(props) => <HighFive {...props} className="mx-auto w-75 sm:w-90" />}
+        image={HighFive}
+        imageClassName="mx-auto w-75 sm:w-90"
         layout="tight"
       >
         Places that embrace Bitcoin, and the companies that support them, will be the new

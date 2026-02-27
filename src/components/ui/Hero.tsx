@@ -1,4 +1,5 @@
-import { tv } from 'tailwind-variants';
+import { twMerge } from 'tailwind-merge';
+import { tv, type VariantProps } from 'tailwind-variants';
 import { Container, Flex, Heading } from '@/components/ui/atoms';
 import type { Url } from '@/utils/types';
 
@@ -23,18 +24,19 @@ const heroVariants = tv({
     layout: 'default',
   },
 });
-interface HeroProps {
+interface HeroProps extends VariantProps<typeof heroVariants> {
   title: string;
   image: React.FC<React.SVGProps<SVGSVGElement>>;
+  imageClassName?: string;
   buttonText?: string;
   buttonHref?: Url;
   children: React.ReactNode;
-  layout?: 'default' | 'tight';
 }
 
 export const Hero: React.FC<HeroProps> = ({
   title,
   image: Illustration,
+  imageClassName,
   buttonText,
   buttonHref,
   children,
@@ -43,11 +45,7 @@ export const Hero: React.FC<HeroProps> = ({
   const { text, image } = heroVariants({ layout });
 
   return (
-    <Flex
-      as={Container}
-      justifyContent="between"
-      className="my-16 flex-col-reverse gap-6 sm:flex-row sm:gap-10"
-    >
+    <Flex as={Container} className="my-16 flex-col-reverse gap-6 sm:flex-row sm:gap-10">
       <Flex direction="column" className={text()}>
         <Flex direction="column" className="gap-4 sm:gap-8">
           <Heading size="h1">{title}</Heading>
@@ -58,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({
         {/* TODO: Add button */}
       </Flex>
 
-      <Illustration className={image()} />
+      <Illustration className={twMerge(image(), imageClassName)} />
     </Flex>
   );
 };

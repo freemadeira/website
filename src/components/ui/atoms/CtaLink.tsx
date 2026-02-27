@@ -14,7 +14,7 @@ export function CtaLink({ href, underline = true, className, children }: CtaLink
       href={href}
       className={twMerge(
         'hover:text-primary-500',
-        underline && 'underline underline-offset-6 group-hover:underline',
+        underline && 'underline underline-offset-6',
         className,
       )}
     >

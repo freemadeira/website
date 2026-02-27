@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import partnershipCTAImage from '@/assets/images/partnership-cta-image.png';
+import partnershipCtaImage from '@/assets/images/partnership-cta-image.jpg';
 import { Container, CtaLink, DiscreetButton, Flex, Heading, Text } from '../ui/atoms';
 
 export function PartnershipCta(): React.ReactElement {
@@ -8,7 +8,7 @@ export function PartnershipCta(): React.ReactElement {
       <Flex stackOnMobileReverse gap={0}>
         <div className="relative h-64 w-full sm:h-auto sm:w-1/2">
           <Image
-            src={partnershipCTAImage}
+            src={partnershipCtaImage}
             alt="Partnership"
             className="object-cover"
             fill
