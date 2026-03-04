@@ -14,7 +14,7 @@ export const events: Event[] = [
     date: 'March 24, 2026, 18:30',
     title: 'Backup & Segurança',
     description:
-      'Workshop entirely in Portuguese. Como manter o teu Bitcon seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
+      'Workshop entirely in Portuguese. Como manter o teu Bitcoin seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
     imgSrc: '/images/events/workshop-intro.jpg',
     tags: ['Workshop', 'In-person'],
   },
