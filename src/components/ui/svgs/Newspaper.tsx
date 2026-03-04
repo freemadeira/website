@@ -1,5 +1,3 @@
-'use client';
-
 import { Svg } from '../atoms';
 
 type Props = {

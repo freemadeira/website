@@ -1,4 +1,4 @@
-import { type VariantProps, tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 
 const flexVariants = tv({
   base: 'flex',
@@ -9,6 +9,9 @@ const flexVariants = tv({
     },
     stackOnMobile: {
       true: 'flex-col sm:flex-row',
+    },
+    stackOnMobileReverse: {
+      true: 'flex-col-reverse sm:flex-row',
     },
     grow: {
       true: 'grow',
@@ -63,6 +66,7 @@ export function Flex<T extends React.ElementType = 'div'>({
   as,
   direction,
   stackOnMobile,
+  stackOnMobileReverse,
   grow,
   gap,
   justifyContent,
@@ -77,6 +81,7 @@ export function Flex<T extends React.ElementType = 'div'>({
       className={flexVariants({
         direction,
         stackOnMobile,
+        stackOnMobileReverse,
         grow,
         gap,
         justifyContent,
