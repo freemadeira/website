@@ -17,6 +17,7 @@ export const events: Event[] = [
       'Workshop entirely in Portuguese. Como manter o teu Bitcoin seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
     imgSrc: '/images/events/workshop-intro.jpg',
     tags: ['Workshop', 'In-person'],
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLSepCNFLfpcBuUop5SkgwAqj1RAHlr2baCdsL6VFnFUIv9wSgA/viewform',
   },
   {
     date: 'March 25, 2026, 18:30',
@@ -34,6 +35,7 @@ export const events: Event[] = [
       'Workshop entirely in Portuguese. Como usar carteiras físicas e outras soluções de backup para manter o teu bitcoin seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
     imgSrc: '/images/events/workshop-intro.jpg',
     tags: ['Workshop', 'In-person'],
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLSepCNFLfpcBuUop5SkgwAqj1RAHlr2baCdsL6VFnFUIv9wSgA/viewform',
   },
   {
     date: 'April 29, 2026, 18:30',
