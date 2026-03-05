@@ -1,8 +1,8 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
-import type { Event } from '@/data/upcomingEvents';
+
 import { externalUrl } from '@/utils/functions';
-import { IconButton } from '../ui/atoms';
+import { IconButton } from '../atoms';
 import type { FeaturedItem } from './FeaturedGrid';
 
 interface Props {
