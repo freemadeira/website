@@ -6,52 +6,52 @@ const calendarTable = [
   {
     chapter: '#1: Porque é que precisamos de dinheiro?',
     theoryClass: '',
-    practiceClass: '27 Set',
+    practiceClass: '18 Abr',
   },
   {
     chapter: '#2: O que é o dinheiro?',
-    theoryClass: '27 Set – 3 Out',
-    practiceClass: '4 Out',
+    theoryClass: '18 Abr – 24 Abr',
+    practiceClass: '25 Abr',
   },
   {
     chapter: '#3: A história do dinheiro',
-    theoryClass: '4 Out – 10 Out',
-    practiceClass: '11 Out',
+    theoryClass: '25 Abr – 1 Mai',
+    practiceClass: '2 Mai',
   },
   {
     chapter: '#4: O que são moedas fiduciárias e quem as controla?',
-    theoryClass: '11 Out – 17 Out',
-    practiceClass: '18 Out',
+    theoryClass: '2 Mai – 8 Mai',
+    practiceClass: '9 Mai',
   },
   {
     chapter: '#5: A criação de soluções, com base nos problemas',
-    theoryClass: '18 Out – 24 Out',
-    practiceClass: '25 Out',
+    theoryClass: '9 Mai – 15 Mai',
+    practiceClass: '16 Mai',
   },
   {
     chapter: '#6: Introdução ao Bitcoin',
-    theoryClass: '25 Out – 31 Out',
-    practiceClass: '1 Nov',
+    theoryClass: '16 Mai – 22 Mai',
+    practiceClass: '23 Mai',
   },
   {
     chapter: '#7: Como usar o Bitcoin',
-    theoryClass: '1 Nov – 7 Nov',
-    practiceClass: '8 Nov',
+    theoryClass: '23 Mai – 29 Mai',
+    practiceClass: '30 Mai',
   },
   {
     chapter: '#8: Rede Lightning: Usar bitcoin no dia a dia',
-    theoryClass: '8 Nov – 14 Nov',
-    practiceClass: '15 Nov',
+    theoryClass: '30 Mai – 5 Jun',
+    practiceClass: '6 Jun',
   },
   {
     chapter: '#9: Uma Introdução ao lado técnico do Bitcoin',
-    theoryClass: '15 Nov – 21 Nov',
-    practiceClass: '22 Nov',
+    theoryClass: '6 Jun – 12 Jun',
+    practiceClass: '13 Jun',
   },
   {
     chapter: '#10: Porquê o Bitcoin?',
-    theoryClass: '22 Nov – 28 Nov',
-    practiceClass: '29 Nov',
+    theoryClass: '13 Jun – 19 Jun',
+    practiceClass: '20 Jun',
   },
 ];
 
@@ -81,7 +81,7 @@ const faq = [
   {
     question: 'O que é o Diploma Bitcoin?',
     answer:
-      'O Diploma Bitcoin é uma adaptação do programa de 10 semanas internacionalmente reconhecido desenvolvido pela My First Bitcoin. É totalmente gratuito e dar-te-á noções sólidas sobre o Bitcoin.',
+      'O Diploma Bitcoin é uma adaptação do programa de 10 semanas internacionalmente reconhecido desenvolvido pela My First Bitcoin. Este curso dar-te-á noções sólidas sobre o Bitcoin.',
   },
   {
     question: 'A quem se destina este curso?',
@@ -113,10 +113,10 @@ const faq = [
   {
     question: 'Como posso aceder às aulas práticas?',
     answer:
-      'A ligação para as aulas práticas será enviada antes do início do curso para o e-mail indicado na inscrição.',
+      'A ligação para as aulas práticas será enviada antes do início do curso para o endereço de e-mail indicado na inscrição.',
   },
   {
-    question: 'Durante quanto tempo as aulas gravadas ficam disponíveis?',
+    question: 'Durante quanto tempo ficam disponíveis as aulas gravadas?',
     answer: 'As aulas gravadas ficarão disponíveis mesmo depois de terminado o curso.',
   },
   {
@@ -131,14 +131,14 @@ const faq = [
   {
     question: 'Não vou poder participar numa das aulas práticas. O que devo fazer?',
     answer:
-      'Caso não possas participar numa das aulas práticas, por favor, informa-nos por e-mail para info@freemadeira.org. Teremos isso em conta no momento da avaliação.',
+      'Caso não possas participar numa das aulas práticas, por favor, informa-nos por e-mail para education@freemadeira.org. Teremos isso em conta no momento da avaliação.',
   },
   {
     question: 'Como será feita a avaliação do curso?',
     answer: 'A avaliação terá em conta a assiduidade e a participação ativa nas aulas práticas.',
   },
   {
-    question: 'No final do curso terei direito a algum diploma ou comprovativo de participação?',
+    question: 'No final do curso terei direito a um diploma ou comprovativo de participação?',
     answer: 'Sim, desde que cumpras os objetivos de avaliação.',
   },
   {
@@ -152,9 +152,9 @@ const faq = [
       'Não. As aulas práticas acontecerão apenas em direto. Não será feita qualquer gravação das mesmas por uma questão de conforto e privacidade dos participantes. As aulas teóricas estarão sempre disponíveis no nosso site.',
   },
   {
-    question: 'Porque é este curso gratuito?',
+    question: 'Porque é que este curso não é gratuito?',
     answer:
-      'A FREE Madeira é uma associação sem fins lucrativos, que tem o privilégio de receber bolsas para poder desenvolver o seu trabalho de forma profissional e financeiramente sustentável.',
+      'O valor simbólico de inscrição serve para garantir o compromisso dos participantes. Esse valor será posteriormente devolvido sob a forma de desconto na nossa loja online.',
   },
   {
     question: 'As vagas são limitadas?',
@@ -164,7 +164,7 @@ const faq = [
   {
     question: 'Qual o prazo para me inscrever?',
     answer:
-      'As inscrições estarão abertas até dia 25 de Setembro ou até ser atingido o número máximo de participantes',
+      'As inscrições estarão abertas até dia 16 de Abril ou até ser atingido o número máximo de participantes',
   },
   {
     question: 'Porque não me posso inscrever a meio do curso?',
@@ -195,7 +195,7 @@ export default function Page() {
         </Text>
 
         <Text>
-          Este programa gratuito de 10 capítulos foi projetado para capacitar indivíduos, empresas e
+          Este programa de 10 capítulos foi projetado para capacitar indivíduos, empresas e
           comunidades, promovendo a literacia financeira e uma compreensão sólida do Bitcoin.
         </Text>
 
@@ -204,11 +204,17 @@ export default function Page() {
           seu impacto na sociedade, de forma estruturada e acessível.
         </Text>
 
+        <Text>
+          A participação no curso tem um valor simbólico de 21 €, que serve para garantir o
+          compromisso dos participantes. Esse valor será posteriormente devolvido sob a forma de
+          desconto na nossa loja online.
+        </Text>
+
         <Text>As aulas acontecem semanalmente, exclusivamente online. Cada capítulo inclui:</Text>
 
         <ul className="list-disc pl-5">
           <li>
-            Uma aula teórica gravada (entre 60–90 minutos), a que os alunos devem assistir antes da
+            Uma aula teórica gravada (de até 45 minutos), a que os alunos devem assistir antes da
             aula prática. Esta gravação é disponibilizada com uma semana de antecedência da aula
             prática e fica disponível para consulta a qualquer momento.
           </li>
@@ -280,11 +286,7 @@ export default function Page() {
           </li>
         </ul>
 
-        <Button
-          as={Link}
-          href="https://docs.google.com/forms/d/1l_JwWx-aIJ-KNHhpsw0lmy4U4it6GuUFMf7IIf4bdLo"
-          className="mt-6"
-        >
+        <Button as={Link} href="https://forms.gle/LC2VQRdxY4v5y7DPA" className="mt-6">
           Inscreve-te já!
         </Button>
       </Container>
