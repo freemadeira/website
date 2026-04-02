@@ -1,6 +1,6 @@
 import type { StaticImageData } from 'next/image';
-import type { Social } from '@/components/ui/atoms/SocialButton';
 import { pictures } from '@/assets/images/team';
+import type { Social } from '@/components/ui/atoms/SocialButton';
 
 export interface TeamMember {
   firstName: string;
@@ -21,8 +21,8 @@ export const teamMembers: TeamMember[] = [
     picture: pictures.andreLoja,
     socials: {
       x: 'andreloja',
-      linkedin: 'andreloja',
       nostr: 'npub1tdc9um9kqfp9cqvjqtwswzsvqzdsgzkpn9swamed3286kfwpaljsrr8r0y',
+      linkedin: 'andreloja',
     },
     bio: 'André Loja is a native of Madeira, father of four, and a dedicated serial entrepreneur committed to fostering innovation and resilience on the archipelago. He founded FREE Madeira, an initiative focused on Bitcoin adoption, education, and community building. In 2024, he launched the first Bitcoin Atlantis Conference, which brought together global Bitcoin leaders to Madeira and highlighted the island’s potential on the international stage. His ventures include Basalto, a Bitcoin investment fund; Monstera Media, a publishing house for Bitcoin literature; and Satsflow, a user-friendly Lightning wallet. He also owns An Island Apart, a leading holiday rental company offering curated stays across Madeira, and helped establish Cowork Funchal, a vibrant coworking space supporting a growing community of remote professionals. Through these projects, André contributes to Madeira’s evolution as a more open, forward-looking, and globally connected island economy.',
   },
@@ -53,6 +53,16 @@ export const teamMembers: TeamMember[] = [
     picture: pictures.luisaCosta,
   },
   {
+    firstName: 'Sara',
+    lastName: 'Aguiar',
+    sex: 'female',
+    picture: pictures.saraAguiar,
+    role: 'Head of Marketing and Communications',
+    socials: {
+      linkedin: 'sara-veiga-frança-aguiar-aa643b5b',
+    },
+  },
+  {
     firstName: 'Marília',
     lastName: 'Marques',
     picture: pictures.mariliaMarques,
@@ -65,14 +75,6 @@ export const teamMembers: TeamMember[] = [
     bio: 'Bitcoin enthusiast working in digital communication, with experience in content creation, video editing, and social media management. Her work aims to deepen Bitcoin education and increase awareness of its economic, technological, and cultural relevance.',
   },
   {
-    firstName: 'Carolina',
-    lastName: 'Roovers',
-    picture: pictures.carolinaRoovers,
-    sex: 'female',
-    role: 'Designer & Project Manager',
-    bio: 'A designer who combines creativity and strategy, and supports event coordination by connecting concepts, people, and experiences.',
-  },
-  {
     firstName: 'Inês',
     lastName: 'Louro',
     picture: pictures.inesLouro,
@@ -82,5 +84,13 @@ export const teamMembers: TeamMember[] = [
       nostr: 'npub1yaz5asg4uzj2zckgq2n5sjkwj7u7cdmz0hk2905xgkuc7d5vj98qwyhh3p',
     },
     bio: 'Software developer and Bitcoin enthusiast who enjoys teaching. She builds applications and turns ideas into working software. She has taught coding and now teaches Bitcoin, designing and creating educational content to make Bitcoin more accessible and encourage its adoption as a better form of money.',
+  },
+  {
+    firstName: 'Carolina',
+    lastName: 'Roovers',
+    picture: pictures.carolinaRoovers,
+    sex: 'female',
+    role: 'Designer & Project Manager',
+    bio: 'A designer who combines creativity and strategy, and supports event coordination by connecting concepts, people, and experiences.',
   },
 ];
