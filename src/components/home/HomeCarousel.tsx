@@ -10,6 +10,15 @@ export const HomeCarousel: React.FC = () => {
     <Carousel title="Projects">
       <CarouselContent>
         <HomeCarouselItem
+          title="FREE Energy Summit"
+          backgroundImage={energySummitImage}
+          mainButtonHref="https://energysummit.freemadeira.org/"
+          mainButtonText="Learn more"
+        >
+          Join us on May 14th in Lisbon for the second edition of the FREE Energy Summit.
+        </HomeCarouselItem>
+
+        <HomeCarouselItem
           title="Adoption"
           backgroundImage={madeiraImage}
           mainButtonHref="https://btcmap.org/map#10/32.80748/-16.82419"
@@ -27,17 +36,6 @@ export const HomeCarousel: React.FC = () => {
         >
           Buy hardware wallets, backup solutions, books, and other Bitcoin-related products in our
           online shop.
-        </HomeCarouselItem>
-
-        <HomeCarouselItem
-          title="Energy Summit"
-          backgroundImage={energySummitImage}
-          mainButtonHref="https://energysummit.freemadeira.org/recap"
-          mainButtonText="Watch the talks"
-        >
-          The first edition of the FREE Energy Summit took place in Lisbon in April 2025. We
-          explored how Bitcoin mining can boost the development of renewable energies and create new
-          opportunities.
         </HomeCarouselItem>
 
         <HomeCarouselItem
