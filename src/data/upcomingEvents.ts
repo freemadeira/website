@@ -11,31 +11,22 @@ export interface Event {
 
 export const events: Event[] = [
   {
-    date: 'March 24, 2026, 18:30',
-    title: 'Backup & Segurança',
+    date: 'April 11, 2026, 10:00',
+    title: 'Bitcoin para Comerciantes',
     description:
-      'Workshop entirely in Portuguese. Como manter o teu Bitcoin seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
-    imgSrc: '/images/events/workshop-intro.jpg',
-    tags: ['Workshop', 'In-person'],
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLSepCNFLfpcBuUop5SkgwAqj1RAHlr2baCdsL6VFnFUIv9wSgA/viewform',
+      'Workshop entirely in Portuguese. Neste workshop prático vais descobrir, passo a passo, como integrar o Bitcoin no teu negócio de forma simples e segura.',
+    imgSrc: '/images/events/workshop-merchants.jpg',
+    tags: ['Education', 'Workshop', 'Online'],
+    href: 'https://forms.gle/PA9dg2kY2p98iN1LA',
   },
   {
-    date: 'March 25, 2026, 18:30',
-    title: 'FREE Madeira Bitcoin Meetup',
+    date: 'April 18-June 20, 2026',
+    title: 'Diploma Bitcoin',
     description:
-      'Guest speaker Cobrador presents TollGate, built during the Sovereign Engineering Cohort in Madeira.',
-    tags: ['Meetup', 'In-person'],
-    imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.satlantis.io/events/1692/FREE-Madeira-Bitcoin-Meetup',
-  },
-  {
-    date: 'March 26, 2026, 18:30',
-    title: 'Carteiras Físicas & Soluções de Backup',
-    description:
-      'Workshop entirely in Portuguese. Como usar carteiras físicas e outras soluções de backup para manter o teu bitcoin seguro? Este workshop é recomendado para quem queira aprender a guardar o seu bitcoin de forma segura.',
-    imgSrc: '/images/events/workshop-intro.jpg',
-    tags: ['Workshop', 'In-person'],
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLSepCNFLfpcBuUop5SkgwAqj1RAHlr2baCdsL6VFnFUIv9wSgA/viewform',
+      'Adaptação para Português do programa de 10 semanas internacionalmente reconhecido desenvolvido pela My First Bitcoin. Este curso dar-te-á noções sólidas sobre o Bitcoin.',
+    imgSrc: '/images/events/diploma.png',
+    tags: ['Education', 'Course', 'Online'],
+    href: '/education/info-diploma-bitcoin',
   },
   {
     date: 'April 29, 2026, 18:30',
@@ -46,6 +37,87 @@ export const events: Event[] = [
     imgSrc: '/images/events/meetup.jpg',
     href: 'https://www.satlantis.io/events/1693/FREE-Madeira-Bitcoin-Meetup',
   },
+  {
+    date: 'May 14, 2026',
+    title: 'FREE Energy Summit',
+    description:
+      'A focused, in-person event dedicated to real-world projects at the intersection of Bitcoin mining and energy systems. Technical, economic and operational insight on concrete, live initiatives.',
+    tags: ['Conference', 'In-person'],
+    imgSrc: '/images/events/energy-summit.jpg',
+    href: 'https://energysummit.freemadeira.org/',
+  },
+  // {
+  //   date: 'May 27, 2026, 18:30',
+  //   title: 'FREE Madeira Bitcoin Meetup',
+  //   description:
+  //     'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+  //   tags: ['Meetup', 'In-person'],
+  //   imgSrc: '/images/events/meetup.jpg',
+  //   href: 'https://www.satlantis.io/events/1694/FREE-Madeira-Bitcoin-Meetup',
+  // },
+  // {
+  //   date: 'June 24, 2026, 18:30',
+  //   title: 'FREE Madeira Bitcoin Meetup',
+  //   description:
+  //     'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+  //   tags: ['Meetup', 'In-person'],
+  //   imgSrc: '/images/events/meetup.jpg',
+  //   href: 'https://www.satlantis.io/events/1695/FREE-Madeira-Bitcoin-Meetup',
+  // },
+  // {
+  //   date: 'July 29, 2026, 18:30',
+  //   title: 'FREE Madeira Bitcoin Meetup',
+  //   description:
+  //     'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+  //   tags: ['Meetup', 'In-person'],
+  //   imgSrc: '/images/events/meetup.jpg',
+  //   href: 'https://www.satlantis.io/events/1696/FREE-Madeira-Bitcoin-Meetup',
+  // },
+  // {
+  //   date: 'August 26, 2026, 18:30',
+  //   title: 'FREE Madeira Bitcoin Meetup',
+  //   description:
+  //     'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+  //   tags: ['Meetup', 'In-person'],
+  //   imgSrc: '/images/events/meetup.jpg',
+  //   href: 'https://www.satlantis.io/events/1697/FREE-Madeira-Bitcoin-Meetup',
+  // },
+  // {
+  //   date: 'September 30, 2026, 18:30',
+  //   title: 'FREE Madeira Bitcoin Meetup',
+  //   description:
+  //     'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+  //   tags: ['Meetup', 'In-person'],
+  //   imgSrc: '/images/events/meetup.jpg',
+  //   href: 'https://www.satlantis.io/events/1698/FREE-Madeira-Bitcoin-Meetup',
+  // },
+  // {
+  //   date: 'October 28, 2026, 18:30',
+  //   title: 'FREE Madeira Bitcoin Meetup',
+  //   description:
+  //     'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+  //   tags: ['Meetup', 'In-person'],
+  //   imgSrc: '/images/events/meetup.jpg',
+  //   href: 'https://www.satlantis.io/events/1699/FREE-Madeira-Bitcoin-Meetup',
+  // },
+  // {
+  //   date: 'November 25, 2026, 18:30',
+  //   title: 'FREE Madeira Bitcoin Meetup',
+  //   description:
+  //     'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+  //   tags: ['Meetup', 'In-person'],
+  //   imgSrc: '/images/events/meetup.jpg',
+  //   href: 'https://www.satlantis.io/events/1700/FREE-Madeira-Bitcoin-Meetup',
+  // },
+  // {
+  //   date: 'December 30, 2026, 18:30',
+  //   title: 'FREE Madeira Bitcoin Meetup',
+  //   description:
+  //     'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+  //   tags: ['Meetup', 'In-person'],
+  //   imgSrc: '/images/events/meetup.jpg',
+  //   href: 'https://www.satlantis.io/events/1701/FREE-Madeira-Bitcoin-Meetup',
+  // },
   // {
   //   date: 'EXACT DATES TBC, 2028',
   //   title: 'Bitcoin Atlantis 2028',
