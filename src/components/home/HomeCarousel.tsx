@@ -15,7 +15,7 @@ export const HomeCarousel: React.FC = () => {
           mainButtonHref="https://energysummit.freemadeira.org/"
           mainButtonText="Learn more"
         >
-          Join us on May 14th in Lisbon for the second edition of the FREE Energy Summit.
+          Join us on May 14th in Lisbon for the second edition of FREE Energy Summit.
         </HomeCarouselItem>
 
         <HomeCarouselItem
