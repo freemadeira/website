@@ -22,7 +22,7 @@ export const teamMembers: TeamMember[] = [
     socials: {
       x: 'andreloja',
       nostr: 'npub1tdc9um9kqfp9cqvjqtwswzsvqzdsgzkpn9swamed3286kfwpaljsrr8r0y',
-      linkedin: 'andreloja',
+      linkedin: 'in/andreloja',
     },
     bio: 'André Loja is a native of Madeira, father of four, and a dedicated serial entrepreneur committed to fostering innovation and resilience on the archipelago. He founded FREE Madeira, an initiative focused on Bitcoin adoption, education, and community building. In 2024, he launched the first Bitcoin Atlantis Conference, which brought together global Bitcoin leaders to Madeira and highlighted the island’s potential on the international stage. His ventures include Basalto, a Bitcoin investment fund; Monstera Media, a publishing house for Bitcoin literature; and Satsflow, a user-friendly Lightning wallet. He also owns An Island Apart, a leading holiday rental company offering curated stays across Madeira, and helped establish Cowork Funchal, a vibrant coworking space supporting a growing community of remote professionals. Through these projects, André contributes to Madeira’s evolution as a more open, forward-looking, and globally connected island economy.',
   },
@@ -59,7 +59,7 @@ export const teamMembers: TeamMember[] = [
     picture: pictures.saraAguiar,
     role: 'Head of Marketing and Communications',
     socials: {
-      linkedin: 'sara-veiga-frança-aguiar-aa643b5b',
+      linkedin: 'in/sara-veiga-frança-aguiar-aa643b5b',
     },
   },
   {

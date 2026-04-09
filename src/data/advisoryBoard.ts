@@ -20,7 +20,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'JeffBooth',
       nostr: 'npub1s05p3ha7en49dv8429tkk07nnfa9pcwczkf5x5qrdraqshxdje9sq6eyhe',
-      linkedin: 'jeffdbooth',
+      linkedin: 'in/jeffdbooth',
     },
     picture: pictures.jeffBooth,
     bio: "Jeff Booth is a visionary leader, technology entrepreneur, Founding Partner at ego death capital and best-selling author of The Price of Tomorrow – Why Deflation is Key to an Abundant Future.  With a profound grasp of technology, system thinking, and design, he stands at the forefront of a shift from an outdated economic model to one designed for tomorrow. Jeff's insights and achievements have earned him the BC Technology Industry Association's Person of the Year in 2015 and in October 2023, he was honored with induction into the prestigious BCTIA's Hall of Fame.  Furthermore, in 2016, he gained recognition from Goldman Sachs, who named him one of the 100 Most Intriguing Entrepreneurs. In addition to his work investing and helping entrepreneurs build on the rails of Bitcoin, he is a Co-Founder of addy and NocNoc. Jeff also actively serves on the boards of Core Scientific, Fedi, and Breez, in addition to several advisory boards. A dedicated member of the Young Presidents Organization since 2004, he further contributes as a Founding Fellow at the Creative Destruction Lab.",
@@ -33,7 +33,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'RobBrinded',
       nostr: 'npub1de8jsek5aykkng5ytlvhvjxjwmdnpjwjcly0q6mu3566tfm00g5sfy0ezd',
-      linkedin: 'rob-brinded-4887817',
+      linkedin: 'in/rob-brinded-4887817',
     },
     picture: pictures.robBrinded,
     bio: "Dedicated Personal Advisor and Educator specializing in elite athletes, CEOs, and entrepreneurs. Spearheading strength & conditioning and injury prevention initiatives for Chelsea FC while offering strategic insights as an Athlete Consultant for Barcelona FC. Trusted Consultant for the English National Ballet School. Pioneering Founder and Creator of EnergeticsOS & MeditationOS performance systems, optimizing mental and physical performance. Author of the transformative book 'Mind Decentralised: Becoming Masterless,' advocating for personal mastery and holistic development.",
@@ -92,7 +92,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     sex: 'male',
     socials: {
       x: 'keidunm',
-      linkedin: 'mkei',
+      linkedin: 'in/mkei',
     },
     category: 'Finance',
     picture: pictures.maxKei,
@@ -106,7 +106,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'stiven_hey_',
       nostr: 'nprofile1qqsqu8ua4wwccjpmujttq6p6v5thnxvdg8fxlemj4fgy3gergvshj8qhpguq6',
-      linkedin: 'stivenk',
+      linkedin: 'in/stivenk',
     },
     picture: pictures.stivenKerestegian,
     bio: 'Stiven is a visionary product and venture designer whose award-winning career has shaped innovation across global markets. His experience includes strategic design for Microsoft, spearheading open innovation at LEGO Future Lab, and leading as Head of Global Innovation at IKEA Group. As co-founder of caos.global, a Bitcoin strategic design studio, and senior advisor to PlanB Network, Stiven continues to envision bold ideas, transforming them into impactful realities in the intersections of people, technology and business.',
@@ -117,7 +117,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     sex: 'female',
     socials: {
       x: 'nduku_jay',
-      linkedin: 'janet-maingi',
+      linkedin: 'in/janet-maingi',
     },
     category: 'Energy',
     picture: pictures.janetMaingi,
@@ -130,7 +130,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     category: 'Strategy',
     socials: {
       x: 'Excellion',
-      linkedin: 'samson',
+      linkedin: 'in/samson',
     },
     picture: pictures.samsonMow,
     bio: 'Bitcoin philosopher and game developer with a degree in Business Administration. Samson is credited on the development of two of the most highly rated real-time strategy games of all time: "Dawn of War" and "Company of Heroes". He is a frequent headline speaker at conferences and often provides television commentary on Bitcoin.',
@@ -143,7 +143,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'JoeNakamoto',
       nostr: 'npub1lr2zzf989mvf393y0tv39ara6a4vddkd6y87z784up9vl6ks6j3qtudl6a',
-      linkedin: 'Joenakamoto',
+      linkedin: 'in/Joenakamoto',
     },
     picture: pictures.joeNakamoto,
     bio: '@joenakamoto is a journalist, documentary maker & MC. As an independent journalist, Joe pushes the boundaries of Bitcoin content, giving away free Sats to strangers and shooting Youtube-friendly challenge videos. Joe is multi-lingual and travels the world trying to make sense of Bitcoin.',
@@ -155,7 +155,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'adam_nili',
       nostr: 'npub18rtjz55wndqwlmgzpjjl9nr9msutvymc08znv2s0a9r5gk53cwjstc8a7u',
-      linkedin: 'adam-nili',
+      linkedin: 'in/adam-nili',
     },
     picture: pictures.adamNili,
     bio: 'Adam is a lifelong entrepreneur and CEO of Methodos Global, an international advisory organization driving global impact through education, technology, and innovation. With a focus on Bitcoin education and technological advancement, Adam has developed educational initiatives that have reached 25 countries and has integrated modern financial literacy into university curricula. Currently, Adam leads and advises global projects in energy, education, and health in communities around the world.',
@@ -167,7 +167,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     category: 'Legal & Governance',
     socials: {
       x: 'PauloPe63416386',
-      linkedin: 'paulo-pereira-82803579',
+      linkedin: 'in/paulo-pereira-82803579',
     },
     picture: pictures.pauloPereira,
     bio: "Bachelor's degree in Economics with a postgraduate qualification in Corporate Finance, experienced in commercial banking for individuals and companies, as well as financial management in family-owned businesses leading their sectors in areas such as automotive distribution, car rentals, tourist real estate, and software development. For the past 11 years, he has been co-CEO of a Corporate Finance boutique and regularly participates in the governing bodies of companies. He loves Freedom and despises the State.",
@@ -192,7 +192,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'knutsvanholm',
       nostr: 'npub1jt97tpsul3fp8hvf7zn0vzzysmu9umcrel4hpgflg4vnsytyxwuqt8la9y',
-      linkedin: 'knut-svanholm-93591673',
+      linkedin: 'in/knut-svanholm-93591673',
     },
     picture: pictures.knutSvanholm,
     bio: "Knut Svanholm is a Bitcoin author, educator, and armchair philosopher. His first work, 'Bitcoin: Sovereignty through Mathematics,' is widely regarded as a classic in the space, earning recognition as a recommended read on numerous educational platforms, including MicroStrategy's Bitcoin site hope.com. Knut is credited with coining the popular meme 'Everything Divided by 21 Million,' a phrase that encapsulates the scarcity and mathematical principles underpinning Bitcoin. Knut is also the host of The Bitcoin Infinity Show.",
@@ -215,7 +215,7 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     socials: {
       x: 'petermiyoung',
       nostr: 'nprofile1qqs0cfrsa5vksqwa4nju9093fffl5hhflq0wxedlf9v0jnrpzlv7ufcvg8qer',
-      linkedin: 'peter-young-70b80a42',
+      linkedin: 'in/peter-young-70b80a42',
     },
     picture: pictures.peterYoung,
     bio: "Peter is the Managing Director of the Free Cities Foundation, a non-profit dedicated to advancing self-governing territories that uphold individual rights, freedoms, and voluntary governance. The foundation's partners include autonomous zones like the ZEDEs in Honduras, intentional communities such as Montelibero in Montenegro, and self-governing territories such as Sark and Madeira. A Bitcoiner since 2017, Peter previously worked alongside Saifedean Ammous, supporting his online learning platform and contributing to educational resources on bitcoin, sound money and economic freedom.",

@@ -1,5 +1,4 @@
-import { IconButton, Link } from './';
-import { type VariantProps, tv } from 'tailwind-variants';
+import { tv, type VariantProps } from 'tailwind-variants';
 import {
   Facebook,
   Github,
@@ -10,6 +9,7 @@ import {
   X,
   Youtube,
 } from '../svgs/socials';
+import { IconButton, Link } from './';
 
 const socialButtonVariants = tv({
   base: 'size-10 rounded-full p-[9px]',
@@ -35,7 +35,7 @@ export type Social =
   | 'youtube';
 
 type socialType = {
-  title: string;
+  name: string;
   baseUrl: string;
   icon: React.FC;
 };
@@ -49,43 +49,43 @@ interface SocialButtonProps
 
 const socialMedia: Record<Social, socialType> = {
   facebook: {
-    title: 'Facebook',
+    name: 'Facebook',
     baseUrl: 'https://www.facebook.com/',
     icon: Facebook,
   },
   x: {
-    title: 'X',
+    name: 'X',
     baseUrl: 'https://x.com/',
     icon: X,
   },
   instagram: {
-    title: 'Instagram',
+    name: 'Instagram',
     baseUrl: 'https://www.instagram.com/',
     // icon: Instagram,
     icon: Instagram,
   },
   linkedin: {
-    title: 'LinkedIn',
-    baseUrl: 'https://www.linkedin.com/in/',
+    name: 'LinkedIn',
+    baseUrl: 'https://www.linkedin.com/',
     icon: Linkedin,
   },
   nostr: {
-    title: 'Nostr',
+    name: 'Nostr',
     baseUrl: 'https://njump.me/',
     icon: Nostr,
   },
   github: {
-    title: 'GitHub',
+    name: 'GitHub',
     baseUrl: 'https://github.com/',
     icon: Github,
   },
   telegram: {
-    title: 'Telegram',
+    name: 'Telegram',
     baseUrl: 'https://t.me/',
     icon: Telegram,
   },
   youtube: {
-    title: 'YouTube',
+    name: 'YouTube',
     baseUrl: 'https://www.youtube.com/@',
     icon: Youtube,
   },
@@ -99,16 +99,16 @@ export function SocialButton({
 }: SocialButtonProps): React.ReactElement {
   const socialNetwork = socialMedia[social];
   const SocialIcon = socialNetwork.icon;
-  const href = (social: Social, username: string): string => {
+  const href = (username: string): string => {
     return socialNetwork.baseUrl + username;
   };
 
   return (
     <IconButton
       as={Link}
-      href={href(social, username)}
+      href={href(username)}
       className={socialButtonVariants({ style })}
-      title={socialNetwork.title}
+      title={socialNetwork.name}
       {...props}
     >
       <SocialIcon />
