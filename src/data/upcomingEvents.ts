@@ -23,7 +23,7 @@ export const events: Event[] = [
     date: 'April 29, 2026, 18:30',
     title: 'FREE Madeira Bitcoin Meetup',
     description:
-      'Groverdi — merging green energy, Bitcoin, and Permaculture. An organic farm that uses BTC mining heat to grow plants in a nursery.',
+      'GroVerdi — merging green energy, Bitcoin, and Permaculture. An organic farm that uses BTC mining heat to grow plants in a nursery.',
     tags: ['Meetup', 'In-person'],
     imgSrc: '/images/events/meetup.jpg',
     href: 'https://www.satlantis.io/events/1693/FREE-Madeira-Bitcoin-Meetup',
