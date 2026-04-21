@@ -28,10 +28,10 @@ export const menuItems: HeaderMenuItem[] = [
         name: 'Team & Advisory Board',
         href: '/team-and-advisory-board',
       },
-      // {
-      //   name: 'Business',
-      //   href: '#',
-      // },
+      {
+        name: 'Business',
+        href: '/business',
+      },
       {
         name: 'Partnerships',
         href: '/partnerships',

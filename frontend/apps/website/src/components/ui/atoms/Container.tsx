@@ -1,10 +1,10 @@
-import { type VariantProps, tv } from 'tailwind-variants';
-import { Flex, type FlexProps } from './Flex';
 import { twMerge } from 'tailwind-merge';
+import { tv, type VariantProps } from 'tailwind-variants';
+import { Flex, type FlexProps } from './Flex';
 
 // TODO: Rethink this component. It should stop expanding beyond the width of a 15" screen
 const containerVariants = tv({
-  base: 'flex mx-auto',
+  base: 'mx-auto flex',
   variants: {
     size: {
       normal: 'max-w-full',

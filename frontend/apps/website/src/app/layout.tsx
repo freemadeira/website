@@ -22,7 +22,7 @@ export default function RootLayout({
   // useTheme();
 
   return (
-    <html lang="en" className={`${schibstedGrotesk.variable}`}>
+    <html lang="en" className={`${schibstedGrotesk.variable} scroll-smooth`}>
       <body className="flex min-h-dvh flex-col antialiased">
         <Header />
 
