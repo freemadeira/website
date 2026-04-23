@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 import { tv, type VariantProps } from 'tailwind-variants';
-import { Container, Flex, Heading } from '@/components/ui/atoms';
+import { Button, Container, Flex, Heading, Link } from '@/components/ui/atoms';
 import type { Url } from '@/utils/types';
 
 const heroVariants = tv({
@@ -53,7 +53,11 @@ export const Hero: React.FC<HeroProps> = ({
           <Heading size="h6">{children}</Heading>
         </Flex>
 
-        {/* TODO: Add button */}
+        {buttonText && buttonHref && (
+          <Button as={Link} href={buttonHref}>
+            {buttonText}
+          </Button>
+        )}
       </Flex>
 
       <Illustration className={twMerge(image(), imageClassName)} />
