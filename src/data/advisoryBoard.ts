@@ -3,7 +3,7 @@ import { pictures } from '@/assets/images/advisory-board';
 import type { Social } from '@/components/ui/atoms/SocialButton';
 export interface AdvisoryBoardMember {
   firstName: string;
-  lastName: string;
+  lastName?: string;
   sex: 'male' | 'female';
   category?: string;
   picture?: StaticImageData;
@@ -12,6 +12,28 @@ export interface AdvisoryBoardMember {
 }
 
 export const advisoryBoardMembers: AdvisoryBoardMember[] = [
+  {
+    firstName: 'NVK',
+    sex: 'male',
+    category: 'Technology',
+    socials: {
+      x: 'nvk',
+    },
+    picture: pictures.nvk,
+  },
+  {
+    firstName: 'Daniel',
+    lastName: 'Batten',
+    sex: 'male',
+    category: 'Energy',
+    socials: {
+      x: 'DSBatten',
+      nostr: 'npub13lkyycj8s3da6fhndtj0wd6s3s2ahmq86s7wrruvzd4tnc66cgfqn4lpsy',
+      linkedin: 'in/danielsbatten',
+    },
+    bio: 'Daniel Batten is a Climatetech investor, and a leading source on the new climate economy. He is an entrepreneur, CEO coach, ClimateTech VC, Bitcoin ESG analyst, author and former TV actor.',
+    picture: pictures.danielBatten,
+  },
   {
     firstName: 'Jeff',
     lastName: 'Booth',
@@ -37,6 +59,30 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     },
     picture: pictures.robBrinded,
     bio: "Dedicated Personal Advisor and Educator specializing in elite athletes, CEOs, and entrepreneurs. Spearheading strength & conditioning and injury prevention initiatives for Chelsea FC while offering strategic insights as an Athlete Consultant for Barcelona FC. Trusted Consultant for the English National Ballet School. Pioneering Founder and Creator of EnergeticsOS & MeditationOS performance systems, optimizing mental and physical performance. Author of the transformative book 'Mind Decentralised: Becoming Masterless,' advocating for personal mastery and holistic development.",
+  },
+  {
+    firstName: 'Joe',
+    lastName: 'Bryan',
+    sex: 'male',
+    category: 'Strategy',
+    socials: {
+      x: 'SatmoJoe',
+      linkedin: 'in/joe-bryan-',
+      youtube: 'SatsVsFiat',
+    },
+    picture: pictures.joeBryan,
+    bio: 'Joe Bryan is a technology entrepreneur, former derivatives trader, and Bitcoin advocate. He spent over a decade trading derivatives at Goldman Sachs and other leading financial institutions before founding and exiting a technology company. He is the creator of What’s The Problem?, a freely accessible educational film explaining the structural foundations of the fiat monetary system and the emergence of Bitcoin as a new monetary paradigm. The film has been translated into more than 40 languages and is available worldwide, helping advance public understanding of Bitcoin. Joe advises organizations and communities building circular Bitcoin economies and is committed to accelerating the transition toward a more open, decentralized, and sovereign global monetary system.',
+  },
+  {
+    firstName: 'Seb',
+    lastName: 'Bunney',
+    sex: 'male',
+    category: 'Education',
+    socials: {
+      x: 'sebbunney',
+    },
+    picture: pictures.sebBunney,
+    bio: 'Seb Bunney started as a mountain bike guide in British Columbia before a deeper curiosity pulled him toward psychology, money, and the structures shaping society. That curiosity became a career. He co-founded the educational platform Looking Glass, co-authored B is for Bitcoin, and wrote the number-one bestseller The Hidden Cost of Money. After serving as Chief Information Officer at Block Rewards, he now focuses on education and public speaking — bringing his perspective on money to audiences around the world.',
   },
   {
     firstName: 'Max',
@@ -185,6 +231,19 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     bio: "Daniel is the author of the book Choose Life and host of the Bitcoin Podcast Once Bitten which is focused on sharing real-life stories of how Bitcoin has changed and shaped individuals' and families' lives forever.",
   },
   {
+    firstName: 'Roy',
+    lastName: 'Sheinfeld',
+    sex: 'male',
+    category: 'Technology',
+    socials: {
+      x: 'roy_breez',
+      nostr: 'npub1ey6qdmvzcgcsr883m9nspzz0mm037l26xtardzcskfsvc6gc7jssm9szvp',
+      linkedin: 'in/roysheinfeld',
+    },
+    picture: pictures.roySheinfeld,
+    bio: 'Roy Sheinfeld is the founder & CEO of Breez, building next-generation infrastructure for Bitcoin and Lightning. He focuses on making Bitcoin usable in everyday apps through non-custodial, developer-friendly tools. With a strong product and technical background, Roy works at the intersection of UX, payments, and open financial systems, pushing toward a future where Bitcoin is seamlessly integrated into mainstream applications and services.',
+  },
+  {
     firstName: 'Knut',
     lastName: 'Svanholm',
     sex: 'male',
@@ -196,6 +255,17 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     },
     picture: pictures.knutSvanholm,
     bio: "Knut Svanholm is a Bitcoin author, educator, and armchair philosopher. His first work, 'Bitcoin: Sovereignty through Mathematics,' is widely regarded as a classic in the space, earning recognition as a recommended read on numerous educational platforms, including MicroStrategy's Bitcoin site hope.com. Knut is credited with coining the popular meme 'Everything Divided by 21 Million,' a phrase that encapsulates the scarcity and mathematical principles underpinning Bitcoin. Knut is also the host of The Bitcoin Infinity Show.",
+  },
+  {
+    firstName: 'Rahim',
+    lastName: 'Taghizadegan',
+    sex: 'male',
+    category: 'Education',
+    socials: {
+      x: 'scholarium_at',
+    },
+    picture: pictures.rahimTaghizadegan,
+    bio: 'Rahim Taghizadegan is the last Austrian economist of the Austrian School in the direct tradition, and has taught at universities across Europe. Author of fifteen books, he is the founder of scholarium, now based in Switzerland, where the Austrian School can be studied in its original interdisciplinary form. Currently building citadel.garden on Madeira.',
   },
   {
     firstName: 'Hermann',
