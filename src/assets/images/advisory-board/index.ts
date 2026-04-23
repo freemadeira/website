@@ -17,6 +17,7 @@ import maxKei from './max-kei.jpeg';
 import nvk from './nvk.jpg';
 import pauloPereira from './paulo-pereira.jpeg';
 import peterYoung from './peter-young.jpg';
+import rahimTaghizadegan from './rahim-taghizadegan.jpg';
 import robBrinded from './rob-brinded.jpeg';
 import roySheinfeld from './roy-sheinfeld.jpg';
 import samsonMow from './samson-mow.jpg';
@@ -42,6 +43,7 @@ export const pictures: Record<string, StaticImageData> = {
   nvk,
   pauloPereira,
   peterYoung,
+  rahimTaghizadegan,
   robBrinded,
   roySheinfeld,
   samsonMow,

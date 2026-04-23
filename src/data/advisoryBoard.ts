@@ -257,6 +257,17 @@ export const advisoryBoardMembers: AdvisoryBoardMember[] = [
     bio: "Knut Svanholm is a Bitcoin author, educator, and armchair philosopher. His first work, 'Bitcoin: Sovereignty through Mathematics,' is widely regarded as a classic in the space, earning recognition as a recommended read on numerous educational platforms, including MicroStrategy's Bitcoin site hope.com. Knut is credited with coining the popular meme 'Everything Divided by 21 Million,' a phrase that encapsulates the scarcity and mathematical principles underpinning Bitcoin. Knut is also the host of The Bitcoin Infinity Show.",
   },
   {
+    firstName: 'Rahim',
+    lastName: 'Taghizadegan',
+    sex: 'male',
+    category: 'Education',
+    socials: {
+      x: 'scholarium_at',
+    },
+    picture: pictures.rahimTaghizadegan,
+    bio: 'Rahim Taghizadegan is the last Austrian economist of the Austrian School in the direct tradition, and has taught at universities across Europe. Author of fifteen books, he is the founder of scholarium, now based in Switzerland, where the Austrian School can be studied in its original interdisciplinary form. Currently building citadel.garden on Madeira.',
+  },
+  {
     firstName: 'Hermann',
     lastName: 'Vivier',
     sex: 'male',
