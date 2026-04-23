@@ -1,8 +1,9 @@
 import { twMerge } from 'tailwind-merge';
+import type { Url } from '@/utils/types';
 import { Link } from './Link';
 
 interface CtaLinkProps {
-  href: string;
+  href: Url;
   underline?: boolean;
   className?: string;
   children: React.ReactNode;

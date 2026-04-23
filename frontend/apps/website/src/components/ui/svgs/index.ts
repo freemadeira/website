@@ -1,3 +1,4 @@
+export * from './BitcoinCoin';
 export * from './ChevronDown';
 export * from './ChevronRight';
 export * from './Coin';
@@ -6,6 +7,7 @@ export * from './FingerTouch';
 export * from './HandCoin';
 export * from './HighFive';
 export * from './LogoHorizontal';
+export * from './Madeira';
 export * from './MaleAvatar';
 export * from './NamasteB';
 export * from './Newspaper';

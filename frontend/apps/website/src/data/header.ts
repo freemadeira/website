@@ -36,6 +36,10 @@ export const menuItems: HeaderMenuItem[] = [
         name: 'Partnerships',
         href: '/partnerships',
       },
+      {
+        name: 'Madeira',
+        href: '/madeira',
+      },
       // {
       //   name: 'Agenda',
       //   href: '#',
