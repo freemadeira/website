@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class EventResource
+class EventResource < ApplicationResource
   include Alba::Resource
 
   attributes :id, :title, :description, :start_at, :end_at, :timezone,
