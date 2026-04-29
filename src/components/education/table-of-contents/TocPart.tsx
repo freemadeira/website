@@ -4,7 +4,7 @@ import { twJoin } from 'tailwind-merge';
 
 import { ScrollButton } from '@/components/ui/atoms';
 import { underlineDecorationClasses } from '@/utils/classes';
-import type { PartTOC } from '@/utils/types';
+import type { PartTOC } from '@/components/education/types';
 
 export const TocPart = ({ part, number }: { part: PartTOC; number: number }) => {
   const hoverUnderline = underlineDecorationClasses('group-hover');

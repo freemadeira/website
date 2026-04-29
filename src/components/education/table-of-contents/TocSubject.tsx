@@ -1,7 +1,7 @@
 'use client';
 
 import { ScrollButton } from '@/components/ui/atoms';
-import type { SubjectTOC } from '@/utils/types';
+import type { SubjectTOC } from '@/components/education/types';
 
 export const TocSubject = ({ subject, className }: { subject: SubjectTOC; className: string }) => {
   return (

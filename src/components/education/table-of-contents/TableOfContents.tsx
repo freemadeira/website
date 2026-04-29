@@ -1,7 +1,7 @@
 import { twJoin } from 'tailwind-merge';
 
 import { Flex, Heading, Info } from '@/components/ui/atoms';
-import type { ChapterTOC, ContentsTable, PartTOC, SubjectTOC } from '@/utils/types';
+import type { ChapterTOC, ContentsTable, PartTOC, SubjectTOC } from '@/components/education/types';
 import { TocChapter, TocPart, TocSubject } from '.';
 
 // `desktop` and `mobile` are mutually exclusive

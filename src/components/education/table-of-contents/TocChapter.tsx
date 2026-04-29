@@ -1,7 +1,7 @@
 'use client';
 
 import { ScrollButton } from '@/components/ui/atoms';
-import type { ChapterTOC } from '@/utils/types';
+import type { ChapterTOC } from '@/components/education/types';
 
 export const TocChapter = ({ chapter, number }: { chapter: ChapterTOC; number?: number }) => {
   return (
