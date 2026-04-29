@@ -1,0 +1,8 @@
+{
+  "name": "@free/types",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./resources": "./resources/index.ts"
+  }
+}

@@ -1,6 +1,5 @@
 {
-  "name": "freemadeira",
-  "version": "0.1.0",
+  "name": "website",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack --port 4010",
@@ -11,6 +10,8 @@
     "check": "biome check ./src"
   },
   "dependencies": {
+    "@free/types": "workspace:*",
+    "@free/ui": "workspace:*",
     "@headlessui/react": "^2.2.4",
     "@radix-ui/react-slot": "^1.2.3",
     "axios": "^1.10.0",

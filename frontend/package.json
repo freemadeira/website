@@ -1,0 +1,19 @@
+{
+  "name": "freemadeira-frontend",
+  "private": true,
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "check-types": "turbo check-types"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@free/tailwind-config": "workspace:*",
+    "@free/typescript-config": "workspace:*",
+    "turbo": "2.9.6",
+    "typescript": "^5.8.3"
+  }
+}
