@@ -21,9 +21,7 @@ export const Chapter = ({ content }: ChapterProps) => {
       <Container size="extraTight" className="my-7 text-lg">
         {content.description}
 
-        {content.subjects?.map((_subject) => {
-          // TODO: Display subject
-        })}
+        {/* TODO: Display subjects */}
       </Container>
     </>
   );
