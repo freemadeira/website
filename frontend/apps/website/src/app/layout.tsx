@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Schibsted_Grotesk } from 'next/font/google';
-import './globals.css';
+import './styles.css';
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 

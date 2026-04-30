@@ -10,6 +10,7 @@
     "check": "biome check ./src"
   },
   "dependencies": {
+    "@free/tailwind-config": "workspace:*",
     "@free/types": "workspace:*",
     "@free/ui": "workspace:*",
     "@headlessui/react": "^2.2.10",
