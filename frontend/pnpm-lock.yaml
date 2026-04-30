@@ -26,6 +26,9 @@ importers:
 
   apps/website:
     dependencies:
+      '@free/tailwind-config':
+        specifier: workspace:*
+        version: link:../../packages/tailwind-config
       '@free/types':
         specifier: workspace:*
         version: link:../../packages/types
