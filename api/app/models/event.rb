@@ -5,7 +5,7 @@ class Event < ApplicationRecord
   has_many :tags, through: :event_tags
   has_one_attached :image
 
-  enum :category, { education: 10, community: 20, event: 30 }
+  enum :category, { education: 'education', community: 'community', event: 'event' }
 
   validates :title, presence: true
   validates :description, presence: true

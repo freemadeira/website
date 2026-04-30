@@ -71,16 +71,15 @@ The backend is not yet deployed but will use Kamal on a VPS.
 
 ### Events
 The core entity. An event has:
-- `category` — integer enum: `education` (10), `community` (20), `event` (30)
+- `category` — string enum: `"education"`, `"community"`, `"event"`
 - `language` — `"en"`, `"pt"`, or `"both"` (Portuguese and English)
 - `timezone` — defaults to `Atlantic/Madeira`
 - `display_time` — boolean; some events show only a date, not a specific time
 - Tags — associated through the `EventTag` join model
 
 ### Tags
-Used to classify events. Categories: `format` (10), `event_type` (20), `education_type` (30),
-`topic` (40). Pre-seeded with values like In-person, Online, Meetup, Conference, Course, Bitcoin,
-Energy.
+Used to classify events. Categories: `"format"`, `"event_type"`, `"education_type"`, `"topic"`.
+Pre-seeded with values like In-person, Online, Meetup, Conference, Course, Bitcoin, Energy.
 
 ### Language
 Events can be in English, Portuguese, or both. The `language` field reflects this.
