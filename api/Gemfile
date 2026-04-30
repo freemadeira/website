@@ -47,6 +47,7 @@ group :development, :test do
   gem 'pry-byebug'            # Breakpoint debugger (binding.pry)
   gem 'pry-rails'             # Replaces IRB with pry in rails console
   gem 'readline'              # Readline input support for console
+  gem 'rspec-rails'           # RSpec testing framework for Rails
 end
 
 group :development do
@@ -55,7 +56,6 @@ group :development do
   gem 'rubocop', require: false   # Ruby linter and formatter
   gem 'rubocop-performance', require: false   # Rubocop rules for performance
   gem 'rubocop-rails', require: false         # Rubocop rules for Rails conventions
-  # gem 'rubocop-factory_bot', require: false   # Rubocop rules for FactoryBot usage
-  # gem 'rubocop-rspec', require: false         # Rubocop rules for RSpec tests
-  # gem 'rubocop-rspec_rails', require: false   # Rubocop rules for RSpec + Rails
+  gem 'rubocop-rspec', require: false         # Rubocop rules for RSpec tests
+  gem 'rubocop-rspec_rails', require: false   # Rubocop rules for RSpec + Rails
 end
