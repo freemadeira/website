@@ -14,7 +14,7 @@ const PartnerLogos = ({ className }: { className?: string }): React.ReactElement
       <Link
         key={partner.name}
         href={partner.href}
-        className="flex-shrink-0 text-center"
+        className="shrink-0 text-center"
         aria-label={`Visit ${partner.name}`}
       >
         <partner.logo
