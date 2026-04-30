@@ -10,10 +10,10 @@
     "check-types": "turbo check-types"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
+    "@biomejs/biome": "^2.4.13",
     "@free/tailwind-config": "workspace:*",
     "@free/typescript-config": "workspace:*",
-    "turbo": "2.9.6",
-    "typescript": "^5.8.3"
+    "turbo": "^2.9.6",
+    "typescript": "^6.0.3"
   }
 }
