@@ -1,6 +1,7 @@
 {
   "extends": "@free/typescript-config/react.json",
   "compilerOptions": {
+    "allowJs": true,
     "noUncheckedSideEffectImports": false,
     "incremental": true,
     "plugins": [{ "name": "next" }],

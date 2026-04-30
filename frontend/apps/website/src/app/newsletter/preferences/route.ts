@@ -5,7 +5,7 @@ import {
   type Language,
   MAILERLITE_ENGLISH_GROUP_ID,
   excludeLanguageGroups,
-  groupId,
+  type groupId,
   groupIdsFromLanguages,
   languagesFromGroupIds,
   mailerliteHeaders,
