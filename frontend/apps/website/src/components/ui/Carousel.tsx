@@ -1,10 +1,11 @@
 'use client';
 
-import { cn } from '@/utils/classNames';
 import useEmblaCarousel, { type UseEmblaCarouselType } from 'embla-carousel-react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import * as React from 'react';
-import { type Button, Container, Flex, IconButton, ScreenReaderOnly } from './atoms';
+
+import { type Button, Container, IconButton, ScreenReaderOnly } from './atoms';
+import { cn } from '@/utils/classNames';
 import { capitalize } from '@/utils/functions';
 
 type CarouselApi = UseEmblaCarouselType[1];
@@ -266,10 +267,10 @@ export function CarouselControls() {
 }
 
 export {
-  type CarouselApi,
   Carousel,
+  type CarouselApi,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
   CarouselNext,
+  CarouselPrevious,
 };
