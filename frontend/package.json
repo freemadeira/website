@@ -13,7 +13,7 @@
     "@biomejs/biome": "^2.4.13",
     "@free/tailwind-config": "workspace:*",
     "@free/typescript-config": "workspace:*",
-    "turbo": "^2.9.6",
+    "turbo": "^2.9.7",
     "typescript": "^6.0.3"
   }
 }
