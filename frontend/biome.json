@@ -7,7 +7,8 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": false,
+    "includes": ["**", "!packages/types/resources"]
   },
   "formatter": {
     "enabled": true,
