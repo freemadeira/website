@@ -6,7 +6,7 @@ class Tag < ApplicationRecord
 
   enum :category,
        { format: 'format', event_type: 'event_type', education_type: 'education_type',
-         topic: 'topic' }
+         topic: 'topic', generic: 'generic' }
 
   validates :name, presence: true, uniqueness: true
 end

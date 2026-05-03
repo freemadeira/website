@@ -4,7 +4,7 @@ class CreateTags < ActiveRecord::Migration[8.1]
   def change
     create_table :tags do |t|
       t.string :name, null: false
-      t.integer :category
+      t.string :category, null: false
 
       t.timestamps
     end

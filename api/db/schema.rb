@@ -25,7 +25,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_04_29_000003) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.integer "category", null: false
+    t.string "category", null: false
     t.datetime "created_at", null: false
     t.string "description", null: false
     t.boolean "display_time", default: true, null: false
@@ -40,7 +40,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_04_29_000003) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.integer "category"
+    t.string "category", null: false
     t.datetime "created_at", null: false
     t.string "name", null: false
     t.datetime "updated_at", null: false

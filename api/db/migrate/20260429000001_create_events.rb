@@ -8,10 +8,10 @@ class CreateEvents < ActiveRecord::Migration[8.1]
       t.column :start_at, :timestamptz, null: false
       t.column :end_at, :timestamptz
       t.string :timezone, null: false, default: 'Atlantic/Madeira'
-      t.string :image_url
-      t.integer :category, null: false
-      t.string :language, null: false, default: 'both'
       t.string :url
+      t.string :category, null: false
+      t.string :language, null: false, default: 'both'
+      t.string :image_url
       t.boolean :display_time, null: false, default: true
 
       t.timestamps
