@@ -51,7 +51,7 @@ export const events: Event[] = [
   //     description:
   //       'Correr um nó de Bitcoin é uma das formas mais eficazes de contribuir para a rede. Neste workshop, vamos mostrar-te como configurar e correr o teu próprio nó de Bitcoin.',
   //     tags: ['Education', 'Workshop', 'Online'],
-  //     imgSrc:,
+  //     imgSrc: '',
   //     href:,
   // }
   // {
