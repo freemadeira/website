@@ -5,8 +5,8 @@ class Tag < ApplicationRecord
   has_many :events, through: :event_tags
 
   enum :category,
-       { format: 'format', event_type: 'event_type', education_type: 'education_type',
-         topic: 'topic', generic: 'generic' }
+       { generic: 'generic', format: 'format', topic: 'topic', event_type: 'event_type',
+         education_type: 'education_type' }
 
   validates :name, presence: true, uniqueness: true
 end
