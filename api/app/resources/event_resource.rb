@@ -6,7 +6,5 @@ class EventResource < ApplicationResource
   attributes :id, :title, :description, :start_at, :end_at, :timezone,
              :category, :language, :url, :image_url, :display_time
 
-  attribute :tags do |event|
-    event.tags.map(&:name)
-  end
+  many :tags, resource: TagResource
 end
