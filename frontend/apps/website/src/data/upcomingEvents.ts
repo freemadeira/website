@@ -46,7 +46,7 @@ export const events: Event[] = [
     href: 'https://www.satlantis.io/events/1695/FREE-Madeira-Bitcoin-Meetup',
   },
   //   {
-  //     date: 'July 1, 2026',
+  //     date: 'July 1, 2026, 18:30',
   //     title: 'Correr um Nó de Bitcoin',
   //     description:
   //       'Correr um nó de Bitcoin é uma das formas mais eficazes de contribuir para a rede. Neste workshop, vamos mostrar-te como configurar e correr o teu próprio nó de Bitcoin.',
