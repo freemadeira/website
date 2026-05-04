@@ -29,10 +29,10 @@ ActiveRecord::Schema[8.1].define(version: 2026_04_29_000003) do
     t.datetime "created_at", null: false
     t.string "description", null: false
     t.boolean "display_time", default: true, null: false
-    t.timestamptz "end_at"
+    t.datetime "end_at"
     t.string "image_url"
     t.string "language", default: "both", null: false
-    t.timestamptz "start_at", null: false
+    t.datetime "start_at", null: false
     t.string "timezone", default: "Atlantic/Madeira", null: false
     t.string "title", null: false
     t.datetime "updated_at", null: false

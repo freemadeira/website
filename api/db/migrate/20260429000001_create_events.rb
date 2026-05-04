@@ -5,8 +5,8 @@ class CreateEvents < ActiveRecord::Migration[8.1]
     create_table :events do |t|
       t.string :title, null: false
       t.string :description, null: false
-      t.column :start_at, :timestamptz, null: false
-      t.column :end_at, :timestamptz
+      t.datetime :start_at, null: false
+      t.datetime :end_at
       t.string :timezone, null: false, default: 'Atlantic/Madeira'
       t.string :url
       t.string :category, null: false
