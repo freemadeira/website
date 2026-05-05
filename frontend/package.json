@@ -2,6 +2,9 @@
   "name": "freemadeira-frontend",
   "private": true,
   "packageManager": "pnpm@11.0.2",
+  "engines": {
+    "node": "^24.0.0"
+  },
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
