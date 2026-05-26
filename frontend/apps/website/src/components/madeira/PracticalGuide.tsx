@@ -4,7 +4,7 @@ import { Card } from './Card';
 
 export const PracticalGuide = (): React.ReactElement => {
   return (
-    <Container size="tight" className="mt-28 mb-20">
+    <Container size="tight" className="mt-28 mb-24">
       <Flex direction="column" gap={8}>
         <Heading size="h3">How to prepare your visit</Heading>
         <Text>Everything you need to visit Madeira and use Bitcoin in your day-to-day.</Text>

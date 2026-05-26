@@ -21,7 +21,7 @@ export const SocialsCard: React.FC<Props> = ({
       href={href}
       className="group relative w-full flex-1 overflow-clip bg-bridal-50 p-7 dark:bg-dark"
     >
-      <Flex direction="column" justifyContent="between" className="h-full w-2/3 md:w-3/5 space-y-6">
+      <Flex direction="column" justifyContent="between" className="h-full w-2/3 space-y-6">
         <Heading size="h6" className="z-10">
           {title}
         </Heading>

@@ -4,7 +4,7 @@ import { SocialsCard } from "./SocialsCard";
 
 export const Community = (): React.ReactElement => {
 	return (
-		<Container size="tight" className="mt-28 mb-24">
+		<Container size="tight" className="my-28">
 			<Flex direction="column" alignItems="center" gap={8} className="mb-18">
 				<Heading size="h3">Don't come alone</Heading>
 				<Text>
@@ -20,7 +20,7 @@ export const Community = (): React.ReactElement => {
 					buttonText="Join the group"
 					href="https://t.me/freemadeira"
 					image={() => (
-						<TelegramLady className="absolute right-4 bottom-0 h-[162px] lg:right-4 lg:h-5/6" />
+						<TelegramLady className="absolute right-4 bottom-0 h-[200px] lg:right-4 lg:h-2/3 xl:h-5/6" />
 					)}
 				/>
 
@@ -30,7 +30,7 @@ export const Community = (): React.ReactElement => {
 					buttonText="View Nostr profile"
 					href="https://njump.me/npub1etgqcj9gc6yaxttuwu9eqgs3ynt2dzaudvwnrssrn2zdt2useaasfj8n6e"
 					image={() => (
-						<NostrMobile className="absolute right-4 -bottom-4 h-[162px] lg:-right-10 lg:h-5/6" />
+						<NostrMobile className="absolute -right-8 -bottom-4 h-[200px] lg:-right-10 lg:h-2/3 xl:h-5/6" />
 					)}
 				/>
 			</Flex>
