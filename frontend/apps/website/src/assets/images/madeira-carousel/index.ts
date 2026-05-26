@@ -1,13 +1,13 @@
 import type { StaticImageData } from 'next/image';
 
 import MadeiraMountainSea from './madeira-mountain-sea.jpg';
-import MadeiraMountainVillage from './madeira-mountain-village.jpg';
-import MadeiraRoad from './madeira-road.jpg';
-import MadeiraViewpoint from './madeira-viewpoint.jpg';
+import MadeiraRenewableEnergy from './madeira-renewable-energy.jpg';
+import MadeiraFunchal from './madeira-funchal.jpg';
+import MadeiraMerchants from './madeira-merchants.jpeg';
 
 export const pictures: Record<string, StaticImageData> = {
   MadeiraMountainSea,
-  MadeiraRoad,
-  MadeiraViewpoint,
-  MadeiraMountainVillage,
+  MadeiraRenewableEnergy,
+  MadeiraFunchal,
+  MadeiraMerchants,
 };

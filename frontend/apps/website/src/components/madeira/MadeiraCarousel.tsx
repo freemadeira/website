@@ -6,26 +6,46 @@ export const MadeiraCarousel: React.FC = () => {
   return (
     <Carousel title="Madeira">
       <CarouselContent>
-        <MadeiraCarouselItem title="Discover Madeira" backgroundImage={pictures.MadeiraMountainSea}>
-          Natural settings, crystal-clear waters, centuries-old traditions,genuine flavours and a
-          warm welcome. Come and experience a unique archipelago where the calendar does not dictate
-          the season.
+        <MadeiraCarouselItem
+          title="The island"
+          subtitle="Why Madeira?"
+          backgroundImage={pictures.MadeiraMountainSea}
+          buttonHref="https://btcmap.org/community/free-madeira/merchants"
+          buttonText="Bitcoin businesses on the island"
+        >
+          An autonomous island in the Atlantic – 1,000 km from the European continent, with a
+          spring-like climate, GMT time zone and part of one of the most Bitcoin-friendly
+          jurisdictions in the European Union.
         </MadeiraCarouselItem>
         <MadeiraCarouselItem
-          title="Hidden Villages in the Mountains"
-          backgroundImage={pictures.MadeiraMountainVillage}
+          title="Energy"
+          subtitle="Renewables as a foundation, Bitcoin as a tool"
+          backgroundImage={pictures.MadeiraRenewableEnergy}
+          buttonHref="https://freeenergysummit.com"
+          buttonText="Learn more"
         >
-          Nestled between lush valleys and misty peaks, Madeira’s hillside villages blend tradition,
-          nature, and quiet charm. Discover a slower rhythm of life shaped by the island’s dramatic
-          terrain.
+          Madeira produces energy from its own renewable sources. FREE Madeira actively explores the
+          connection between Bitcoin mining and surplus renewable energy.
         </MadeiraCarouselItem>
-        <MadeiraCarouselItem title="Scenic Coastal Drives" backgroundImage={pictures.MadeiraRoad}>
-          Winding roads hug the cliffs, revealing breathtaking views of the Atlantic at every turn.
-          In Madeira, the journey is just as unforgettable as the destination.
+        <MadeiraCarouselItem
+          title="Climate"
+          subtitle="Spring all year round"
+          backgroundImage={pictures.MadeiraFunchal}
+          buttonHref="https://www.satlantis.io/p/npub1etgqcj9gc6yaxttuwu9eqgs3ynt2dzaudvwnrssrn2zdt2useaasfj8n6e"
+          buttonText="Next events"
+        >
+          Funchal has one of the most stable temperatures in Europe — from 19°C to 27°C throughout
+          the year. Any month is ideal for working remotely or attending a Bitcoin meetup.
         </MadeiraCarouselItem>
-        <MadeiraCarouselItem title="Above the Clouds" backgroundImage={pictures.MadeiraViewpoint}>
-          Step into a world above the clouds, where rugged peaks and endless horizons create moments
-          of pure awe. Madeira’s viewpoints offer perspectives you won’t forget.
+        <MadeiraCarouselItem
+          title="Bitcoin adoption"
+          subtitle="About 80% of merchants are holding onto their Sats – using Bitcoin as a store of value."
+          backgroundImage={pictures.MadeiraMerchants}
+          buttonHref="mailto:info@freemadeira.org?subject=I%20want%20my%20business%20to%20accept%20bitcoin" // TODO: link to business page
+          buttonText="I want my business to accept Bitcoin"
+        >
+          Adoption in Madeira is not superficial. Merchants genuinely believe in what they are
+          doing. Your business could be next.
         </MadeiraCarouselItem>
       </CarouselContent>
 

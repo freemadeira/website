@@ -1,15 +1,25 @@
 import Image, { type StaticImageData } from 'next/image';
 import { twJoin } from 'tailwind-merge';
 import { CarouselItem } from '../ui';
-import { Container, Flex, Heading } from '../ui/atoms';
+import { Button, CategoryTag, Container, Flex, Heading, Text, Link } from '../ui/atoms';
 
 type Props = {
   title: string;
+  subtitle: string;
   backgroundImage: string | StaticImageData;
   children: string;
+  buttonHref: string;
+  buttonText: string;
 };
 
-export function MadeiraCarouselItem({ title, backgroundImage, children }: Props) {
+export function MadeiraCarouselItem({
+  title,
+  subtitle,
+  backgroundImage,
+  children,
+  buttonHref,
+  buttonText,
+}: Props) {
   return (
     <CarouselItem>
       <div className="relative h-screen w-full select-none pt-14 pb-10 text-white sm:mt-10 sm:pt-16 sm:pb-14">
@@ -36,13 +46,22 @@ export function MadeiraCarouselItem({ title, backgroundImage, children }: Props)
           className="relative z-10 h-full"
           wrapperClasses="h-full"
         >
+          <CategoryTag>{title}</CategoryTag>
+
           <Flex
             direction="column"
             gap={6}
             className="w-full grow md:w-4/5 lg:w-3/5"
             justifyContent="center"
           >
-            <Heading size="h4">{children}</Heading>
+            <Heading weight="semibold" size="h4">
+              {subtitle}
+            </Heading>
+            <Text size="3xl">{children}</Text>
+
+            <Button as={Link} href={buttonHref}>
+              {buttonText}
+            </Button>
           </Flex>
         </Container>
       </div>
