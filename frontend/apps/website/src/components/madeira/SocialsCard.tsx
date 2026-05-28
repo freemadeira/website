@@ -28,6 +28,7 @@ export const SocialsCard: React.FC<Props> = ({
 
         <Text size="lg">{description}</Text>
 
+        {/* TODO: DiscreetButton uses a link wich means in this instance we have a link inside a link */}
         <DiscreetButton href={href}>{buttonText}</DiscreetButton>
       </Flex>
 

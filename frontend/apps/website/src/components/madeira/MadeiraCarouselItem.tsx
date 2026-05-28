@@ -34,7 +34,7 @@ export function MadeiraCarouselItem({
         {/* Dark overlay */}
         <div
           className={twJoin(
-            '-z-10 absolute inset-0 bg-black/60 md:bg-transparent',
+            'absolute inset-0 -z-10 bg-black/60 md:bg-transparent',
             'md:bg-gradient-to-r md:from-black/60 md:via-black/50 md:to-black/20',
             'dark:bg-black/70 dark:bg-none',
           )}

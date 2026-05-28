@@ -3,7 +3,7 @@ import {
   MadeiraCarousel,
   PracticalGuide,
   FlightConnections,
-  RecurentEvents,
+  RecurringEvents,
 } from '@/components/madeira';
 import { Community } from '@/components/madeira/Community';
 import { Hero } from '@/components/ui';
@@ -29,7 +29,7 @@ export default function About() {
       <MadeiraCarousel />
       <PracticalGuide />
       <FlightConnections />
-      <RecurentEvents />
+      <RecurringEvents />
       <Community />
       <Contribute />
     </>

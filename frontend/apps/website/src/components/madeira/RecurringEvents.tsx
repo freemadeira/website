@@ -1,8 +1,8 @@
 import { Container, Flex, Heading, Text } from '@/components/ui/atoms';
-import { events } from '@/data/recurrentEvents';
+import { events } from '@/data/recurringEvents';
 import { EventCard } from '@/components/events';
 
-export function RecurentEvents(): React.ReactElement {
+export function RecurringEvents(): React.ReactElement {
   return (
     <Container wrapperClasses="px-0" className="gap-7">
       <Heading className="mx-4 sm:mx-0" size="h5">

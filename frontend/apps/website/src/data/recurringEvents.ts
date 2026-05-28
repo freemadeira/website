@@ -35,7 +35,7 @@ export const events: Event[] = [
       "Join us for an evening of Bitcoin discussion, networking, and learning with fellow enthusiasts, builders, and newcomers alike. Whether you're deep into the ecosystem or just getting started, everyone is welcome at our monthly meetup",
     imgSrc: '/images/events/meetup.jpg',
     tags: ['Meetup', 'In-person'],
-    href: 'https://www.satlantis.io/events/1693/FREE-Madeira-Bitcoin-Meetup',
+    href: 'https://www.satlantis.io/c/74/free-madeira-bitcoin-meetups',
   },
   {
     date: 'Annual',
