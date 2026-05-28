@@ -1,7 +1,10 @@
 {
   "name": "freemadeira-frontend",
   "private": true,
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@11.1.3",
+  "engines": {
+    "node": "^24.0.0"
+  },
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
@@ -10,10 +13,10 @@
     "check-types": "turbo check-types"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.6",
+    "@biomejs/biome": "^2.4.14",
     "@free/tailwind-config": "workspace:*",
     "@free/typescript-config": "workspace:*",
-    "turbo": "2.9.6",
-    "typescript": "^5.8.3"
+    "turbo": "^2.9.14",
+    "typescript": "^6.0.3"
   }
 }

@@ -53,7 +53,7 @@ export const Preferences: React.FC<Props> = ({ email, token }) => {
               ? 'portuguese'
               : 'english';
 
-        const option = options.find((opt) => opt.key === currentPref) || options[0];
+        const option = options.find((opt) => opt.key === currentPref) ?? options[0] ?? null;
         setSelected(option);
       } catch (err) {
         setError('Failed to load preferences');

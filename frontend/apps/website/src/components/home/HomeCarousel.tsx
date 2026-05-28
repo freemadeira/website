@@ -1,30 +1,21 @@
-import bitcoinAtlantisImage from '@/assets/images/carousel/bitcoin-atlantis.jpg';
-import energySummitImage from '@/assets/images/carousel/energy-summit.jpg';
-import madeiraImage from '@/assets/images/carousel/madeira.jpg';
-import shopImage from '@/assets/images/carousel/shop.jpg';
 import { Carousel, CarouselContent, CarouselControls } from '../ui';
 import { HomeCarouselItem } from './HomeCarouselItem';
+import bitcoinAtlantisImage from '@/assets/images/carousel/bitcoin-atlantis.jpg';
+// import energySummitImage from '@/assets/images/carousel/energy-summit.jpg';
+import madeiraImage from '@/assets/images/carousel/madeira.jpg';
+import shopImage from '@/assets/images/carousel/shop.jpg';
 
 export const HomeCarousel: React.FC = () => {
   return (
     <Carousel title="Projects">
       <CarouselContent>
         <HomeCarouselItem
-          title="FREE Energy Summit"
-          backgroundImage={energySummitImage}
-          mainButtonHref="https://energysummit.freemadeira.org/"
-          mainButtonText="Learn more"
-        >
-          Join us on May 14th in Lisbon for the second edition of FREE Energy Summit.
-        </HomeCarouselItem>
-
-        <HomeCarouselItem
           title="Adoption"
           backgroundImage={madeiraImage}
           mainButtonHref="https://btcmap.org/map#10/32.80748/-16.82419"
           mainButtonText="Explore the map"
         >
-          With more than 150 businesses accepting Bitcoin and regular meetups, Madeira Island has
+          With more than 160 businesses accepting Bitcoin and regular meetups, Madeira Island has
           become a world reference for Bitcoin.
         </HomeCarouselItem>
 
