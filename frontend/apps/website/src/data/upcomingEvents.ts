@@ -11,15 +11,6 @@ export interface Event {
 
 export const events: Event[] = [
   {
-    date: 'May 27, 2026, 18:30',
-    title: 'FREE Madeira Bitcoin Meetup',
-    description:
-      'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
-    tags: ['Meetup', 'In-person'],
-    imgSrc: '/images/events/meetup.jpg',
-    href: 'https://www.satlantis.io/events/1694/FREE-Madeira-Bitcoin-Meetup',
-  },
-  {
     date: 'April 18-June 20, 2026',
     title: 'Diploma Bitcoin',
     description:
@@ -54,15 +45,15 @@ export const events: Event[] = [
     imgSrc: '/images/events/meetup.jpg',
     href: 'https://www.satlantis.io/events/1696/FREE-Madeira-Bitcoin-Meetup',
   },
-  // {
-  //   date: 'August 26, 2026, 18:30',
-  //   title: 'FREE Madeira Bitcoin Meetup',
-  //   description:
-  //     'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
-  //   tags: ['Meetup', 'In-person'],
-  //   imgSrc: '/images/events/meetup.jpg',
-  //   href: 'https://www.satlantis.io/events/1697/FREE-Madeira-Bitcoin-Meetup',
-  // },
+  {
+    date: 'August 26, 2026, 18:30',
+    title: 'FREE Madeira Bitcoin Meetup',
+    description:
+      'Every last Wednesday of the month, FREE Madeira organises a Bitcoin meetup, bringing the community together. Know more and sign up.',
+    tags: ['Meetup', 'In-person'],
+    imgSrc: '/images/events/meetup.jpg',
+    href: 'https://www.satlantis.io/events/1697/FREE-Madeira-Bitcoin-Meetup',
+  },
   // {
   //   date: 'September 30, 2026, 18:30',
   //   title: 'FREE Madeira Bitcoin Meetup',
