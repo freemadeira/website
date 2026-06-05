@@ -3,6 +3,7 @@ import { HomeCarouselItem } from './HomeCarouselItem';
 import bitcoinAtlantisImage from '@/assets/images/carousel/bitcoin-atlantis.jpg';
 // import energySummitImage from '@/assets/images/carousel/energy-summit.jpg';
 import madeiraImage from '@/assets/images/carousel/madeira.jpg';
+import oIndividuoSoberanoImage from '@/assets/images/carousel/o-individuo-soberano.jpg';
 import shopImage from '@/assets/images/carousel/shop.jpg';
 
 export const HomeCarousel: React.FC = () => {
@@ -17,6 +18,16 @@ export const HomeCarousel: React.FC = () => {
         >
           With more than 160 businesses accepting Bitcoin and regular meetups, Madeira Island has
           become a world reference for Bitcoin.
+        </HomeCarouselItem>
+
+        <HomeCarouselItem
+          title="Monstera Books"
+          backgroundImage={oIndividuoSoberanoImage}
+          mainButtonHref="https://shop.freemadeira.org/products/o-individuo-soberano"
+          mainButtonText="Comprar"
+        >
+          O Indivíduo Soberano é um livro visionário que antecipa muitos dos acontecimentos que
+          moldam o mundo moderno. Agora disponível em português.
         </HomeCarouselItem>
 
         <HomeCarouselItem
