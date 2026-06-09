@@ -1,25 +1,28 @@
+'use client';
+
 import type { Url } from '@/utils/types';
-import { DiscreetButton, Flex, Heading, Link, Text, type SvgProps } from '../ui/atoms';
+import { format } from 'url';
+import { useRouter } from 'next/navigation';
+import { DiscreetButton, Flex, Heading, Text, type SvgProps } from '../ui/atoms';
 
 interface Props {
   title: string;
   description: string;
   buttonText: string;
   href: Url;
-  image: React.ComponentType<SvgProps>;
+  image: React.ReactNode;
 }
 
-export const SocialsCard: React.FC<Props> = ({
-  title,
-  description,
-  buttonText,
-  href,
-  image: Illustration,
-}) => {
+export const SocialsCard: React.FC<Props> = ({ title, description, buttonText, href, image }) => {
+  const router = useRouter();
+  const resolvedHref = typeof href === 'string' ? href : format(href);
+
   return (
-    <Link
-      href={href}
-      className="group relative w-full flex-1 overflow-clip bg-bridal-50 p-7 dark:bg-dark"
+    <button
+      type="button"
+      onClick={() => router.push(resolvedHref)}
+      onKeyDown={(e) => e.key === 'Enter' && router.push(resolvedHref)}
+      className="group relative w-full flex-1 cursor-pointer appearance-none overflow-clip border-0 bg-bridal-50 bg-bridal-50 p-7 text-left dark:bg-dark dark:bg-dark"
     >
       <Flex direction="column" justifyContent="between" className="h-full w-2/3 space-y-6">
         <Heading size="h6" className="z-10">
@@ -28,11 +31,10 @@ export const SocialsCard: React.FC<Props> = ({
 
         <Text size="lg">{description}</Text>
 
-        {/* TODO: DiscreetButton uses a link wich means in this instance we have a link inside a link */}
-        <DiscreetButton href={href}>{buttonText}</DiscreetButton>
+        <DiscreetButton href={resolvedHref}>{buttonText}</DiscreetButton>
       </Flex>
 
-      <Illustration />
-    </Link>
+      {image}
+    </button>
   );
 };
