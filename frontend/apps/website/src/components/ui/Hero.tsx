@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 import { tv, type VariantProps } from 'tailwind-variants';
-import { Container, Flex, Heading } from '@/components/ui/atoms';
+import { Button, Container, Flex, Heading, Link, Pill } from '@/components/ui/atoms';
 import type { Url } from '@/utils/types';
 
 const heroVariants = tv({
@@ -26,6 +26,8 @@ const heroVariants = tv({
 });
 interface HeroProps extends VariantProps<typeof heroVariants> {
   title: string;
+  subtitle?: string;
+  pillInfo?: string;
   image: React.FC<React.SVGProps<SVGSVGElement>>;
   imageClassName?: string;
   buttonText?: string;
@@ -35,6 +37,8 @@ interface HeroProps extends VariantProps<typeof heroVariants> {
 
 export const Hero: React.FC<HeroProps> = ({
   title,
+  subtitle,
+  pillInfo,
   image: Illustration,
   imageClassName,
   buttonText,
@@ -48,12 +52,20 @@ export const Hero: React.FC<HeroProps> = ({
     <Flex as={Container} className="my-16 flex-col-reverse gap-6 sm:flex-row sm:gap-10">
       <Flex direction="column" className={text()}>
         <Flex direction="column" className="gap-4 sm:gap-8">
+          {pillInfo && <Pill info={pillInfo} />}
+
           <Heading size="h1">{title}</Heading>
+
+          {subtitle && <Heading size="h4">{subtitle}</Heading>}
 
           <Heading size="h6">{children}</Heading>
         </Flex>
 
-        {/* TODO: Add button */}
+        {buttonText && buttonHref && (
+          <Button as={Link} href={buttonHref}>
+            {buttonText}
+          </Button>
+        )}
       </Flex>
 
       <Illustration className={twMerge(image(), imageClassName)} />

@@ -11,6 +11,7 @@ export * from './Grid';
 export * from './Heading';
 export * from './IconButton';
 export * from './Link';
+export * from './Pill';
 export * from './ScreenReaderOnly';
 export * from './SocialButton';
 export * from './Svg';

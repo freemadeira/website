@@ -7,7 +7,7 @@ import { NamasteB, Planet } from '@/components/ui/svgs';
 export default function About() {
   return (
     <>
-      <Hero title="A quest for freedom" buttonText="Join us" buttonHref="#" image={Planet}>
+      <Hero title="A quest for freedom" image={Planet}>
         FREE Madeira, founded in 2022, is a non-profit organisation dedicated to empowering
         individuals and businesses to take control of their financial future through education and
         Bitcoin adoption in Portugal, particularly in Madeira.
