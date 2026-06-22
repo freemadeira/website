@@ -1,13 +1,15 @@
+import axios from 'axios';
+import { type NextRequest, NextResponse } from 'next/server';
+
 import { DEV_ENV } from '@/utils/constants';
 import { secureHex } from '@/utils/functions';
 import {
   MAILERLITE_ENGLISH_GROUP_ID,
+  MAILERLITE_NEWSLETTER_GROUP_ID,
   MAILERLITE_PORTUGUESE_GROUP_ID,
   MAILERLITE_WEBSITE_GROUP_ID,
   mailerliteHeaders,
 } from '@/utils/mailerlite';
-import axios, { AxiosError } from 'axios';
-import { type NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   const { email, language } = await request.json();
@@ -20,7 +22,7 @@ export async function POST(request: NextRequest) {
       'https://connect.mailerlite.com/api/subscribers',
       {
         email,
-        groups: [MAILERLITE_WEBSITE_GROUP_ID, languageGroupId],
+        groups: [MAILERLITE_NEWSLETTER_GROUP_ID, MAILERLITE_WEBSITE_GROUP_ID, languageGroupId],
         fields: {
           language,
           token: secureHex(), // The token will be used to authenticate the subscriber in the preferences page.

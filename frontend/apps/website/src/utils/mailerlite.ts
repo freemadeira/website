@@ -8,6 +8,7 @@ export const mailerliteHeaders = {
 export const MAILERLITE_WEBSITE_GROUP_ID = '153157474249082044'; // Group ID for website subscribers
 export const MAILERLITE_PORTUGUESE_GROUP_ID = '153161515456792037'; // Group ID for Portuguese language
 export const MAILERLITE_ENGLISH_GROUP_ID = '153161521070868114'; // Group ID for English language
+export const MAILERLITE_NEWSLETTER_GROUP_ID = '190971553192609215'; // Group ID for newsletter subscribers
 
 // If there ever is a new language, add it here.
 const LANGUAGE_GROUPS = [
