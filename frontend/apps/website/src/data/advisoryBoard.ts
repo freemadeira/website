@@ -13,15 +13,6 @@ export interface AdvisoryBoardMember {
 
 export const advisoryBoardMembers: AdvisoryBoardMember[] = [
   {
-    firstName: 'NVK',
-    sex: 'male',
-    category: 'Technology',
-    socials: {
-      x: 'nvk',
-    },
-    picture: pictures.nvk,
-  },
-  {
     firstName: 'Daniel',
     lastName: 'Batten',
     sex: 'male',

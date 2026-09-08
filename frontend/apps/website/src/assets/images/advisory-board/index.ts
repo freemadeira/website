@@ -14,7 +14,6 @@ import knutSvanholm from './knut-svanholm.jpeg';
 import maxDeMarco from './max-de-marco.jpeg';
 import maxHillebrand from './max-hillebrand.jpg';
 import maxKei from './max-kei.jpeg';
-import nvk from './nvk.jpg';
 import pauloPereira from './paulo-pereira.jpeg';
 import peterYoung from './peter-young.jpg';
 import rahimTaghizadegan from './rahim-taghizadegan.jpg';
@@ -40,7 +39,6 @@ export const pictures: Record<string, StaticImageData> = {
   maxDeMarco,
   maxHillebrand,
   maxKei,
-  nvk,
   pauloPereira,
   peterYoung,
   rahimTaghizadegan,
