@@ -2,6 +2,7 @@ import { Container, Flex } from '@/components/ui/atoms';
 import { twJoin } from 'tailwind-merge';
 import { FooterMenu } from './FooterMenu';
 import { FreeMadeira } from './FreeMadeira';
+import { LegalDetails } from './LegalDetails';
 import { Newsletter } from './Newsletter';
 import { Socials } from './Socials';
 
@@ -24,15 +25,19 @@ export function Footer(): React.ReactElement {
         <Flex direction="column" gap={8}>
           <FreeMadeira />
 
-          <Flex justifyContent="between" gap={6} stackOnMobile className="text-sm">
-            <Flex gap={6}>
-              {/* TODO: Add privacy policy */}
-              {/* <p>Privacy Policy</p> */}
-              {/* <p>Cookie Policy</p> */}
-              <div />
-            </Flex>
+          <Flex direction="column" gap={4} className="text-sm">
+            <LegalDetails />
 
-            <p>© {process.env.BUILD_YEAR} FREE Madeira. All rights reserved</p>
+            <Flex justifyContent="between" gap={6} stackOnMobile>
+              <Flex gap={6}>
+                {/* TODO: Add privacy policy */}
+                {/* <p>Privacy Policy</p> */}
+                {/* <p>Cookie Policy</p> */}
+                <div />
+              </Flex>
+
+              <p>© {process.env.BUILD_YEAR} FREE Madeira. All rights reserved</p>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

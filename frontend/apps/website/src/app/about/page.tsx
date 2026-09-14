@@ -1,4 +1,10 @@
-import { Cards, Donations, EducationGoals, WhoWeAre } from '@/components/about';
+import {
+  Cards,
+  Donations,
+  EducationGoals,
+  OrganisationDetails,
+  WhoWeAre,
+} from '@/components/about';
 import { UpcomingEvents } from '@/components/events';
 import { Hero, SplitHighlight } from '@/components/ui';
 import { ColourSection } from '@/components/ui/atoms/ColourSection';
@@ -29,6 +35,8 @@ export default function About() {
       </SplitHighlight>
 
       <UpcomingEvents />
+
+      <OrganisationDetails />
     </>
   );
 }

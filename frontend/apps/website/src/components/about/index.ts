@@ -1,4 +1,5 @@
 export * from './Cards';
-export * from './EducationGoals';
-export * from './WhoWeAre';
 export * from './Donations';
+export * from './EducationGoals';
+export * from './OrganisationDetails';
+export * from './WhoWeAre';
