@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 
-const widget = 'my-6 rounded-xl border border-bridal-200 bg-bridal-50 p-4';
-const answer = 'my-3 border-l-4 border-primary-400 bg-bridal-100 px-3 py-2';
-const linkBtn = 'px-1 py-2 text-bridal-700 underline';
+const widget = 'my-8 border-t-4 border-(--tier) bg-white p-5';
+const answer = 'my-3 border-l-4 border-(--tier) bg-(--ap-tint) px-3 py-2';
+const linkBtn = 'px-1 py-2 text-(--ap-sea) underline';
 const choice = (on: boolean) =>
-  `rounded-lg border px-4 py-2 disabled:opacity-40 ${on ? 'border-primary-500 bg-primary-400 font-semibold text-dark' : 'border-bridal-300 bg-white'}`;
+  `rounded-md border px-4 py-2 disabled:opacity-40 ${on ? 'border-(--ap-ink) bg-(--ap-ink) text-white' : 'border-(--ap-line) bg-white'}`;
 
 /* ------------------------------------------------------------ inflation */
 export function Inflation() {
@@ -22,7 +22,7 @@ export function Inflation() {
           Daqui a <strong>{years}</strong> {years === 1 ? 'ano' : 'anos'}
         </span>
         <input
-          className="mt-2 w-full accent-primary-500"
+          className="mt-2 w-full accent-(--ap-sea)"
           type="range"
           min={0}
           max={30}
@@ -30,16 +30,16 @@ export function Inflation() {
           onChange={(e) => setYears(Number(e.target.value))}
         />
       </label>
-      <div className="block h-4 overflow-hidden rounded-full bg-bridal-200" aria-hidden="true">
+      <div className="block h-4 overflow-hidden rounded-full bg-(--ap-line)" aria-hidden="true">
         <div
-          className="block h-full rounded-full bg-primary-400 transition-[width] duration-300 motion-reduce:transition-none"
+          className="block h-full rounded-full bg-(--ap-sun) transition-[width] duration-300 motion-reduce:transition-none"
           style={{ width: `${value}%` }}
         />
       </div>
       <p className="my-3 font-semibold text-lg">
         100 € de hoje comprarão o que ≈ {Math.round(value)} € de hoje compram.
       </p>
-      <p className="text-mountain-mist-500 text-sm">
+      <p className="text-(--ap-mute) text-sm">
         Simulação simples, à meta oficial de 2% de inflação ao ano do Banco Central Europeu. Não é
         uma previsão.
       </p>
@@ -86,21 +86,21 @@ export function Timeline() {
         <button
           key={r.id}
           type="button"
-          className={`my-2 grid w-full gap-1 rounded-lg border px-3 py-2 text-left ${open === r.id ? 'border-primary-500 bg-primary-50' : 'border-bridal-200'}`}
+          className={`my-2 grid w-full gap-1 rounded-md border px-3 py-2 text-left ${open === r.id ? 'border-(--ap-ink) bg-(--ap-tint)' : 'border-(--ap-line)'}`}
           onClick={() => setOpen(r.id)}
           aria-pressed={open === r.id}
         >
           <span className="font-semibold">{r.name}</span>
-          <span className="block h-4 overflow-hidden rounded-full bg-bridal-200">
+          <span className="block h-4 overflow-hidden rounded-full bg-(--ap-line)">
             <span
-              className="block h-full rounded-full bg-primary-400"
+              className="block h-full rounded-full bg-(--ap-sun)"
               style={{ width: `${r.width}%` }}
             />
           </span>
-          <span className="text-mountain-mist-500 text-sm">{r.when}</span>
+          <span className="text-(--ap-mute) text-sm">{r.when}</span>
         </button>
       ))}
-      <div className="mt-2 flex justify-between text-mountain-mist-500 text-xs" aria-hidden="true">
+      <div className="mt-2 flex justify-between text-(--ap-mute) text-xs" aria-hidden="true">
         <span>agora</span>
         <span>fim do dia</span>
         <span>1 dia útil</span>
@@ -173,7 +173,7 @@ export function Chooser() {
         </p>
       )}
       {done && (
-        <p className="text-mountain-mist-500 text-sm">
+        <p className="text-(--ap-mute) text-sm">
           Muitos acabam por usar dois ao mesmo tempo: A ou B para o balcão, C para o que guardam.
         </p>
       )}
@@ -205,9 +205,9 @@ export function Taps() {
         {TAPS.map((s, i) => (
           <li
             key={s.t}
-            className={`flex flex-col gap-1 rounded-lg p-3 text-sm ${i === 3 && step === 3 ? 'bg-primary-400' : 'bg-bridal-100'} ${i === step ? 'outline-2 outline-primary-500' : i < step ? 'opacity-90' : 'opacity-60'}`}
+            className={`flex flex-col gap-1 rounded-md p-3 text-sm ${i === 3 && step === 3 ? 'bg-(--ap-sun)' : 'bg-(--ap-tint)'} ${i === step ? 'outline-(--ap-ink) outline-2' : i < step ? 'opacity-90' : 'opacity-60'}`}
           >
-            <span className="inline-grid size-6 place-items-center rounded-full bg-dark font-bold text-primary-400 text-xs">
+            <span className="inline-grid size-6 place-items-center rounded-full bg-(--ap-ink) font-bold text-primary-400 text-xs">
               {i + 1}
             </span>
             <strong>{s.t}</strong>

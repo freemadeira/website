@@ -8,8 +8,8 @@ export function Contact(): React.ReactElement {
   return (
     <>
       <AtlantisCta />
-      <section aria-labelledby="apoio-contact" className="mt-16 border-bridal-200 border-t pt-8">
-        <h2 id="apoio-contact" className="font-semibold text-2xl">
+      <section aria-labelledby="apoio-contact" className="mt-6 border-(--ap-line) border-t pt-8">
+        <h2 id="apoio-contact" className="text-3xl">
           Dúvidas? Algum problema?
         </h2>
         <p className="my-3">

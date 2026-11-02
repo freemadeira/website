@@ -9,7 +9,7 @@ import { FAQ, FAQ_CATS } from '@/data/apoio/faq';
 const fold = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 const chip = (on: boolean) =>
-  `rounded-full border px-3 py-1 text-sm ${on ? 'border-primary-500 bg-primary-400 font-semibold' : 'border-bridal-300'}`;
+  `rounded-full border px-3 py-1 text-sm ${on ? 'border-(--ap-ink) bg-(--ap-ink) text-white' : 'border-(--ap-line) bg-white'}`;
 
 export function Faq(): React.ReactElement {
   const [query, setQuery] = useState('');
@@ -24,9 +24,9 @@ export function Faq(): React.ReactElement {
   return (
     <>
       <input
-        className="my-3 w-full rounded-xl border border-bridal-300 bg-white px-4 py-3"
+        className="my-3 w-full rounded-md border border-(--ap-line) bg-white px-4 py-3"
         type="search"
-        placeholder="Procurar, por exemplo: IVA, devolução, equipa…"
+        placeholder="Procurar: IVA, devolução…"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         aria-label="Procurar nas perguntas"
@@ -46,14 +46,14 @@ export function Faq(): React.ReactElement {
           </button>
         ))}
       </div>
-      <p className="text-mountain-mist-500 text-sm" aria-live="polite">
+      <p className="text-(--ap-mute) text-sm" aria-live="polite">
         {shown.length} {shown.length === 1 ? 'pergunta' : 'perguntas'}
       </p>
       {shown.map((e) => {
         const target = e.to ? findPage(e.to) : undefined;
         return (
-          <details key={e.q} className="my-3 rounded-xl border border-bridal-200 px-4">
-            <summary className="cursor-pointer py-3 font-semibold">{e.q}</summary>
+          <details key={e.q} className="my-3 border-(--ap-line) border-y px-1">
+            <summary className="cursor-pointer py-3 font-bold text-lg">{e.q}</summary>
             <p className="mb-3">{e.a}</p>
             {target && (
               <p className="mb-3">

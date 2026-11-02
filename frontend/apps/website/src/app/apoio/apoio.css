@@ -1,0 +1,307 @@
+/* Apoio section styles. Everything is under .ap-root so nothing leaks into the rest of the site.
+   Concept: Funchal's painted doors. Three doors (read now / at the till / later) and their
+   colours carry through the chapters as wayfinding. */
+.ap-root {
+  --ap-ink: #0d2535;
+  --ap-sea: #1b6b93;
+  --ap-sun: #ffcb05;
+  --ap-levada: #2e7d5b;
+  --ap-salt: #f3f7f8;
+  --ap-red: #c8412b;
+  --ap-line: #cfdce2;
+  --ap-tint: #e6eef1;
+  --ap-mute: #4d626d;
+  --tier: var(--ap-ink);
+  --tier-ink: #fff;
+
+  background: var(--ap-salt);
+  color: var(--ap-ink);
+  font-family: var(--font-ap-body), Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+.ap-root :focus-visible {
+  outline: 3px solid var(--ap-sea);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.ap-root a {
+  text-underline-offset: 3px;
+}
+
+/* Display / UI face */
+.ap-display,
+.ap-root h1,
+.ap-root h2,
+.ap-root h3,
+.ap-root table,
+.ap-root button,
+.ap-root summary,
+.ap-bar {
+  font-family: var(--font-ap-display), system-ui, sans-serif;
+}
+.ap-root h1,
+.ap-root h2,
+.ap-root h3 {
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+/* Tiers: the door colours */
+.ap-tier-agora {
+  --tier: var(--ap-sea);
+  --tier-ink: #fff;
+}
+.ap-tier-balcao {
+  --tier: var(--ap-sun);
+  --tier-ink: var(--ap-ink);
+}
+.ap-tier-depois {
+  --tier: var(--ap-levada);
+  --tier-ink: #fff;
+}
+.ap-tier-extra {
+  --tier: var(--ap-ink);
+  --tier-ink: #fff;
+}
+
+/* Top bar */
+.ap-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--ap-ink);
+  color: #fff;
+}
+.ap-bar a {
+  color: inherit;
+  text-decoration: none;
+}
+.ap-bar nav a {
+  padding: 0.5rem 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+.ap-bar nav a:hover,
+.ap-bar nav a[aria-current="page"] {
+  border-bottom-color: var(--ap-sun);
+}
+
+/* Chapter header band */
+.ap-head {
+  background: var(--tier);
+  color: var(--tier-ink);
+}
+.ap-head a {
+  color: inherit;
+}
+.ap-head .ap-num {
+  font-family: var(--font-ap-display), system-ui, sans-serif;
+  font-weight: 800;
+  line-height: 0.8;
+  font-size: clamp(5rem, 22vw, 11rem);
+  opacity: 0.22;
+}
+
+/* Prose */
+.ap-prose {
+  max-width: 40rem;
+}
+.ap-prose p,
+.ap-prose li {
+  max-width: 68ch;
+}
+
+/* Notes: a rule in the page's door colour */
+.ap-note {
+  border-left: 5px solid var(--tier);
+  background: #fff;
+  padding: 0.75rem 1.25rem 1rem;
+  margin: 1.75rem 0;
+}
+.ap-tier-balcao .ap-note {
+  border-left-color: var(--ap-ink);
+}
+
+/* Doors (home) */
+.ap-doors {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  align-items: end;
+}
+@media (min-width: 52rem) {
+  .ap-doors {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+.ap-door {
+  position: relative;
+  background: var(--tier);
+  color: var(--tier-ink);
+  border-radius: 50% 50% 0 0 / 6rem 6rem 0 0;
+  padding: 5.25rem 1.75rem 2.75rem;
+  min-height: 22rem;
+}
+.ap-door:nth-child(2) {
+  min-height: 25rem;
+}
+.ap-door:nth-child(3) {
+  min-height: 23.5rem;
+}
+.ap-door::after {
+  /* the handle */
+  content: "";
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.25rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: currentcolor;
+  opacity: 0.55;
+}
+.ap-door a {
+  color: inherit;
+}
+.ap-door ul {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.ap-door li {
+  padding: 0.35rem 0;
+  border-top: 1px solid color-mix(in srgb, currentcolor 30%, transparent);
+  line-height: 1.35;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ap-door {
+    animation: ap-door-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .ap-door:nth-child(2) {
+    animation-delay: 0.12s;
+  }
+  .ap-door:nth-child(3) {
+    animation-delay: 0.24s;
+  }
+}
+@keyframes ap-door-in {
+  from {
+    transform: translateY(2.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Steps rail */
+.ap-steps {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  counter-reset: step;
+  border-left: 3px solid var(--ap-line);
+}
+.ap-steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 0.25rem 0 1.25rem 3.25rem;
+}
+.ap-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: -1.4rem;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ap-sun);
+  color: var(--ap-ink);
+  font-family: var(--font-ap-display), system-ui, sans-serif;
+  font-weight: 800;
+}
+
+/* Key facts: rows, no boxes */
+.ap-facts {
+  margin: 2rem 0;
+  border-top: 2px solid var(--ap-ink);
+}
+.ap-facts > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--ap-line);
+}
+@media (min-width: 40rem) {
+  .ap-facts > div {
+    grid-template-columns: 11rem 1fr;
+    gap: 1rem;
+  }
+}
+.ap-facts dt {
+  font-family: var(--font-ap-display), system-ui, sans-serif;
+  font-weight: 700;
+}
+.ap-facts dd {
+  margin: 0;
+}
+
+/* Tables: horizontal rules only */
+.ap-root .ap-table th,
+.ap-root .ap-table td {
+  border: 0;
+  border-bottom: 1px solid var(--ap-line);
+  background: none;
+}
+.ap-root .ap-table thead th {
+  border-bottom: 2px solid var(--ap-ink);
+}
+
+/* Buttons */
+.ap-btn {
+  display: inline-block;
+  font-family: var(--font-ap-display), system-ui, sans-serif;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  background: var(--ap-sun);
+  color: var(--ap-ink);
+}
+.ap-btn:hover {
+  background: #ffd93d;
+}
+.ap-btn--line {
+  background: none;
+  color: #fff;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.ap-btn--line:hover {
+  background: #ffffff1a;
+}
+
+/* Atlantis band */
+.ap-band {
+  background: var(--ap-ink);
+  color: #fff;
+}
+
+.ap-wrap {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 40rem) {
+  .ap-wrap {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

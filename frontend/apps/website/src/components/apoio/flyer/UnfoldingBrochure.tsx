@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { useState } from 'react';
 
 import { useContent } from './LocaleContext';
@@ -70,7 +71,7 @@ export function UnfoldingBrochure() {
           {STEPS.map((s, i) => (
             <span
               key={s.key}
-              className={'brochure-dot' + (i === step ? ' brochure-dot--active' : '')}
+              className={clsx('brochure-dot', i === step && 'brochure-dot--active')}
             />
           ))}
         </div>

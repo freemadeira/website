@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 
 import { Blocks } from '@/components/apoio/Blocks';
 import { Contact } from '@/components/apoio/Contact';
+import { PageHead } from '@/components/apoio/PageHead';
 import { QaSlot } from '@/components/apoio/QaSlot';
 import { CHAPTERS, findPage, PAGES } from '@/data/apoio';
 
@@ -33,38 +34,33 @@ export default async function ApoioPage({ params }: { params: Promise<{ slug: st
   const next = idx >= 0 && idx < CHAPTERS.length - 1 ? CHAPTERS[idx + 1] : undefined;
 
   return (
-    <article>
-      <p>
-        <Link className="underline" href="/apoio">
-          ← Início
-        </Link>
-      </p>
-      <h1 className="mt-4 font-medium text-4xl leading-tight">
-        {page.num ? `${page.num}. ` : ''}
-        {page.title}
-      </h1>
-      {page.lead && <p className="mt-3 text-lg text-mountain-mist-500">{page.lead}</p>}
-      <Blocks blocks={page.blocks} collapse={page.collapseSections} />
-      {(prev || next) && (
-        <nav className="my-8 flex justify-between gap-4">
-          {prev ? (
-            <Link className="underline" href={`/apoio/${prev.slug}`}>
-              ← {prev.title}
-            </Link>
-          ) : (
-            <span />
-          )}
-          {next ? (
-            <Link className="underline" href={`/apoio/${next.slug}`}>
-              {next.title} →
-            </Link>
-          ) : (
-            <span />
-          )}
-        </nav>
-      )}
-      <QaSlot page={page.slug} />
-      <Contact />
+    <article className={`ap-tier-${page.tier}`}>
+      <PageHead tier={page.tier} num={page.num} title={page.title} lead={page.lead} />
+      <div className="ap-wrap ap-prose pt-10">
+        <Blocks blocks={page.blocks} collapse={page.collapseSections} />
+        {(prev || next) && (
+          <nav className="my-10 flex flex-wrap justify-between gap-x-6 gap-y-2 font-semibold [font-family:var(--font-ap-display)]">
+            {prev ? (
+              <Link className="underline" href={`/apoio/${prev.slug}`}>
+                ← {prev.title}
+              </Link>
+            ) : (
+              <span />
+            )}
+            {next ? (
+              <Link className="underline" href={`/apoio/${next.slug}`}>
+                {next.title} →
+              </Link>
+            ) : (
+              <span />
+            )}
+          </nav>
+        )}
+        <QaSlot page={page.slug} />
+      </div>
+      <div className="ap-wrap">
+        <Contact />
+      </div>
     </article>
   );
 }

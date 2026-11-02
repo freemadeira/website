@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 
 import { FlyerViewer } from '@/components/apoio/flyer/FlyerViewer';
+import { PageHead } from '@/components/apoio/PageHead';
 
 export const metadata: Metadata = { title: 'Folheto para comerciantes' };
 
@@ -15,18 +15,14 @@ export default function FlyerPage() {
         }
       </style>
 
-      <p className="print:hidden">
-        <Link className="underline" href="/apoio">
-          ← Início
-        </Link>
-      </p>
-      <h1 className="mt-4 font-medium text-4xl leading-tight print:hidden">
-        Folheto para comerciantes
-      </h1>
-      <p className="my-3 text-lg text-mountain-mist-500 print:hidden">
-        O folheto que deixamos nas lojas: abra-o aqui e imprima em A4, frente e verso.
-      </p>
-      <FlyerViewer />
+      <PageHead
+        tier="extra"
+        title="Folheto para comerciantes"
+        lead="O folheto que deixamos nas lojas: abra-o aqui e imprima em A4, frente e verso."
+      />
+      <div className="ap-wrap pt-10">
+        <FlyerViewer />
+      </div>
     </article>
   );
 }

@@ -6,22 +6,58 @@ import { CHAPTERS, TIERS } from '@/data/apoio';
 export default function ApoioHome() {
   return (
     <>
-      <section>
-        <h1 className="font-medium text-4xl leading-tight sm:text-5xl">
+      <section className="ap-wrap pt-12 pb-10 sm:pt-20">
+        <h1 className="max-w-[16ch] text-[clamp(2.6rem,8vw,5.5rem)] leading-[0.98]">
           170+ negócios na Madeira já aceitam Bitcoin.
         </h1>
-        <p className="mt-4 text-lg text-mountain-mist-500">
+        <p className="mt-6 max-w-[34rem] text-(--ap-mute) text-xl">
           Não vai ser o primeiro, mas pode ser o melhor. Aqui, os bitcoiners podem viver em Bitcoin.
           É um destino Bitcoin reconhecido, o seu negócio é a próxima paragem.
         </p>
+        <p className="mt-8">
+          <a className="ap-btn" href="#comecar">
+            Comece em minutos
+          </a>
+        </p>
       </section>
 
-      <section className="mt-10">
-        <h2 className="font-semibold text-3xl">Comece em minutos</h2>
-        <p className="my-3">
+      <section className="ap-wrap pt-6" aria-label="O guia, por ordem de utilidade">
+        <div className="ap-doors">
+          {TIERS.map((tier) => (
+            <div key={tier.id} className={`ap-door ap-tier-${tier.id}`}>
+              <h2 className="text-2xl">{tier.label}</h2>
+              <p className="mt-2 text-[0.95rem] leading-snug opacity-90">{tier.note}</p>
+              <ul>
+                {CHAPTERS.filter((c) => c.tier === tier.id).map((c) => (
+                  <li key={c.slug}>
+                    <Link href={`/apoio/${c.slug}`}>
+                      {c.num}. {c.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 flex flex-wrap gap-x-6 gap-y-1 font-semibold [font-family:var(--font-ap-display)]">
+          <Link className="underline" href="/apoio/perguntas-frequentes">
+            Perguntas frequentes
+          </Link>
+          <Link className="underline" href="/apoio/folheto">
+            Folheto para ver e imprimir
+          </Link>
+          <Link className="underline" href="/apoio/glossario">
+            Glossário
+          </Link>
+        </p>
+      </section>
+
+      <section id="comecar" className="ap-wrap ap-prose pt-20">
+        <h2 className="text-4xl">Comece em minutos</h2>
+        <p className="mt-3">
           O nosso caminho recomendado é a <strong>Swiss Bitcoin Pay</strong>.
         </p>
-        <ol className="my-4 list-decimal space-y-2 pl-6">
+        <ol className="ap-steps">
           <li>Descarregue a aplicação.</li>
           <li>
             Adicione os dados do seu negócio: NIF, número da conta bancária, morada e nome do
@@ -30,7 +66,7 @@ export default function ApoioHome() {
           <li>Demora cerca de 10 minutos.</li>
           <li>Pronto. No fim do dia já pode receber pagamentos em Bitcoin.</li>
         </ol>
-        <ul className="my-4 list-disc space-y-2 pl-6">
+        <ul className="my-6 list-disc space-y-2 pl-6">
           <li>Bitcoin entra, euros saem, automaticamente. Só fica com Bitcoin se quiser.</li>
           <li>Sem complexidade contabilística. É tratado como qualquer outra venda, em euros.</li>
           <li>
@@ -42,29 +78,22 @@ export default function ApoioHome() {
             Pode ajustar a divisão em qualquer momento, se quiser manter uma parte em Bitcoin.
           </li>
         </ul>
-        <div className="my-6 overflow-x-auto">
-          <table className="w-full border-collapse text-left text-sm">
-            <tbody>
-              {[
-                ['Comissão', '1,5%.'],
-                ['Fidelização', 'Nenhuma. Pode parar quando quiser.'],
-                [
-                  'As suas chaves',
-                  'A Swiss Bitcoin Pay não guarda as suas chaves: é não-custodial.',
-                ],
-                [
-                  'Dados pedidos',
-                  'NIF, nome do negócio e morada são, em grande parte, informação que já é pública. O número da conta bancária serve para lhe enviarem os euros.',
-                ],
-              ].map(([k, v]) => (
-                <tr key={k}>
-                  <th className="border border-bridal-200 bg-bridal-100 p-2 align-top">{k}</th>
-                  <td className="border border-bridal-200 p-2">{v}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <dl className="ap-facts">
+          {[
+            ['Comissão', '1,5%.'],
+            ['Fidelização', 'Nenhuma. Pode parar quando quiser.'],
+            ['As suas chaves', 'A Swiss Bitcoin Pay não guarda as suas chaves: é não-custodial.'],
+            [
+              'Dados pedidos',
+              'NIF, nome do negócio e morada são, em grande parte, informação que já é pública. O número da conta bancária serve para lhe enviarem os euros.',
+            ],
+          ].map(([k, v]) => (
+            <div key={k}>
+              <dt>{k}</dt>
+              <dd>{v}</dd>
+            </div>
+          ))}
+        </dl>
         <p>
           Prefere outra solução? A{' '}
           <Link className="underline" href="/apoio/escolher-a-solucao">
@@ -79,39 +108,9 @@ export default function ApoioHome() {
         </p>
       </section>
 
-      <section className="mt-10">
-        <h2 className="font-semibold text-3xl">O guia, por ordem de utilidade</h2>
-        {TIERS.map((tier) => (
-          <div key={tier.id} className="mt-6">
-            <h3 className="font-semibold text-xl">{tier.label}</h3>
-            <p className="text-mountain-mist-500">{tier.note}</p>
-            <ul className="mt-2 list-none space-y-1 p-0">
-              {CHAPTERS.filter((c) => c.tier === tier.id).map((c) => (
-                <li key={c.slug}>
-                  <Link className="underline" href={`/apoio/${c.slug}`}>
-                    {c.num}. {c.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-        <p className="mt-6">
-          <Link className="underline" href="/apoio/perguntas-frequentes">
-            Perguntas frequentes
-          </Link>{' '}
-          ·{' '}
-          <Link className="underline" href="/apoio/folheto">
-            Folheto para ver e imprimir
-          </Link>{' '}
-          ·{' '}
-          <Link className="underline" href="/apoio/glossario">
-            Glossário
-          </Link>
-        </p>
-      </section>
-
-      <Contact />
+      <div className="ap-wrap">
+        <Contact />
+      </div>
     </>
   );
 }

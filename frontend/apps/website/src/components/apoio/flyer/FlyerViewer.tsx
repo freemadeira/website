@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import { Fraunces, Inter } from 'next/font/google';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -24,7 +25,10 @@ function LanguageSwitcher() {
         <button
           key={l.code}
           type="button"
-          className={`language-switcher-btn${l.code === locale ? ' language-switcher-btn--active' : ''}`}
+          className={clsx(
+            'language-switcher-btn',
+            l.code === locale && 'language-switcher-btn--active',
+          )}
           onClick={() => setLocale(l.code)}
           aria-pressed={l.code === locale}
         >

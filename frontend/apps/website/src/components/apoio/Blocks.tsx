@@ -71,11 +71,8 @@ export function Blocks({
             );
           case 'note':
             return (
-              <aside
-                key={key}
-                className="my-6 rounded-r-lg border-primary-400 border-l-4 bg-bridal-100 px-5 py-3"
-              >
-                <strong className="block">{b.title}</strong>
+              <aside key={key} className="ap-note">
+                <strong className="block [font-family:var(--font-ap-display)]">{b.title}</strong>
                 {b.x.map((p) => (
                   <p key={p} className="mt-2">
                     {p}
@@ -86,11 +83,9 @@ export function Blocks({
           case 'img':
             return (
               <figure key={key} className="my-8">
-                <Image src={b.src} alt={b.alt} className="h-auto w-full rounded-xl" />
+                <Image src={b.src} alt={b.alt} className="h-auto w-full rounded-md" />
                 {b.caption && (
-                  <figcaption className="mt-2 text-mountain-mist-500 text-sm">
-                    {b.caption}
-                  </figcaption>
+                  <figcaption className="mt-2 text-(--ap-mute) text-sm">{b.caption}</figcaption>
                 )}
               </figure>
             );
@@ -100,23 +95,19 @@ export function Blocks({
           }
           case 'details':
             return (
-              <details
-                key={key}
-                className="my-3 rounded-xl border border-bridal-200 px-4"
-                open={b.open}
-              >
-                <summary className="cursor-pointer py-3 font-semibold">{b.title}</summary>
+              <details key={key} className="my-3 border-(--ap-line) border-y px-1" open={b.open}>
+                <summary className="cursor-pointer py-3 font-bold text-lg">{b.title}</summary>
                 <Blocks blocks={b.x} />
               </details>
             );
           case 'table':
             return (
               <div key={key} className="my-6 overflow-x-auto">
-                <table className="w-full border-collapse text-left text-sm">
+                <table className="ap-table w-full border-collapse text-left text-[0.95rem]">
                   <thead>
                     <tr>
                       {b.head.map((h) => (
-                        <th key={h} className="border border-bridal-200 bg-bridal-100 p-2">
+                        <th key={h} className="p-2 pr-4">
                           {h}
                         </th>
                       ))}
@@ -126,7 +117,7 @@ export function Blocks({
                     {b.rows.map((r) => (
                       <tr key={r.join('|')}>
                         {r.map((c) => (
-                          <td key={c} className="border border-bridal-200 p-2 align-top">
+                          <td key={c} className="p-2 pr-4 align-top">
                             {c}
                           </td>
                         ))}
